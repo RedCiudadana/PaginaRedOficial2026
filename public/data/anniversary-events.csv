@@ -1,0 +1,2 @@
+id,title,slug,description,event_type,event_date,event_end_date,location,is_virtual,registration_url,image_url,max_attendees,current_attendees,tags,featured,status
+1,Celebración 15 Años Red Ciudadana,celebracion-15-anos,"Evento especial para celebrar 15 años de impacto en la democracia guatemalteca.",celebration,2025-06-15T18:00:00,2025-06-15T22:00:00,Guatemala Ciudad,false,https://example.com/registro,https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop,500,234,"aniversario,celebración",true,upcoming
