@@ -10,7 +10,7 @@ const InnovationGovernmentPage = () => {
       title: 'Gobierno Abierto',
       icon: Building2,
       color: 'from-blue-500 to-blue-600',
-      bgColor: 'bg-blue-50',
+      bgColor: 'bg-primary',
       textColor: 'text-blue-600',
       description: 'Promovemos la transparencia, participación ciudadana y colaboración en las instituciones públicas para crear gobiernos más abiertos y responsables.',
       objectives: [
@@ -37,7 +37,7 @@ const InnovationGovernmentPage = () => {
       title: 'Innovación Pública',
       icon: TrendingUp,
       color: 'from-green-500 to-green-600',
-      bgColor: 'bg-green-50',
+      bgColor: 'bg-primary',
       textColor: 'text-green-600',
       description: 'Impulsamos la adopción de metodologías innovadoras y tecnologías emergentes para modernizar la gestión pública y mejorar los servicios ciudadanos.',
       objectives: [
@@ -64,7 +64,7 @@ const InnovationGovernmentPage = () => {
       title: 'Justicia Abierta',
       icon: Scale,
       color: 'from-purple-500 to-purple-600',
-      bgColor: 'bg-purple-50',
+      bgColor: 'bg-primary',
       textColor: 'text-purple-600',
       description: 'Trabajamos para hacer el sistema de justicia más transparente, accesible y eficiente mediante tecnología y participación ciudadana.',
       objectives: [
@@ -91,7 +91,7 @@ const InnovationGovernmentPage = () => {
       title: 'Municipalidades Abiertas',
       icon: MapPin,
       color: 'from-orange-500 to-orange-600',
-      bgColor: 'bg-orange-50',
+      bgColor: 'bg-primary',
       textColor: 'text-orange-600',
       description: 'Fortalecemos la gestión municipal mediante herramientas digitales, transparencia presupuestaria y participación ciudadana local.',
       objectives: [
@@ -128,7 +128,7 @@ const InnovationGovernmentPage = () => {
       <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-blue-600/20 text-blue-300 px-6 py-3 rounded-full mb-6">
+            <div className="inline-flex items-center bg-primary text-blue-300 px-6 py-3 rounded-full mb-6">
               <Building2 className="mr-2" size={20} />
               <span className="font-semibold">Objetivo Estratégico 1</span>
             </div>
@@ -281,7 +281,7 @@ const InnovationGovernmentPage = () => {
             de innovación gubernamental adaptadas a sus necesidades específicas.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200">
+            <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary transition-colors duration-200">
               Solicitar Consultoría
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">

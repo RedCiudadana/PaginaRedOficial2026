@@ -79,7 +79,7 @@ const Hero = () => {
 
           {/* Video/Image Placeholder */}
           <div className="relative">
-            <div className="aspect-video bg-black/20 rounded-3xl backdrop-blur-sm border border-white/20 flex items-center justify-center group cursor-pointer hover:bg-black/30 transition-all duration-500 shadow-2xl hover:shadow-3xl overflow-hidden">
+            <div className="aspect-video bg-primary rounded-3xl backdrop-blur-sm border border-white/20 flex items-center justify-center group cursor-pointer hover:bg-primary transition-all duration-500 shadow-2xl hover:shadow-3xl overflow-hidden">
               {/* Video Thumbnail Background */}
               <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-gray-600/20"></div>
               
@@ -94,12 +94,12 @@ const Hero = () => {
             {/* Floating Elements */}
             <div className="absolute -top-6 -right-6 bg-white text-black px-6 py-3 rounded-xl text-sm font-semibold shadow-xl animate-bounce">
               <div className="flex items-center">
-                <div className="w-2 h-2 bg-black rounded-full mr-2 animate-pulse"></div>
+                <div className="w-2 h-2 bg-primary rounded-full mr-2 animate-pulse"></div>
                 {t('hero.video.duration')}
               </div>
             </div>
 
-            <div className="absolute -bottom-6 -left-6 bg-black text-white px-6 py-3 rounded-xl text-sm font-semibold shadow-xl border border-white/20">
+            <div className="absolute -bottom-6 -left-6 bg-primary text-white px-6 py-3 rounded-xl text-sm font-semibold shadow-xl border border-white/20">
               <div className="flex items-center">
                 <Award className="mr-2" size={16} />
                 {t('hero.badge.recognition')}

@@ -10,7 +10,7 @@ const DigitalTransformationPage = () => {
       title: 'Gobierno Digital',
       icon: Cpu,
       color: 'from-blue-500 to-blue-600',
-      bgColor: 'bg-blue-50',
+      bgColor: 'bg-primary',
       textColor: 'text-blue-600',
       description: 'Implementamos soluciones tecnológicas integrales para modernizar la administración pública, mejorando la eficiencia operativa y la experiencia ciudadana a través de servicios digitales.',
       objectives: [
@@ -37,7 +37,7 @@ const DigitalTransformationPage = () => {
       title: 'Encuentro y Escuela de Gobierno Digital',
       icon: GraduationCap,
       color: 'from-green-500 to-green-600',
-      bgColor: 'bg-green-50',
+      bgColor: 'bg-primary',
       textColor: 'text-green-600',
       description: 'Creamos espacios de formación y encuentro para funcionarios públicos, desarrollando capacidades en transformación digital y promoviendo el intercambio de mejores prácticas.',
       objectives: [
@@ -64,7 +64,7 @@ const DigitalTransformationPage = () => {
       title: 'Política y Plan Nacional de Gobierno Digital',
       icon: FileText,
       color: 'from-purple-500 to-purple-600',
-      bgColor: 'bg-purple-50',
+      bgColor: 'bg-primary',
       textColor: 'text-purple-600',
       description: 'Desarrollamos marcos normativos y estratégicos para guiar la transformación digital del Estado, estableciendo estándares, principios y roadmaps de implementación nacional.',
       objectives: [
@@ -91,7 +91,7 @@ const DigitalTransformationPage = () => {
       title: 'Interoperabilidad y Acceso Inclusivo a Datos',
       icon: Network,
       color: 'from-orange-500 to-orange-600',
-      bgColor: 'bg-orange-50',
+      bgColor: 'bg-primary',
       textColor: 'text-orange-600',
       description: 'Construimos la infraestructura tecnológica que permite la comunicación entre sistemas gubernamentales y garantiza el acceso inclusivo a datos públicos para todos los ciudadanos.',
       objectives: [
@@ -128,7 +128,7 @@ const DigitalTransformationPage = () => {
       <section className="bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700 text-white py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-purple-600/20 text-purple-300 px-6 py-3 rounded-full mb-6">
+            <div className="inline-flex items-center bg-primary text-purple-300 px-6 py-3 rounded-full mb-6">
               <TrendingUp className="mr-2" size={20} />
               <span className="font-semibold">Objetivo Estratégico 4</span>
             </div>
@@ -285,7 +285,7 @@ const DigitalTransformationPage = () => {
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
-              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Cpu className="text-blue-600" size={24} />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Inteligencia Artificial</h3>
@@ -295,7 +295,7 @@ const DigitalTransformationPage = () => {
             </div>
 
             <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
-              <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Network className="text-green-600" size={24} />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Blockchain</h3>
@@ -305,7 +305,7 @@ const DigitalTransformationPage = () => {
             </div>
 
             <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
-              <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Eye className="text-purple-600" size={24} />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">IoT Ciudadano</h3>
@@ -316,10 +316,10 @@ const DigitalTransformationPage = () => {
           </div>
 
           <div className="text-center">
-            <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 mr-4">
+            <button className="bg-primary hover:bg-primary text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 mr-4">
               Explorar Tecnologías
             </button>
-            <button className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors duration-200">
+            <button className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary transition-colors duration-200">
               Ver Casos de Uso
             </button>
           </div>
@@ -337,7 +337,7 @@ const DigitalTransformationPage = () => {
             con metodologías probadas y tecnologías de vanguardia.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors duration-200">
+            <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary transition-colors duration-200">
               Solicitar Consultoría Digital
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">

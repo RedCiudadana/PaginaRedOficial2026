@@ -140,11 +140,11 @@ const Projects = () => {
   const getStatusColor = (status) => {
     switch (status) {
       case 'Activo':
-        return 'bg-green-100 text-green-800';
+        return 'bg-primary text-green-800';
       case 'En desarrollo':
-        return 'bg-yellow-100 text-yellow-800';
+        return 'bg-primary text-yellow-800';
       case 'Piloto':
-        return 'bg-blue-100 text-blue-800';
+        return 'bg-primary text-blue-800';
       default:
         return 'bg-gray-100 text-gray-800';
     }
@@ -187,7 +187,7 @@ const Projects = () => {
                   onClick={() => setActiveFilter(filter.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
                     activeFilter === filter.id
-                      ? 'bg-blue-600 text-white shadow-md'
+                      ? 'bg-primary text-white shadow-md'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
                 >
@@ -276,7 +276,7 @@ const Projects = () => {
             Trabajamos con metodologías probadas y medimos nuestro impacto constantemente.
           </p>
 
-          <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200">
+          <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-primary transition-colors duration-200">
             Ver Todos los Proyectos
           </button>
         </div>

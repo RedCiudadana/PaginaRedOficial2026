@@ -10,7 +10,7 @@ const JournalismStrengtheningPage = () => {
       title: 'Liderazgo Comunitario y Activismo',
       icon: Users,
       color: 'from-blue-500 to-blue-600',
-      bgColor: 'bg-blue-50',
+      bgColor: 'bg-primary',
       textColor: 'text-blue-600',
       description: 'Capacitamos líderes comunitarios y activistas en habilidades de liderazgo transformacional, organización comunitaria y gestión de iniciativas ciudadanas para fortalecer el tejido social.',
       objectives: [
@@ -37,7 +37,7 @@ const JournalismStrengtheningPage = () => {
       title: 'Incidencia Política y Participación Ciudadana',
       icon: Target,
       color: 'from-green-500 to-green-600',
-      bgColor: 'bg-green-50',
+      bgColor: 'bg-primary',
       textColor: 'text-green-600',
       description: 'Fortalecemos las capacidades ciudadanas para incidir en políticas públicas, participar activamente en procesos democráticos y ejercer control social sobre las instituciones.',
       objectives: [
@@ -64,7 +64,7 @@ const JournalismStrengtheningPage = () => {
       title: 'Movilización Social y Activismo Digital',
       icon: Megaphone,
       color: 'from-purple-500 to-purple-600',
-      bgColor: 'bg-purple-50',
+      bgColor: 'bg-primary',
       textColor: 'text-purple-600',
       description: 'Equipamos a organizaciones y activistas con herramientas digitales para la movilización social, campañas ciudadanas y comunicación efectiva en redes sociales.',
       objectives: [
@@ -91,7 +91,7 @@ const JournalismStrengtheningPage = () => {
       title: 'Monitoreo de Espacios Cívicos con Datos Abiertos',
       icon: Eye,
       color: 'from-red-500 to-red-600',
-      bgColor: 'bg-red-50',
+      bgColor: 'bg-primary',
       textColor: 'text-red-600',
       description: 'Promovemos el uso de datos abiertos para monitorear el estado de los espacios cívicos, la libertad de expresión y asociación, y documentar amenazas a las libertades democráticas.',
       objectives: [
@@ -118,7 +118,7 @@ const JournalismStrengtheningPage = () => {
       title: 'Redes de Colaboración y Fortalecimiento Organizacional',
       icon: TrendingUp,
       color: 'from-orange-500 to-orange-600',
-      bgColor: 'bg-orange-50',
+      bgColor: 'bg-primary',
       textColor: 'text-orange-600',
       description: 'Construimos redes colaborativas entre organizaciones de sociedad civil para fortalecer capacidades institucionales, sostenibilidad y amplificar el impacto colectivo.',
       objectives: [
@@ -155,7 +155,7 @@ const JournalismStrengtheningPage = () => {
       <section className="bg-gradient-to-br from-green-900 via-green-800 to-green-700 text-white py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-green-600/20 text-green-300 px-6 py-3 rounded-full mb-6">
+            <div className="inline-flex items-center bg-primary text-green-300 px-6 py-3 rounded-full mb-6">
               <Users className="mr-2" size={20} />
               <span className="font-semibold">Objetivo Estratégico 2</span>
             </div>
@@ -313,7 +313,7 @@ const JournalismStrengtheningPage = () => {
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
-              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Users className="text-blue-600" size={24} />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Talleres de Liderazgo</h3>
@@ -323,7 +323,7 @@ const JournalismStrengtheningPage = () => {
             </div>
 
             <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
-              <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Award className="text-green-600" size={24} />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Certificaciones</h3>
@@ -333,7 +333,7 @@ const JournalismStrengtheningPage = () => {
             </div>
 
             <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
-              <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Heart className="text-purple-600" size={24} />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Red de Activismo</h3>
@@ -344,10 +344,10 @@ const JournalismStrengtheningPage = () => {
           </div>
 
           <div className="text-center">
-            <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 mr-4">
+            <button className="bg-primary hover:bg-primary text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 mr-4">
               Explorar la Academia
             </button>
-            <button className="border-2 border-green-600 text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors duration-200">
+            <button className="border-2 border-green-600 text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary transition-colors duration-200">
               Ver Talleres Disponibles
             </button>
           </div>
@@ -365,7 +365,7 @@ const JournalismStrengtheningPage = () => {
             de los espacios cívicos y la defensa de las libertades democráticas en Guatemala.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors duration-200">
+            <button className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary transition-colors duration-200">
               Aplicar a la Academia
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">

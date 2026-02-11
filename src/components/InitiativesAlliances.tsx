@@ -173,7 +173,7 @@ const InitiativesAlliances = () => {
                   onClick={() => setActiveCategory(category.id)}
                   className={`flex items-center px-4 py-2 rounded-lg font-medium transition-all duration-300 whitespace-nowrap ${
                     activeCategory === category.id
-                      ? 'bg-blue-600 text-white'
+                      ? 'bg-primary text-white'
                       : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                   }`}
                 >
@@ -206,7 +206,7 @@ const InitiativesAlliances = () => {
               <div className="space-y-3">
                 <div>
                   <div className="flex items-center justify-between mb-1">
-                    <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-medium">
+                    <span className="bg-primary text-blue-800 px-2 py-1 rounded text-xs font-medium">
                       {partner.type}
                     </span>
                     <span className="text-gray-500 text-xs">Desde {partner.since}</span>
@@ -250,7 +250,7 @@ const InitiativesAlliances = () => {
             </div>
           </div>
 
-          <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-50 transition-colors duration-300">
+          <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-primary transition-colors duration-300">
             Conocer Más Alianzas
           </button>
         </div>

@@ -127,7 +127,7 @@ const PodcastPage = () => {
                   onClick={() => setSelectedTopic(topic)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
                     selectedTopic === topic
-                      ? 'bg-purple-600 text-white shadow-md'
+                      ? 'bg-primary text-white shadow-md'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
                 >
@@ -162,7 +162,7 @@ const PodcastPage = () => {
                       />
                       <button
                         onClick={() => handlePlayPause(episode.id)}
-                        className="absolute inset-0 flex items-center justify-center bg-black/40 hover:bg-black/50 transition-all"
+                        className="absolute inset-0 flex items-center justify-center bg-primary hover:bg-primary transition-all"
                       >
                         {playingEpisode === episode.id ? (
                           <Pause className="text-white" size={48} />
@@ -173,7 +173,7 @@ const PodcastPage = () => {
                     </div>
                     <div className="p-6 flex-1">
                       <div className="flex items-center gap-2 text-xs text-purple-600 font-semibold mb-2">
-                        <span className="bg-yellow-400 text-gray-900 px-2 py-1 rounded">DESTACADO</span>
+                        <span className="bg-primary text-gray-900 px-2 py-1 rounded">DESTACADO</span>
                         <span>Episodio {episode.episode_number}</span>
                       </div>
                       <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
@@ -202,7 +202,7 @@ const PodcastPage = () => {
                       )}
                       <div className="mt-3 flex flex-wrap gap-1">
                         {episode.topics.map((topic) => (
-                          <span key={topic} className="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">
+                          <span key={topic} className="text-xs bg-primary text-purple-700 px-2 py-1 rounded">
                             {topic}
                           </span>
                         ))}
@@ -241,7 +241,7 @@ const PodcastPage = () => {
                       />
                       <button
                         onClick={() => handlePlayPause(episode.id)}
-                        className="absolute inset-0 flex items-center justify-center bg-black/40 hover:bg-black/50 transition-all"
+                        className="absolute inset-0 flex items-center justify-center bg-primary hover:bg-primary transition-all"
                       >
                         {playingEpisode === episode.id ? (
                           <Pause className="text-white" size={40} />
@@ -302,16 +302,16 @@ const PodcastPage = () => {
             No te pierdas ningún episodio. Disponible en todas las plataformas de podcast.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
+            <button className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-primary transition-colors">
               Apple Podcasts
             </button>
-            <button className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
+            <button className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-primary transition-colors">
               Spotify
             </button>
-            <button className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
+            <button className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-primary transition-colors">
               Google Podcasts
             </button>
-            <button className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
+            <button className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-primary transition-colors">
               RSS Feed
             </button>
           </div>

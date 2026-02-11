@@ -27,7 +27,7 @@ const ContactPage = () => {
           {/* Contact Form */}
           <div className="bg-white rounded-2xl lg:rounded-3xl p-6 lg:p-10 shadow-xl border border-gray-100">
               <div className="flex items-center mb-6 lg:mb-8">
-                <div className="w-12 h-12 lg:w-16 lg:h-16 bg-blue-100 rounded-2xl flex items-center justify-center mr-4">
+                <div className="w-12 h-12 lg:w-16 lg:h-16 bg-primary rounded-2xl flex items-center justify-center mr-4">
                   <Send className="text-blue-600" size={24} />
                 </div>
                 <div>

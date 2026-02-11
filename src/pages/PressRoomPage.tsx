@@ -137,7 +137,7 @@ const PressRoomPage = () => {
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-2 rounded-full font-medium transition-all duration-200 ${
                   selectedCategory === category.id
-                    ? 'bg-blue-600 text-white shadow-md'
+                    ? 'bg-primary text-white shadow-md'
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                 }`}
               >
@@ -153,7 +153,7 @@ const PressRoomPage = () => {
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between">
                   <div className="flex-1 mb-4 lg:mb-0">
                     <div className="flex items-center gap-3 mb-3">
-                      <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
+                      <span className="bg-primary text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
                         {release.type}
                       </span>
                       <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-medium">
@@ -184,7 +184,7 @@ const PressRoomPage = () => {
                   </div>
 
                   <div className="flex flex-col gap-2 lg:ml-6">
-                    <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center whitespace-nowrap">
+                    <button className="bg-primary hover:bg-primary text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center whitespace-nowrap">
                       Leer Completo
                       <ExternalLink size={16} className="ml-2" />
                     </button>
@@ -221,7 +221,7 @@ const PressRoomPage = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {mediaResources.map((resource, index) => (
               <div key={index} className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 border border-gray-200">
-                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mb-4">
                   <resource.icon className="text-blue-600" size={24} />
                 </div>
 
@@ -238,7 +238,7 @@ const PressRoomPage = () => {
                   <span>{resource.size}</span>
                 </div>
 
-                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center text-sm">
+                <button className="w-full bg-primary hover:bg-primary text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center text-sm">
                   <Download size={16} className="mr-2" />
                   Descargar
                 </button>

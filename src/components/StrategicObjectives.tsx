@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Cpu, Users, Shield, TrendingUp, ArrowRight, Target, Award, Eye, Lightbulb } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import icon01 from '../assets/iconos/01_ICON.png';
+import icon04 from '../assets/iconos/04_ICON.png';
+import icon05 from '../assets/iconos/05_ICON.png';
+import icon02 from '../assets/iconos/02_ICON.png';
 
 const StrategicObjectives = () => {
   const [activeObjective, setActiveObjective] = useState(0);
@@ -8,7 +12,8 @@ const StrategicObjectives = () => {
   const objectives = [
     {
       id: 'innovation',
-      icon: Cpu,
+      iconSrc: icon01,
+      iconAlt: 'Innovación en Gobierno',
       title: 'Innovación en Gobierno',
       subtitle: 'Transformación Digital del Sector Público',
       description: 'Modernizamos la administración pública a través de tecnología avanzada, datos abiertos y servicios ciudadanos digitales que mejoran la experiencia de los guatemaltecos.',
@@ -30,7 +35,8 @@ const StrategicObjectives = () => {
     },
     {
       id: 'civic-spaces',
-      icon: Users,
+      iconSrc: icon04,
+      iconAlt: 'Fortalecimiento de Espacios Cívicos',
       title: 'Fortalecimiento de Espacios Cívicos',
       subtitle: 'Empoderamiento Ciudadano y Activismo',
       description: 'Capacitamos líderes comunitarios y activistas en habilidades de liderazgo, incidencia política y movilización social. Promovemos el uso de datos abiertos para monitorear el estado de los espacios cívicos y la libertad de expresión y asociación.',
@@ -52,7 +58,8 @@ const StrategicObjectives = () => {
     },
     {
       id: 'anticorruption',
-      icon: Shield,
+      iconSrc: icon05,
+      iconAlt: 'Anticorrupción',
       title: 'Anticorrupción',
       subtitle: 'Transparencia y Rendición de Cuentas',
       description: 'Desarrollamos herramientas y metodologías para la prevención, detección y combate de la corrupción en instituciones públicas guatemaltecas.',
@@ -74,7 +81,8 @@ const StrategicObjectives = () => {
     },
     {
       id: 'digital',
-      icon: TrendingUp,
+      iconSrc: icon02,
+      iconAlt: 'Transformación Digital',
       title: 'Transformación Digital',
       subtitle: 'Tecnologías Emergentes para el Sector Público',
       description: 'Lideramos la adopción de tecnologías emergentes como inteligencia artificial, blockchain e IoT para modernizar el sector público guatemalteco.',
@@ -126,8 +134,8 @@ const StrategicObjectives = () => {
               {/* Header */}
               <div className={`relative p-4 sm:p-6 lg:p-8 bg-white border-b border-gray-100`}>
                 <div className="flex items-center justify-between mb-4 lg:mb-6">
-                  <div className={`w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br ${objective.color} rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300`}>
-                    <objective.icon className="text-white" size={20} />
+                  <div className={`w-20 h-20 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300`}>
+                    <img src={objective.iconSrc} alt={objective.iconAlt} className="w-100 h-100" />
                   </div>
                 </div>
                 

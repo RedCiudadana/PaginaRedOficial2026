@@ -15,35 +15,35 @@ const BusinessPage = () => {
       title: 'Experiencia de +14 años',
       description: 'Líderes en transparencia y anticorrupción en Guatemala',
       color: 'text-blue-600',
-      bgColor: 'bg-blue-50'
+      bgColor: 'bg-primary'
     },
     {
       icon: Target,
       title: 'Enfoque técnico e independiente',
       description: 'Soluciones basadas en evidencia y mejores prácticas internacionales',
       color: 'text-green-600',
-      bgColor: 'bg-green-50'
+      bgColor: 'bg-primary'
     },
     {
       icon: Building2,
       title: 'Adaptado a todo tamaño',
       description: 'Desde startups hasta corporaciones multinacionales',
       color: 'text-purple-600',
-      bgColor: 'bg-purple-50'
+      bgColor: 'bg-primary'
     },
     {
       icon: Globe,
       title: 'Estándares internacionales',
       description: 'Cumplimiento con ESG, OCDE, OGP y marcos globales',
       color: 'text-orange-600',
-      bgColor: 'bg-orange-50'
+      bgColor: 'bg-primary'
     },
     {
       icon: Users,
       title: 'Red de expertos',
       description: 'Alianzas con especialistas legales, digitales y sociales',
       color: 'text-indigo-600',
-      bgColor: 'bg-indigo-50'
+      bgColor: 'bg-primary'
     }
   ];
 
@@ -53,7 +53,7 @@ const BusinessPage = () => {
       title: 'Ética y Compliance',
       icon: Shield,
       color: 'from-blue-500 to-blue-600',
-      bgColor: 'bg-blue-50',
+      bgColor: 'bg-primary',
       textColor: 'text-blue-600',
       description: 'Fortalecemos la cultura ética y el cumplimiento normativo en tu organización.',
       features: [
@@ -68,7 +68,7 @@ const BusinessPage = () => {
       title: 'Mecanismos de Quejas y Consultas (MQC)',
       icon: MessageSquare,
       color: 'from-green-500 to-green-600',
-      bgColor: 'bg-green-50',
+      bgColor: 'bg-primary',
       textColor: 'text-green-600',
       description: 'Implementamos canales seguros y efectivos para la gestión de denuncias.',
       features: [
@@ -83,7 +83,7 @@ const BusinessPage = () => {
       title: 'Gobernanza Digital y Datos',
       icon: TrendingUp,
       color: 'from-purple-500 to-purple-600',
-      bgColor: 'bg-purple-50',
+      bgColor: 'bg-primary',
       textColor: 'text-purple-600',
       description: 'Modernizamos tus procesos de gobernanza con tecnología avanzada.',
       features: [
@@ -98,7 +98,7 @@ const BusinessPage = () => {
       title: 'Reputación y Medios',
       icon: Eye,
       color: 'from-orange-500 to-orange-600',
-      bgColor: 'bg-orange-50',
+      bgColor: 'bg-primary',
       textColor: 'text-orange-600',
       description: 'Protegemos y fortalecemos la reputación corporativa de tu empresa.',
       features: [
@@ -113,7 +113,7 @@ const BusinessPage = () => {
       title: 'Inversión Social Estratégica',
       icon: Heart,
       color: 'from-red-500 to-red-600',
-      bgColor: 'bg-red-50',
+      bgColor: 'bg-primary',
       textColor: 'text-red-600',
       description: 'Diseñamos programas de impacto social alineados con tu estrategia de negocio.',
       features: [
@@ -267,7 +267,7 @@ const BusinessPage = () => {
       result = {
         level: 'Básico',
         color: 'text-red-600',
-        bgColor: 'bg-red-50',
+        bgColor: 'bg-primary',
         chartColor: '#dc2626',
         percentage: Math.round(percentage),
         description: 'No hay mecanismos formales de ética empresarial.',
@@ -284,7 +284,7 @@ const BusinessPage = () => {
       result = {
         level: 'Intermedio',
         color: 'text-yellow-600',
-        bgColor: 'bg-yellow-50',
+        bgColor: 'bg-primary',
         chartColor: '#d97706',
         percentage: Math.round(percentage),
         description: 'Bases sólidas pero con riesgo reputacional.',
@@ -301,7 +301,7 @@ const BusinessPage = () => {
       result = {
         level: 'Avanzado',
         color: 'text-green-600',
-        bgColor: 'bg-green-50',
+        bgColor: 'bg-primary',
         chartColor: '#16a34a',
         percentage: Math.round(percentage),
         description: 'Madurez ética sólida y bien estructurada.',
@@ -434,7 +434,7 @@ const BusinessPage = () => {
       <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center bg-blue-600/20 text-blue-300 px-6 py-3 rounded-full mb-6">
+            <div className="inline-flex items-center bg-primary text-blue-300 px-6 py-3 rounded-full mb-6">
               <Building2 className="mr-2" size={20} />
               <span className="font-semibold">Servicios Empresariales</span>
             </div>
@@ -447,7 +447,7 @@ const BusinessPage = () => {
               Acompañamos a empresas a construir confianza, prevenir riesgos y fortalecer su reputación
             </p>
 
-            <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 text-lg">
+            <button className="bg-primary hover:bg-primary text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 text-lg">
               Realiza tu diagnóstico gratuito
             </button>
           </div>
@@ -529,7 +529,7 @@ const BusinessPage = () => {
       <section id="diagnostico" className="py-12 lg:py-16 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-full mb-6 shadow-lg">
+            <div className="inline-flex items-center bg-primary text-white px-6 py-3 rounded-full mb-6 shadow-lg">
               <Shield className="mr-2" size={20} />
               <span className="font-semibold">Diagnóstico Gratuito</span>
             </div>
@@ -545,21 +545,21 @@ const BusinessPage = () => {
             
             <div className="grid md:grid-cols-3 gap-4 max-w-2xl mx-auto mb-8">
               <div className="bg-gray-50 rounded-lg p-4">
-                <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-2">
+                <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mx-auto mb-2">
                   <Clock className="text-blue-600" size={20} />
                 </div>
                 <div className="text-sm font-bold text-gray-900">5 minutos</div>
                 <div className="text-xs text-gray-600">Tiempo estimado</div>
               </div>
               <div className="bg-gray-50 rounded-lg p-4">
-                <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-2">
+                <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mx-auto mb-2">
                   <FileText className="text-green-600" size={20} />
                 </div>
                 <div className="text-sm font-bold text-gray-900">Informe PDF</div>
                 <div className="text-xs text-gray-600">Resultados detallados</div>
               </div>
               <div className="bg-gray-50 rounded-lg p-4">
-                <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-2">
+                <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mx-auto mb-2">
                   <Target className="text-purple-600" size={20} />
                 </div>
                 <div className="text-sm font-bold text-gray-900">Plan de Acción</div>
@@ -573,7 +573,7 @@ const BusinessPage = () => {
               <>
                 {showEmailForm ? (
                   <div className="text-center space-y-6">
-                    <div className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mx-auto">
+                    <div className="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mx-auto">
                       <Mail className="text-white" size={24} />
                     </div>
                     <div>
@@ -628,7 +628,7 @@ const BusinessPage = () => {
                         <button
                           onClick={handleDiagnosticSubmit}
                           disabled={!userEmail}
-                          className="flex-1 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white px-4 py-3 rounded-lg font-semibold transition-colors duration-200"
+                          className="flex-1 bg-primary hover:bg-primary disabled:bg-gray-300 text-white px-4 py-3 rounded-lg font-semibold transition-colors duration-200"
                         >
                           Generar Mi Informe →
                         </button>
@@ -653,7 +653,7 @@ const BusinessPage = () => {
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-3">
                         <div
-                          className="bg-blue-600 h-3 rounded-full transition-all duration-500"
+                          className="bg-primary h-3 rounded-full transition-all duration-500"
                           style={{ width: `${getProgressPercentage()}%` }}
                         ></div>
                       </div>
@@ -673,9 +673,9 @@ const BusinessPage = () => {
                             onClick={() => goToQuestion(index)}
                             className={`w-8 h-8 rounded-lg text-sm font-bold transition-all duration-200 ${
                               index === currentQuestion
-                                ? 'bg-blue-600 text-white'
+                                ? 'bg-primary text-white'
                                 : isQuestionAnswered(index)
-                                  ? 'bg-green-500 text-white'
+                                  ? 'bg-primary text-white'
                                   : 'bg-gray-200 text-gray-500 hover:bg-gray-300'
                             }`}
                           >
@@ -688,7 +688,7 @@ const BusinessPage = () => {
                     {/* Current Question */}
                     <div className={`transition-opacity duration-200 ${isAnimating ? 'opacity-50' : 'opacity-100'}`}>
                       <div className="text-center mb-6">
-                        <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full mb-4">
+                        <div className="inline-flex items-center bg-primary text-blue-800 px-4 py-2 rounded-full mb-4">
                           <span className="font-bold">
                             Pregunta {currentQuestion + 1} de {diagnosticQuestions.length}
                           </span>
@@ -705,14 +705,14 @@ const BusinessPage = () => {
                             onClick={() => handleAnswerSelect(currentQuestion, optionIndex)}
                             className={`w-full text-left p-4 rounded-lg border-2 transition-all duration-200 ${
                               diagnosticAnswers[currentQuestion] == optionIndex
-                                ? 'border-blue-500 bg-blue-50'
+                                ? 'border-blue-500 bg-primary'
                                 : 'border-gray-200 hover:border-blue-300 hover:bg-gray-50'
                             }`}
                           >
                             <div className="flex items-start">
                               <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0 ${
                                 diagnosticAnswers[currentQuestion] == optionIndex
-                                  ? 'border-blue-500 bg-blue-500'
+                                  ? 'border-blue-500 bg-primary'
                                   : 'border-gray-300'
                               }`}>
                                 {diagnosticAnswers[currentQuestion] == optionIndex && (
@@ -746,7 +746,7 @@ const BusinessPage = () => {
 
                         <div className="text-center">
                           {isQuestionAnswered(currentQuestion) && (
-                            <div className="inline-flex items-center text-green-700 bg-green-100 px-3 py-1 rounded-full text-sm font-semibold">
+                            <div className="inline-flex items-center text-green-700 bg-primary px-3 py-1 rounded-full text-sm font-semibold">
                               <CheckCircle size={16} className="mr-1" />
                               Respondida
                             </div>
@@ -757,7 +757,7 @@ const BusinessPage = () => {
                           <button
                             onClick={nextQuestion}
                             disabled={!isQuestionAnswered(currentQuestion)}
-                            className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors duration-200 font-semibold"
+                            className="flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors duration-200 font-semibold"
                           >
                             Siguiente →
                           </button>
@@ -765,7 +765,7 @@ const BusinessPage = () => {
                           <button
                             onClick={handleDiagnosticSubmit}
                             disabled={Object.keys(diagnosticAnswers).length < diagnosticQuestions.length}
-                            className="flex items-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors duration-200 font-semibold"
+                            className="flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors duration-200 font-semibold"
                           >
                             Finalizar Diagnóstico
                           </button>
@@ -780,7 +780,7 @@ const BusinessPage = () => {
               <div className="space-y-6">
                 {/* Header de Resultados */}
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-3">
                     <Award className="text-green-600" size={24} />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">
@@ -842,7 +842,7 @@ const BusinessPage = () => {
                   <div className="grid md:grid-cols-2 gap-3">
                     {diagnosticResult.recommendations.map((rec, index) => (
                       <div key={index} className="flex items-start bg-white rounded-lg p-3">
-                        <div className="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center mr-2 mt-0.5 flex-shrink-0">
+                        <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center mr-2 mt-0.5 flex-shrink-0">
                           <span className="text-blue-600 font-bold text-xs">{index + 1}</span>
                         </div>
                         <span className="text-gray-700 text-sm">{rec}</span>
@@ -852,14 +852,14 @@ const BusinessPage = () => {
                 </div>
 
                 {/* CTAs */}
-                <div className="bg-blue-600 rounded-xl p-6 text-white text-center">
+                <div className="bg-primary rounded-xl p-6 text-white text-center">
                   <h4 className="text-xl font-bold mb-3">¿Listo para el siguiente paso?</h4>
                   <p className="text-blue-100 mb-4 max-w-xl mx-auto text-sm">
                     Nuestros expertos pueden ayudarte a implementar las mejoras necesarias 
                     para fortalecer la ética y gobernanza de tu empresa.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                    <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200">
+                    <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-primary transition-colors duration-200">
                       Solicitar Consultoría Personalizada
                     </button>
                     <button className="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
@@ -905,7 +905,7 @@ const BusinessPage = () => {
             {successCases.map((case_, index) => (
               <div key={index} className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-4">
+                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mr-4">
                     <Building2 className="text-blue-600" size={20} />
                   </div>
                   <div>
@@ -962,7 +962,7 @@ const BusinessPage = () => {
               </div>
             </div>
 
-            <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200">
+            <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary transition-colors duration-200">
               Acceder a la Academia
             </button>
           </div>
@@ -1072,7 +1072,7 @@ const BusinessPage = () => {
               <div className="text-center">
                 <button
                   type="submit"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"
+                  className="bg-primary hover:bg-primary text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"
                 >
                   Solicitar propuesta personalizada
                 </button>

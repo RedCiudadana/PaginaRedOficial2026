@@ -7,6 +7,7 @@ import KPICounters from '../components/KPICounters';
 import QuickAccess from '../components/QuickAccess';
 import BlogPreview from '../components/BlogPreview';
 import { PartyPopper, ArrowRight, Sparkles, TrendingUp, Users, Award } from 'lucide-react';
+import homeHeroImage from '../assets/banner/01_SLIDER.png';
 
 const HomePage = () => {
   const heroSlides = [
@@ -15,8 +16,7 @@ const HomePage = () => {
       title: 'Impulsando la transparencia e innovación pública',
       subtitle: 'Transformando Guatemala',
       description: 'Fortalecemos la democracia guatemalteca a través de la participación ciudadana, el periodismo independiente y la colaboración con el gobierno para crear un país más transparente.',
-      image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
-      video: 'https://videos.pexels.com/video-files/3129671/3129671-uhd_2560_1440_30fps.mp4',
+      image: homeHeroImage,
       stats: [],
       cta: {
         primary: { text: 'Plan Estratégico 2024-2028', action: '/estrategia' },
@@ -30,7 +30,7 @@ const HomePage = () => {
       <HeroSlider slides={heroSlides} showStats={true} />
 
       {/* 15th Anniversary Celebration Banner */}
-      <div className="relative bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 overflow-hidden">
+      <div className="relative overflow-hidden" style={{backgroundColor: 'rgb(35, 40, 48)'}}>
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0" style={{
             backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
@@ -58,7 +58,7 @@ const HomePage = () => {
             </div>
             <Link
               to="/15-anos"
-              className="flex-shrink-0 bg-white text-orange-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-50 transition-all transform hover:scale-105 shadow-2xl flex items-center gap-3 group"
+              className="flex-shrink-0 bg-white text-primary px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-50 transition-all transform hover:scale-105 shadow-2xl flex items-center gap-3 group"
             >
               <span>Ver Celebración</span>
               <ArrowRight size={24} className="group-hover:translate-x-1 transition-transform" />

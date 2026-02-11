@@ -103,7 +103,7 @@ const BlogPage = () => {
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
                     selectedCategory === category
-                      ? 'bg-blue-600 text-white shadow-md'
+                      ? 'bg-primary text-white shadow-md'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
                 >
@@ -136,7 +136,7 @@ const BlogPage = () => {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute top-4 left-4">
-                      <span className="bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                      <span className="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
                         Destacado
                       </span>
                     </div>

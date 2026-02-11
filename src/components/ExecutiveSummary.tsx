@@ -1,39 +1,44 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Target, Lightbulb, ArrowRight, Award } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import favicon from '../assets/logo/FAVICON.png';
+import iconMission from '../assets/iconos/01_ICON.png';
+import iconHow from '../assets/iconos/02_ICON.png';
+import iconImpact from '../assets/iconos/03_ICON.png';
+import ctaBg from '../assets/banner/01_CALL TO ACTION.png';
 
 const ExecutiveSummary = () => {
   const keyPoints = [
     {
-      icon: Target,
+      iconSrc: iconMission,
+      iconAlt: 'Nuestra Misión',
       title: 'Nuestra Misión',
       description: 'Promovemos la transparencia, innovación pública y participación ciudadana para fortalecer la democracia guatemalteca.',
-      color: 'text-blue-600',
-      bgColor: 'bg-blue-50'
+      bgColor: 'bg-primary'
     },
     {
-      icon: Lightbulb,
+      iconSrc: iconHow,
+      iconAlt: 'Cómo lo Hacemos',
       title: 'Cómo lo Hacemos',
       description: 'A través de tecnología, capacitación especializada y colaboración con instituciones públicas y medios de comunicación.',
-      color: 'text-green-600',
-      bgColor: 'bg-green-50'
+      bgColor: 'bg-primary'
     },
     {
-      icon: Award,
+      iconSrc: iconImpact,
+      iconAlt: 'Nuestro Impacto',
       title: 'Nuestro Impacto',
       description: 'Transformando Guatemala con presencia nacional y resultados tangibles en transparencia y participación ciudadana.',
-      color: 'text-purple-600',
-      bgColor: 'bg-purple-50'
+      bgColor: 'bg-primary'
     }
   ];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-white via-blue-50/30 to-green-50/20">
+    <section className="py-12 sm:py-16 lg:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-          <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 lg:px-6 lg:py-3 rounded-full mb-4 lg:mb-6">
-            <Target className="mr-2" size={16} />
+          <div className="inline-flex items-center bg-white text-gray-800 px-4 py-2 lg:px-6 lg:py-3 rounded-full mb-4 lg:mb-6">
+            <img src={favicon} alt="" className="mr-2 w-10 h-10" />
             <span className="font-semibold text-sm lg:text-base">¿Qué es Red Ciudadana?</span>
           </div>
           
@@ -52,17 +57,18 @@ const ExecutiveSummary = () => {
           {keyPoints.map((point, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl lg:rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100"
+              className="bg-white rounded-xl lg:rounded-2xl flex items-center justify-center p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100"
+              style={{flexDirection: 'column', justifyContent: 'space-between'}}
             >
-              <div className={`w-12 h-12 lg:w-14 lg:h-14 ${point.bgColor} rounded-xl flex items-center justify-center mb-4 lg:mb-6`}>
-                <point.icon className={point.color} size={24} />
+              <div className={`w-20 h-20 rounded-xl flex items-center justify-center mb-4 lg:mb-6`}>
+                <img src={point.iconSrc} alt={point.iconAlt} className="w-100 h-100" />
               </div>
               
               <h3 className="text-lg lg:text-xl font-bold text-gray-900 mb-3 lg:mb-4">
                 {point.title}
               </h3>
               
-              <p className="text-gray-600 leading-relaxed text-sm lg:text-base">
+              <p className="text-gray-600 text-center leading-relaxed text-sm lg:text-base">
                 {point.description}
               </p>
             </div>
@@ -72,7 +78,10 @@ const ExecutiveSummary = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-green-600 rounded-2xl lg:rounded-3xl p-6 lg:p-8 text-white">
+          <div
+            className="rounded-2xl lg:rounded-3xl p-6 lg:p-8 text-white bg-cover bg-center"
+            style={{ backgroundImage: `url(${ctaBg})` }}
+          >
             <h3 className="text-xl lg:text-2xl font-bold mb-3 lg:mb-4">
               Conoce Más Sobre Nuestro Trabajo
             </h3>
@@ -83,7 +92,7 @@ const ExecutiveSummary = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/quienes-somos"
-                className="inline-flex items-center bg-white text-blue-600 px-6 py-3 lg:px-8 lg:py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 text-sm lg:text-base"
+                className="inline-flex items-center bg-white text-gray-600 px-6 py-3 lg:px-8 lg:py-4 rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors duration-200 text-sm lg:text-base"
               >
                 Conocer Nuestra Historia
                 <ArrowRight className="ml-2" size={16} />

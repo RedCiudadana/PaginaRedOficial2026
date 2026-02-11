@@ -72,16 +72,16 @@ const HeroSlider: React.FC<HeroSliderProps> = ({
   const getBadgeColor = (color: string) => {
     switch (color) {
       case 'blue':
-        return 'bg-blue-600/20 text-blue-300 border-blue-400/20';
+        return 'bg-primary text-blue-300 border-blue-400/20';
       case 'green':
-        return 'bg-green-600/20 text-green-300 border-green-400/20';
+        return 'bg-primary text-green-300 border-green-400/20';
       default:
-        return 'bg-blue-600/20 text-blue-300 border-blue-400/20';
+        return 'bg-primary text-blue-300 border-blue-400/20';
     }
   };
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700">
+    <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Video or Image with Overlay */}
       <div className="absolute inset-0">
         {currentSlideData.video ? (
@@ -123,8 +123,6 @@ const HeroSlider: React.FC<HeroSliderProps> = ({
             style={{ backgroundImage: `url(${currentSlideData.image})` }}
           />
         )}
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/95 via-blue-800/85 to-blue-900/70" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full z-10">
@@ -137,7 +135,7 @@ const HeroSlider: React.FC<HeroSliderProps> = ({
                 className={`inline-flex items-center backdrop-blur-sm border px-4 py-2 lg:px-6 lg:py-3 rounded-full text-xs lg:text-sm font-semibold ${getBadgeColor(currentSlideData.badge.color)} transform hover:scale-105 transition-all duration-300 cursor-default`}
                 style={{ animationDelay: '0.2s' }}
               >
-                <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse" />
+                <span className="w-2 h-2 bg-primary rounded-full mr-2 animate-pulse" />
                 {currentSlideData.badge.text}
               </div>
             )}
@@ -182,7 +180,7 @@ const HeroSlider: React.FC<HeroSliderProps> = ({
             <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 pt-4 animate-fade-in" style={{ animationDelay: '1s' }}>
               <a
                 href={currentSlideData.cta.primary.action.startsWith('/') ? currentSlideData.cta.primary.action : '#'}
-                className="group bg-green-600 hover:bg-green-700 text-white px-6 py-3 lg:px-8 lg:py-4 rounded-xl font-semibold flex items-center justify-center transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-xl hover:shadow-2xl text-sm lg:text-base"
+                className="group bg-primary hover:bg-primary text-white px-6 py-3 lg:px-8 lg:py-4 rounded-xl font-semibold flex items-center justify-center transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-xl hover:shadow-2xl text-sm lg:text-base"
               >
                 {currentSlideData.cta.primary.text}
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" size={16} />

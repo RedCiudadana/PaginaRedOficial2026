@@ -10,7 +10,7 @@ const AnticorruptionPage = () => {
       title: 'Implementación y Lanzamiento de Open Contracting',
       icon: FileText,
       color: 'from-blue-500 to-blue-600',
-      bgColor: 'bg-blue-50',
+      bgColor: 'bg-primary',
       textColor: 'text-blue-600',
       description: 'Implementamos estándares internacionales de contratación abierta para aumentar la transparencia en procesos de adquisición pública y facilitar el monitoreo ciudadano.',
       objectives: [
@@ -37,7 +37,7 @@ const AnticorruptionPage = () => {
       title: 'Red Flags de Contrataciones e Índice Anticorrupción',
       icon: AlertTriangle,
       color: 'from-red-500 to-red-600',
-      bgColor: 'bg-red-50',
+      bgColor: 'bg-primary',
       textColor: 'text-red-600',
       description: 'Desarrollamos sistemas automatizados de detección de señales de alerta en contrataciones públicas y creamos índices que miden el riesgo de corrupción en instituciones.',
       objectives: [
@@ -64,7 +64,7 @@ const AnticorruptionPage = () => {
       title: 'Implementando PIDA y Portal Anticorrupción',
       icon: Database,
       color: 'from-green-500 to-green-600',
-      bgColor: 'bg-green-50',
+      bgColor: 'bg-primary',
       textColor: 'text-green-600',
       description: 'Desarrollamos el Programa de Datos Abiertos contra la Corrupción (PIDA) y un portal integral que centraliza información, herramientas y recursos anticorrupción.',
       objectives: [
@@ -91,7 +91,7 @@ const AnticorruptionPage = () => {
       title: 'Plataforma de Acceso a la Información y Observatorio de Transparencia Fiscal',
       icon: Eye,
       color: 'from-purple-500 to-purple-600',
-      bgColor: 'bg-purple-50',
+      bgColor: 'bg-primary',
       textColor: 'text-purple-600',
       description: 'Creamos una plataforma integral para facilitar solicitudes de información pública y un observatorio que monitorea la transparencia fiscal de instituciones gubernamentales.',
       objectives: [
@@ -128,7 +128,7 @@ const AnticorruptionPage = () => {
       <section className="bg-gradient-to-br from-red-900 via-red-800 to-red-700 text-white py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-red-600/20 text-red-300 px-6 py-3 rounded-full mb-6">
+            <div className="inline-flex items-center bg-primary text-red-300 px-6 py-3 rounded-full mb-6">
               <Shield className="mr-2" size={20} />
               <span className="font-semibold">Objetivo Estratégico 3</span>
             </div>
@@ -285,7 +285,7 @@ const AnticorruptionPage = () => {
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
-              <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Shield className="text-red-600" size={24} />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Portal Anticorrupción</h3>
@@ -295,7 +295,7 @@ const AnticorruptionPage = () => {
             </div>
 
             <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
-              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-4">
                 <AlertTriangle className="text-blue-600" size={24} />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Sistema de Alertas</h3>
@@ -305,7 +305,7 @@ const AnticorruptionPage = () => {
             </div>
 
             <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
-              <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Database className="text-green-600" size={24} />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Base de Datos PIDA</h3>
@@ -316,10 +316,10 @@ const AnticorruptionPage = () => {
           </div>
 
           <div className="text-center">
-            <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 mr-4">
+            <button className="bg-primary hover:bg-primary text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 mr-4">
               Acceder al Portal Anticorrupción
             </button>
-            <button className="border-2 border-red-600 text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-red-50 transition-colors duration-200">
+            <button className="border-2 border-red-600 text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary transition-colors duration-200">
               Descargar Guía de Uso
             </button>
           </div>
@@ -337,7 +337,7 @@ const AnticorruptionPage = () => {
             de corrupción de manera segura y efectiva.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-red-50 transition-colors duration-200">
+            <button className="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary transition-colors duration-200">
               Hacer un Reporte
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">

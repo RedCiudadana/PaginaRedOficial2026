@@ -38,7 +38,7 @@ const GDPRBar = () => {
           <div className="py-4">
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
               <div className="flex items-start lg:items-center gap-3 flex-1">
-                <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 lg:mt-0">
+                <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center flex-shrink-0 mt-1 lg:mt-0">
                   <Shield className="text-blue-600" size={16} />
                 </div>
                 <div className="flex-1">
@@ -57,19 +57,19 @@ const GDPRBar = () => {
               <div className="flex flex-col sm:flex-row gap-2 lg:flex-shrink-0">
                 <button
                   onClick={handleCustomize}
-                  className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-800 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-200"
+                  className="px-4 py-2 text-sm font-medium bg-white text-gray-600 hover:text-gray-800 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-200"
                 >
                   Personalizar
                 </button>
                 <button
                   onClick={handleReject}
-                  className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-800 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-200"
+                  className="px-4 py-2 text-sm font-medium bg-white text-gray-600 hover:text-gray-800 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-200"
                 >
                   Rechazar
                 </button>
                 <button
                   onClick={handleAccept}
-                  className="px-6 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors duration-200"
+                  className="px-6 py-2 text-sm font-medium text-white bg-primary hover:bg-primary rounded-lg transition-colors duration-200"
                 >
                   Aceptar Todo
                 </button>
@@ -151,7 +151,7 @@ const GDPRBar = () => {
               </div>
             </div>
 
-            <div className="bg-blue-50 rounded-lg p-4 mb-4">
+            <div className="bg-primary rounded-lg p-4 mb-4">
               <h4 className="font-medium text-gray-900 mb-2">Tus Derechos</h4>
               <p className="text-sm text-gray-600 mb-2">
                 Conforme a la Ley de Protección de Datos Personales de Guatemala, tienes derecho a:
@@ -173,7 +173,7 @@ const GDPRBar = () => {
               </button>
               <button
                 onClick={handleAccept}
-                className="px-6 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors duration-200"
+                className="px-6 py-2 text-sm font-medium text-white bg-primary hover:bg-primary rounded-lg transition-colors duration-200"
               >
                 Guardar Preferencias
               </button>

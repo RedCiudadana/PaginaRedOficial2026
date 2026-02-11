@@ -89,7 +89,7 @@ const AboutUs = () => {
         {/* Mission, Vision, Values */}
         <div className="grid lg:grid-cols-3 gap-8 mb-20">
           <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+            <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mb-6">
               <Target className="text-blue-600" size={32} />
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Misión</h3>
@@ -100,7 +100,7 @@ const AboutUs = () => {
           </div>
 
           <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
+            <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mb-6">
               <Eye className="text-green-600" size={32} />
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Visión</h3>
@@ -111,7 +111,7 @@ const AboutUs = () => {
           </div>
 
           <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mb-6">
+            <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mb-6">
               <Award className="text-purple-600" size={32} />
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Impacto</h3>
@@ -130,7 +130,7 @@ const AboutUs = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, index) => (
               <div key={index} className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
-                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mb-4">
                   <value.icon className="text-blue-600" size={24} />
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">{value.title}</h4>
@@ -163,7 +163,7 @@ const AboutUs = () => {
                     key={index}
                     onClick={() => setCurrentYear(index)}
                     className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                      index === currentYear ? 'bg-blue-600' : 'bg-gray-300'
+                      index === currentYear ? 'bg-primary' : 'bg-gray-300'
                     }`}
                   />
                 ))}
@@ -194,7 +194,7 @@ const AboutUs = () => {
                   {timeline[currentYear].achievements.map((achievement, index) => (
                     <span
                       key={index}
-                      className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
+                      className="bg-primary text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
                     >
                       {achievement}
                     </span>

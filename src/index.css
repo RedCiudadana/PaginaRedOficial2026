@@ -2,6 +2,186 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'EuclidCircularA';
+  src: url('/src/assets/tipografia/texto/EuclidCircularA-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'EuclidCircularA';
+  src: url('/src/assets/tipografia/texto/EuclidCircularA-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'EuclidCircularA';
+  src: url('/src/assets/tipografia/texto/EuclidCircularA-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'EuclidCircularA';
+  src: url('/src/assets/tipografia/texto/EuclidCircularA-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'EuclidCircularA';
+  src: url('/src/assets/tipografia/texto/EuclidCircularA-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'EuclidCircularA';
+  src: url('/src/assets/tipografia/texto/EuclidCircularA-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'EuclidCircularA';
+  src: url('/src/assets/tipografia/texto/EuclidCircularA-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'EuclidCircularA';
+  src: url('/src/assets/tipografia/texto/EuclidCircularA-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'EuclidCircularA';
+  src: url('/src/assets/tipografia/texto/EuclidCircularA-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'EuclidCircularA';
+  src: url('/src/assets/tipografia/texto/EuclidCircularA-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/src/assets/tipografia/titular/Sora-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/src/assets/tipografia/titular/Sora-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/src/assets/tipografia/titular/Sora-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/src/assets/tipografia/titular/Sora-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/src/assets/tipografia/titular/Sora-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/src/assets/tipografia/titular/Sora-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/src/assets/tipografia/titular/Sora-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/src/assets/tipografia/titular/Sora-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  body {
+    background-color: rgb(241, 245, 250);
+    font-family: 'EuclidCircularA', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  }
+  button,
+  input[type='button'],
+  input[type='submit'],
+  input[type='reset'],
+  .btn {
+    @apply bg-[#7FB0EA] text-white;
+  }
+
+  button:hover,
+  input[type='button']:hover,
+  input[type='submit']:hover,
+  input[type='reset']:hover,
+  .btn:hover {
+    @apply bg-[#F0F4FA];
+  }
+
+  section {
+    background-color: #F1F5FA !important;
+    background-image: none !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Sora', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  }
+}
+
 @layer utilities {
   @keyframes fadeInUp {
     from {

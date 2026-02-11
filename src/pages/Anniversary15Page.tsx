@@ -118,7 +118,7 @@ const Anniversary15Page = () => {
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
           <div className="text-center">
-            <div className="inline-flex items-center gap-2 bg-yellow-400 text-gray-900 px-6 py-2 rounded-full font-bold text-lg mb-8 animate-bounce">
+            <div className="inline-flex items-center gap-2 bg-primary text-gray-900 px-6 py-2 rounded-full font-bold text-lg mb-8 animate-bounce">
               <Award size={24} />
               <span>Celebrando 15 Años</span>
             </div>
@@ -130,7 +130,7 @@ const Anniversary15Page = () => {
               Desde 2010, hemos trabajado incansablemente para fortalecer la democracia, la transparencia y la innovación cívica en Guatemala
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-yellow-400 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-all transform hover:scale-105 shadow-lg">
+              <button className="bg-primary text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-primary transition-all transform hover:scale-105 shadow-lg">
                 Ver Eventos de Celebración
               </button>
               <button className="bg-white/10 backdrop-blur-sm text-white border-2 border-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/20 transition-all">
@@ -169,7 +169,7 @@ const Anniversary15Page = () => {
                   </div>
 
                   <div className="hidden lg:block">
-                    <div className="w-6 h-6 bg-yellow-400 rounded-full border-4 border-white shadow-lg"></div>
+                    <div className="w-6 h-6 bg-primary rounded-full border-4 border-white shadow-lg"></div>
                   </div>
 
                   <div className="flex-1 hidden lg:block"></div>
@@ -202,7 +202,7 @@ const Anniversary15Page = () => {
                       <img src={event.image_url} alt={event.title} className="w-full h-full object-cover" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                       <div className="absolute top-4 left-4">
-                        <span className="bg-yellow-400 text-gray-900 px-4 py-2 rounded-lg font-bold text-sm flex items-center gap-2">
+                        <span className="bg-primary text-gray-900 px-4 py-2 rounded-lg font-bold text-sm flex items-center gap-2">
                           <Award size={16} />
                           Evento Destacado
                         </span>
@@ -243,7 +243,7 @@ const Anniversary15Page = () => {
                           href={event.registration_url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all"
+                          className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary transition-all"
                         >
                           Registrarse Ahora
                           <ArrowRight size={20} />
@@ -276,7 +276,7 @@ const Anniversary15Page = () => {
               const Icon = goal.icon;
               return (
                 <div key={index} className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/20 transition-all">
-                  <div className="bg-yellow-400 text-gray-900 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
+                  <div className="bg-primary text-gray-900 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
                     <Icon size={32} />
                   </div>
                   <h3 className="text-xl font-bold mb-3">{goal.title}</h3>
@@ -299,7 +299,7 @@ const Anniversary15Page = () => {
             Únete a nosotros en esta celebración y ayúdanos a construir los próximos 15 años de transformación social
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-700 transition-all transform hover:scale-105 shadow-lg">
+            <button className="bg-primary text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-primary transition-all transform hover:scale-105 shadow-lg">
               Conviértete en Aliado
             </button>
             <button className="bg-gray-100 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-200 transition-all">

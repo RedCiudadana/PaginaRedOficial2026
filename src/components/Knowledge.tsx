@@ -88,7 +88,7 @@ const Knowledge = () => {
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
                       <div className="flex items-center mb-2">
-                        <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium mr-3">
+                        <span className="bg-primary text-green-800 px-3 py-1 rounded-full text-xs font-medium mr-3">
                           {publication.type}
                         </span>
                         <span className="text-sm text-gray-500">{publication.date}</span>
@@ -113,7 +113,7 @@ const Knowledge = () => {
                       <span>{publication.downloads.toLocaleString()} descargas</span>
                     </div>
                     
-                    <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 flex items-center">
+                    <button className="bg-primary hover:bg-primary text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 flex items-center">
                       <Download size={16} className="mr-2" />
                       Descargar
                     </button>
@@ -130,7 +130,7 @@ const Knowledge = () => {
                 Accede a nuestro repositorio completo con más de 150 publicaciones, investigaciones 
                 y recursos especializados organizados por temática y año.
               </p>
-              <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200">
+              <button className="bg-primary hover:bg-primary text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200">
                 Explorar Repositorio Completo
               </button>
             </div>

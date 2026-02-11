@@ -85,11 +85,11 @@ const ConectaFuturoPopup = () => {
           <div className="mt-3 flex items-center justify-center text-xs text-gray-500">
             <div className="flex items-center gap-4">
               <span className="flex items-center">
-                <span className="w-2 h-2 bg-green-500 rounded-full mr-1.5"></span>
+                <span className="w-2 h-2 bg-primary rounded-full mr-1.5"></span>
                 Certificación oficial
               </span>
               <span className="flex items-center">
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-1.5"></span>
+                <span className="w-2 h-2 bg-primary rounded-full mr-1.5"></span>
                 100% en línea
               </span>
             </div>

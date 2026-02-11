@@ -29,7 +29,7 @@ const SistemaRC = () => {
     <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-blue-800 rounded-full text-sm font-semibold mb-6">
             <Database className="w-4 h-4" />
             <span>Plataforma de Transparencia</span>
           </div>
@@ -48,7 +48,7 @@ const SistemaRC = () => {
               return (
                 <div key={index} className="flex gap-4">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                    <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
                       <Icon className="w-6 h-6 text-white" />
                     </div>
                   </div>
@@ -65,7 +65,7 @@ const SistemaRC = () => {
             href="https://sistema.redciudadana.org.gt/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 shadow-lg hover:shadow-xl"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white rounded-lg font-semibold hover:bg-primary transition-colors duration-300 shadow-lg hover:shadow-xl"
           >
             Acceder al Sistema RC
             <ExternalLink className="w-5 h-5" />

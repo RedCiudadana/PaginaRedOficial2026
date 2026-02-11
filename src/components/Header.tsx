@@ -131,7 +131,7 @@ const Header = () => {
                       to={item.href}
                       className={`px-3 xl:px-4 py-2 rounded-lg transition-all duration-200 font-medium text-sm xl:text-base ${
                         item.highlight
-                          ? 'bg-black text-white hover:bg-gray-800 shadow-md hover:shadow-lg transform hover:-translate-y-0.5'
+                          ? 'bg-primary text-white hover:bg-gray-800 shadow-md hover:shadow-lg transform hover:-translate-y-0.5'
                           : isActiveLink(item.href)
                             ? 'text-black bg-gray-100'
                             : 'text-gray-700 hover:text-black hover:bg-gray-100'
@@ -149,7 +149,7 @@ const Header = () => {
           <div className="flex items-center space-x-2 lg:space-x-4">
             <LanguageSwitcher />
 
-            <button className="p-2 lg:p-3 text-gray-600 hover:text-black hover:bg-gray-100 rounded-lg transition-all duration-200 hidden sm:block">
+            <button className="p-2 lg:p-3 text-gray-600 hover:text-black bg-white hover:bg-gray-100 rounded-lg transition-all duration-200 hidden sm:block">
               <Search size={18} />
             </button>
 
@@ -191,7 +191,7 @@ const Header = () => {
                         to={item.href}
                         className={`block px-4 py-3 rounded-lg mx-2 transition-colors duration-200 ${
                           item.highlight
-                            ? 'bg-black text-white font-semibold text-sm'
+                            ? 'bg-primary text-white font-semibold text-sm'
                             : isActiveLink(item.href)
                               ? 'bg-gray-100 text-black font-semibold text-sm'
                               : 'text-gray-700 hover:bg-gray-100 hover:text-black text-sm'

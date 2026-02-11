@@ -36,10 +36,10 @@ const LanguageSwitcher = () => {
   return (
     <button
       onClick={toggleLanguage}
-      className="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-100 transition-all duration-200 group"
+      className="flex items-center bg-white space-x-2 p-2 rounded-lg hover:bg-gray-100 transition-all duration-200 group"
       aria-label="Change language"
     >
-      <div className="w-6 h-6 rounded overflow-hidden shadow-sm ring-1 ring-gray-200 group-hover:ring-gray-300 transition-all duration-200">
+      <div className="w-6 h-6 bg-white rounded overflow-hidden shadow-sm ring-1 ring-gray-200 group-hover:ring-gray-300 transition-all duration-200">
         {language === 'es' ? <GuatemalaFlag className="w-full h-full" /> : <UKFlag className="w-full h-full" />}
       </div>
       <span className="text-sm font-medium text-gray-700 group-hover:text-black hidden sm:inline">

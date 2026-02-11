@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, User, Eye, ArrowRight, BookOpen } from 'lucide-react';
+import { Calendar, User, Eye, ArrowRight } from 'lucide-react';
+import favicon from '../assets/logo/FAVICON.png';
 
 const BlogPreview = () => {
   const featuredPosts = [
@@ -43,23 +44,23 @@ const BlogPreview = () => {
   const getCategoryColor = (category) => {
     switch (category) {
       case 'Innovación':
-        return 'bg-blue-100 text-blue-800';
+        return 'bg-primary text-white';
       case 'Periodismo':
-        return 'bg-green-100 text-green-800';
+        return 'bg-primary text-white';
       case 'Anticorrupción':
-        return 'bg-red-100 text-red-800';
+        return 'bg-primary text-white';
       default:
         return 'bg-gray-100 text-gray-800';
     }
   };
 
   return (
-    <section className="py-10 sm:py-12 lg:py-24 bg-gradient-to-br from-white via-gray-50 to-blue-50/30">
+    <section className="pb-10 sm:pb-12 lg:pb-24 bg-gradient-to-br from-white via-gray-50 to-blue-50/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-10 lg:mb-16">
-          <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 lg:px-6 lg:py-3 rounded-full mb-4 lg:mb-6">
-            <BookOpen className="mr-2" size={16} />
+          <div className="inline-flex items-center bg-white text-gray-800 px-4 py-2 lg:px-6 lg:py-3 rounded-full mb-4 lg:mb-6">
+            <img src={favicon} alt="" className="mr-2 w-10 h-10" />
             <span className="font-semibold">El Pulso Cívico</span>
           </div>
           
@@ -88,7 +89,7 @@ const BlogPreview = () => {
                     {featuredPosts[0].category}
                   </span>
                 </div>
-                <div className="absolute top-3 right-3 lg:top-4 lg:right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-medium">
+                <div className="absolute top-3 right-3 lg:top-4 lg:right-4 bg-primary text-white px-3 py-1 rounded-full text-xs font-medium">
                   Destacado
                 </div>
               </div>
