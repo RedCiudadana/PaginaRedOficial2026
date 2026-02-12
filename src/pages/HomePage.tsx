@@ -40,7 +40,7 @@ const HomePage = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-4">
-              <div className="bg-white/20 backdrop-blur-sm p-4 rounded-2xl animate-bounce">
+              <div className="bg-white/20 backdrop-blur-sm p-4 rounded-2xl">
                 <PartyPopper size={48} className="text-white" />
               </div>
               <div>
@@ -58,7 +58,7 @@ const HomePage = () => {
             </div>
             <Link
               to="/15-anos"
-              className="flex-shrink-0 bg-white text-primary px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-50 transition-all transform hover:scale-105 shadow-2xl flex items-center gap-3 group"
+              className="flex-shrink-0 bg-white text-gray-800 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-50 transition-all transform hover:scale-105 shadow-2xl flex items-center gap-3 group"
             >
               <span>Ver Celebración</span>
               <ArrowRight size={24} className="group-hover:translate-x-1 transition-transform" />

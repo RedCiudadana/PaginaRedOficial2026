@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { Filter, Search, Calendar, MapPin, Users, ExternalLink, Award } from 'lucide-react';
+import impactIcon1 from '../assets/iconos/11_ICON.png';
+import impactIcon2 from '../assets/iconos/12_ICON.png';
+import impactIcon3 from '../assets/iconos/13_ICON.png';
+import impactIcon4 from '../assets/iconos/14_ICON.png';
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -140,13 +144,13 @@ const Projects = () => {
   const getStatusColor = (status) => {
     switch (status) {
       case 'Activo':
-        return 'bg-primary text-green-800';
+        return 'bg-primary text-white';
       case 'En desarrollo':
-        return 'bg-primary text-yellow-800';
+        return 'bg-primary text-white';
       case 'Piloto':
-        return 'bg-primary text-blue-800';
+        return 'bg-primary text-white';
       default:
-        return 'bg-gray-100 text-gray-800';
+        return 'bg-gray-100 text-white';
     }
   };
 
@@ -246,37 +250,40 @@ const Projects = () => {
         </div>
 
         {/* Impact Summary */}
-        <div className="bg-gradient-to-r from-blue-600 to-green-600 rounded-3xl p-8 text-white text-center">
-          <div className="flex items-center justify-center mb-4">
-            <Award className="mr-2" size={32} />
+        <div className="bg-gray-800 rounded-3xl p-8 text-white text-center">
+          <div className="flex items-center justify-center mb-16 mt-8">
             <h3 className="text-2xl font-bold">Impacto Acumulado</h3>
           </div>
           
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
+          <div className="grid md:grid-cols-4 gap-8 mb-16">
             <div>
+              <img src={impactIcon1} alt="" className="mx-auto mb-3 h-14 w-14" />
               <div className="text-4xl font-bold mb-2">156+</div>
               <div className="text-blue-100">Proyectos Completados</div>
             </div>
             <div>
+              <img src={impactIcon2} alt="" className="mx-auto mb-3 h-14 w-14" />
               <div className="text-4xl font-bold mb-2">2.8M+</div>
               <div className="text-blue-100">Personas Beneficiadas</div>
             </div>
             <div>
+              <img src={impactIcon3} alt="" className="mx-auto mb-3 h-14 w-14" />
               <div className="text-4xl font-bold mb-2">Q45M</div>
               <div className="text-blue-100">Ahorro al Estado</div>
             </div>
             <div>
+              <img src={impactIcon4} alt="" className="mx-auto mb-3 h-14 w-14" />
               <div className="text-4xl font-bold mb-2">89%</div>
               <div className="text-blue-100">Satisfacción Promedio</div>
             </div>
           </div>
 
-          <p className="text-blue-100 max-w-2xl mx-auto mb-6">
+          <p className="text-blue-100 max-w-2xl mx-auto mb-16">
             Cada proyecto representa nuestro compromiso con la transformación de Guatemala. 
             Trabajamos con metodologías probadas y medimos nuestro impacto constantemente.
           </p>
 
-          <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-primary transition-colors duration-200">
+          <button className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-800 transition-colors duration-200 mb-8">
             Ver Todos los Proyectos
           </button>
         </div>

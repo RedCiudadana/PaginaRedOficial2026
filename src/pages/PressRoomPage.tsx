@@ -114,7 +114,7 @@ const PressRoomPage = () => {
     : pressReleases.filter(release => release.category === selectedCategory);
 
   return (
-    <div className="pt-20">
+    <div className="">
       <HeroSlider slides={heroSlides} />
 
       {/* Press Releases */}

@@ -69,7 +69,7 @@ const Knowledge = () => {
               onClick={() => setActiveTab(tab.id)}
               className={`flex items-center px-6 py-3 rounded-xl font-medium transition-all duration-200 whitespace-nowrap flex-1 justify-center ${
                 activeTab === tab.id
-                  ? 'bg-white text-blue-600 shadow-md'
+                  ? 'bg-white text-primary shadow-md'
                   : 'text-gray-600 hover:text-gray-900'
               }`}
             >
@@ -88,7 +88,7 @@ const Knowledge = () => {
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
                       <div className="flex items-center mb-2">
-                        <span className="bg-primary text-green-800 px-3 py-1 rounded-full text-xs font-medium mr-3">
+                        <span className="bg-primary text-white px-3 py-1 rounded-full text-xs font-medium mr-3">
                           {publication.type}
                         </span>
                         <span className="text-sm text-gray-500">{publication.date}</span>
@@ -122,11 +122,11 @@ const Knowledge = () => {
               ))}
             </div>
 
-            <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8 text-center">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            <div className="bg-gray-800 rounded-2xl p-8 text-center py-16">
+              <h3 className="text-2xl font-bold text-white mb-4">
                 Repositorio Completo
               </h3>
-              <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+              <p className="text-white mb-6 max-w-2xl mx-auto">
                 Accede a nuestro repositorio completo con más de 150 publicaciones, investigaciones 
                 y recursos especializados organizados por temática y año.
               </p>

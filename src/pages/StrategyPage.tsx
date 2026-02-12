@@ -25,7 +25,7 @@ const StrategyPage = () => {
   ];
 
   return (
-    <div className="pt-20">
+    <div className="">
       <HeroSlider slides={heroSlides} />
       <Strategy />
     </div>

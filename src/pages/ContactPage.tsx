@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import HeroSlider from '../components/HeroSlider';
 import { Send } from 'lucide-react';
+import Slider from '../assets/banner/03_SLIDER.png';
 
 const ContactPage = () => {
   const heroSlides = [
@@ -10,7 +11,7 @@ const ContactPage = () => {
       title: 'Contacto',
       subtitle: 'Estamos aquí para apoyarte',
       description: 'Contáctanos para colaboraciones institucionales, consultas especializadas, solicitudes de medios o cualquier información que necesites sobre nuestro trabajo.',
-      image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
+      image: Slider,
       cta: {
         primary: { text: 'Enviar Mensaje', action: '#contacto-form' }
       }
@@ -18,7 +19,7 @@ const ContactPage = () => {
   ];
 
   return (
-    <div className="pt-20">
+    <div className="">
       <HeroSlider slides={heroSlides} />
 
       {/* Main Contact Section */}

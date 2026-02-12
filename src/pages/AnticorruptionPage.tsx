@@ -123,7 +123,7 @@ const AnticorruptionPage = () => {
   ];
 
   return (
-    <div className="pt-20">
+    <div className="">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-red-900 via-red-800 to-red-700 text-white py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
