@@ -90,7 +90,7 @@ const AboutUs = () => {
         <div className="grid lg:grid-cols-3 gap-8 mb-20">
           <div className="bg-white rounded-2xl p-8 shadow-lg">
             <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mb-6">
-              <Target className="text-blue-600" size={32} />
+              <Target className="text-white" size={32} />
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Misión</h3>
             <p className="text-gray-600 leading-relaxed">
@@ -101,7 +101,7 @@ const AboutUs = () => {
 
           <div className="bg-white rounded-2xl p-8 shadow-lg">
             <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mb-6">
-              <Eye className="text-green-600" size={32} />
+              <Eye className="text-white" size={32} />
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Visión</h3>
             <p className="text-gray-600 leading-relaxed">
@@ -112,7 +112,7 @@ const AboutUs = () => {
 
           <div className="bg-white rounded-2xl p-8 shadow-lg">
             <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mb-6">
-              <Award className="text-purple-600" size={32} />
+              <Award className="text-white" size={32} />
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Impacto</h3>
             <p className="text-gray-600 leading-relaxed">
@@ -131,7 +131,7 @@ const AboutUs = () => {
             {values.map((value, index) => (
               <div key={index} className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
                 <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mb-4">
-                  <value.icon className="text-blue-600" size={24} />
+                  <value.icon className="text-white" size={24} />
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">{value.title}</h4>
                 <p className="text-gray-600 text-sm leading-relaxed">{value.description}</p>
@@ -180,7 +180,7 @@ const AboutUs = () => {
 
             {/* Timeline Content */}
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">
+              <div className="text-4xl font-bold text-primary mb-2">
                 {timeline[currentYear].year}
               </div>
               <h4 className="text-2xl font-bold text-gray-900 mb-4">

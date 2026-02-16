@@ -29,7 +29,7 @@ const ContactPage = () => {
           <div className="bg-white rounded-2xl lg:rounded-3xl p-6 lg:p-10 shadow-xl border border-gray-100">
               <div className="flex items-center mb-6 lg:mb-8">
                 <div className="w-12 h-12 lg:w-16 lg:h-16 bg-primary rounded-2xl flex items-center justify-center mr-4">
-                  <Send className="text-blue-600" size={24} />
+                  <Send className="text-white" size={24} />
                 </div>
                 <div>
                   <h2 className="text-xl lg:text-3xl font-bold text-gray-900">Envíanos un Mensaje</h2>
@@ -144,7 +144,7 @@ const ContactPage = () => {
                 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-4 lg:py-5 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm lg:text-base"
+                  className="w-full bg-primary hover:bg-white text-white hover:text-primary py-4 lg:py-5 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm lg:text-base"
                 >
                   Enviar Mensaje
                 </button>

@@ -9,9 +9,9 @@ const InnovationGovernmentPage = () => {
       id: 'gobierno-abierto',
       title: 'Gobierno Abierto',
       icon: Building2,
-      color: 'from-blue-500 to-blue-600',
+      color: 'from-primary-500 to-primary-600',
       bgColor: 'bg-primary',
-      textColor: 'text-blue-600',
+      textColor: 'text-primary-600',
       description: 'Promovemos la transparencia, participación ciudadana y colaboración en las instituciones públicas para crear gobiernos más abiertos y responsables.',
       objectives: [
         'Implementar políticas de transparencia activa',
@@ -116,7 +116,7 @@ const InnovationGovernmentPage = () => {
   ];
 
   const overallStats = [
-    { icon: Building2, number: '80+', label: 'Instituciones Transformadas', color: 'text-blue-600' },
+    { icon: Building2, number: '80+', label: 'Instituciones Transformadas', color: 'text-primary-600' },
     { icon: Users, number: '2.8M', label: 'Ciudadanos Beneficiados', color: 'text-green-600' },
     { icon: Target, number: '156', label: 'Proyectos Implementados', color: 'text-purple-600' },
     { icon: Award, number: '89%', label: 'Satisfacción Promedio', color: 'text-orange-600' }
@@ -125,19 +125,19 @@ const InnovationGovernmentPage = () => {
   return (
     <div className="">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-24">
+      <section className="bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700 text-white py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-primary text-blue-300 px-6 py-3 rounded-full mb-6">
+            <div className="inline-flex items-center bg-primary text-white px-6 py-3 rounded-full mb-6">
               <Building2 className="mr-2" size={20} />
               <span className="font-semibold">Objetivo Estratégico 1</span>
             </div>
             
-            <h1 className="text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-5xl text-primary lg:text-6xl font-bold mb-6">
               Innovación en Gobierno
             </h1>
             
-            <p className="text-xl lg:text-2xl text-blue-100 max-w-4xl mx-auto font-light leading-relaxed">
+            <p className="text-xl lg:text-2xl text-primary max-w-4xl mx-auto font-light leading-relaxed">
               Transformamos la administración pública a través de tecnología avanzada, 
               datos abiertos y servicios ciudadanos digitales
             </p>
@@ -146,12 +146,12 @@ const InnovationGovernmentPage = () => {
           {/* Overall Stats */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {overallStats.map((stat, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center bg-primary rounded-2xl p-6">
                 <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="text-white" size={24} />
                 </div>
                 <div className="text-3xl font-bold mb-2">{stat.number}</div>
-                <div className="text-blue-200 text-sm">{stat.label}</div>
+                <div className="text-white text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -195,14 +195,14 @@ const InnovationGovernmentPage = () => {
 
           {/* Active Program Details */}
           <div className="bg-white rounded-3xl shadow-lg overflow-hidden">
-            <div className={`bg-gradient-to-r ${programs[activeProgram].color} p-8 text-white`}>
+            <div className={`bg-gradient-to-r ${programs[activeProgram].color} p-8 text-gray-800`}>
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mr-6">
                   {React.createElement(programs[activeProgram].icon, { size: 32 })}
                 </div>
                 <div>
                   <h3 className="text-3xl font-bold">{programs[activeProgram].title}</h3>
-                  <p className="text-white/90 text-lg mt-2">{programs[activeProgram].description}</p>
+                  <p className="text-gray-700 text-lg mt-2">{programs[activeProgram].description}</p>
                 </div>
               </div>
             </div>
@@ -271,7 +271,7 @@ const InnovationGovernmentPage = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-green-600 text-white">
+      <section className="py-20 text-white !bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">
             ¿Tu institución está lista para la transformación?
@@ -281,7 +281,7 @@ const InnovationGovernmentPage = () => {
             de innovación gubernamental adaptadas a sus necesidades específicas.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary transition-colors duration-200">
+            <button className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:text-gray-800 transition-colors duration-200">
               Solicitar Consultoría
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">

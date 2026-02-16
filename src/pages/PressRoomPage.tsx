@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import HeroSlider from '../components/HeroSlider';
+import pressHero from '../assets/banner/02_SLIDER.png';
 import {
   Newspaper,
   Download,
@@ -19,7 +20,7 @@ const PressRoomPage = () => {
       title: 'Sala de Prensa',
       subtitle: 'Información para Periodistas y Medios',
       description: 'Accede a comunicados de prensa, recursos multimedia, información sobre eventos y proyectos. Todo lo que necesitas para contar nuestras historias.',
-      image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
+      image: pressHero,
       cta: {
         primary: { text: 'Kit de Medios', action: '#media-kit' }
       }
@@ -153,7 +154,7 @@ const PressRoomPage = () => {
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between">
                   <div className="flex-1 mb-4 lg:mb-0">
                     <div className="flex items-center gap-3 mb-3">
-                      <span className="bg-primary text-blue-800 px-3 py-1 rounded-full text-xs font-medium">
+                      <span className="bg-primary text-white px-3 py-1 rounded-full text-xs font-medium">
                         {release.type}
                       </span>
                       <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-medium">
@@ -199,7 +200,7 @@ const PressRoomPage = () => {
           </div>
 
           <div className="text-center">
-            <button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl">
+            <button className="bg-primary hover:bg-primary text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl">
               Ver Todos los Comunicados
             </button>
           </div>
@@ -222,7 +223,7 @@ const PressRoomPage = () => {
             {mediaResources.map((resource, index) => (
               <div key={index} className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 border border-gray-200">
                 <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mb-4">
-                  <resource.icon className="text-blue-600" size={24} />
+                  <resource.icon className="text-white" size={24} />
                 </div>
 
                 <h3 className="text-lg font-bold text-gray-900 mb-2">

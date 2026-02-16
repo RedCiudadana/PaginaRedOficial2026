@@ -9,9 +9,9 @@ const AnticorruptionPage = () => {
       id: 'open-contracting',
       title: 'Implementación y Lanzamiento de Open Contracting',
       icon: FileText,
-      color: 'from-blue-500 to-blue-600',
+      color: 'from-primary-500 to-primary-600',
       bgColor: 'bg-primary',
-      textColor: 'text-blue-600',
+      textColor: 'text-primary-600',
       description: 'Implementamos estándares internacionales de contratación abierta para aumentar la transparencia en procesos de adquisición pública y facilitar el monitoreo ciudadano.',
       objectives: [
         'Implementar el estándar OCDS en instituciones públicas',
@@ -117,7 +117,7 @@ const AnticorruptionPage = () => {
 
   const overallStats = [
     { icon: Shield, number: '67+', label: 'Casos Anticorrupción Documentados', color: 'text-red-600' },
-    { icon: Eye, number: '34', label: 'Instituciones Monitoreadas', color: 'text-blue-600' },
+    { icon: Eye, number: '34', label: 'Instituciones Monitoreadas', color: 'text-primary-600' },
     { icon: AlertTriangle, number: '156', label: 'Alertas Rojas Generadas', color: 'text-orange-600' },
     { icon: Database, number: 'Q45M', label: 'Valor Monitoreado', color: 'text-green-600' }
   ];
@@ -128,16 +128,16 @@ const AnticorruptionPage = () => {
       <section className="bg-gradient-to-br from-red-900 via-red-800 to-red-700 text-white py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-primary text-red-300 px-6 py-3 rounded-full mb-6">
+            <div className="inline-flex items-center bg-primary text-white px-6 py-3 rounded-full mb-6">
               <Shield className="mr-2" size={20} />
               <span className="font-semibold">Objetivo Estratégico 3</span>
             </div>
             
-            <h1 className="text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-5xl lg:text-6xl font-bold mb-6 text-primary">
               Anticorrupción
             </h1>
             
-            <p className="text-xl lg:text-2xl text-red-100 max-w-4xl mx-auto font-light leading-relaxed">
+            <p className="text-xl lg:text-2xl max-w-4xl mx-auto font-light leading-relaxed text-primary">
               Desarrollamos herramientas y metodologías para la prevención, detección y combate 
               de la corrupción en instituciones públicas guatemaltecas
             </p>
@@ -146,12 +146,12 @@ const AnticorruptionPage = () => {
           {/* Overall Stats */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {overallStats.map((stat, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center bg-primary rounded-2xl p-6">
                 <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="text-white" size={24} />
                 </div>
                 <div className="text-3xl font-bold mb-2">{stat.number}</div>
-                <div className="text-red-200 text-sm">{stat.label}</div>
+                <div className={`text-white text-sm ${stat.color}`}>{stat.label}</div>
               </div>
             ))}
           </div>
@@ -286,31 +286,31 @@ const AnticorruptionPage = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
               <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Shield className="text-red-600" size={24} />
+                <Shield className="text-white" size={24} />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Portal Anticorrupción</h3>
               <p className="text-gray-600 mb-4">Acceso centralizado a datos, herramientas y reportes</p>
-              <div className="text-2xl font-bold text-red-600">12.5K</div>
+              <div className="text-2xl font-bold text-primary-600">12.5K</div>
               <div className="text-gray-500 text-sm">Usuarios Mensuales</div>
             </div>
 
             <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
               <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-4">
-                <AlertTriangle className="text-blue-600" size={24} />
+                <AlertTriangle className="text-white" size={24} />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Sistema de Alertas</h3>
               <p className="text-gray-600 mb-4">Detección automática de patrones sospechosos</p>
-              <div className="text-2xl font-bold text-blue-600">89%</div>
+              <div className="text-2xl font-bold text-primary-600">89%</div>
               <div className="text-gray-500 text-sm">Precisión</div>
             </div>
 
             <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
               <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Database className="text-green-600" size={24} />
+                <Database className="text-white" size={24} />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Base de Datos PIDA</h3>
               <p className="text-gray-600 mb-4">Repositorio de datos abiertos anticorrupción</p>
-              <div className="text-2xl font-bold text-green-600">45</div>
+              <div className="text-2xl font-bold text-primary-600">45</div>
               <div className="text-gray-500 text-sm">Datasets Disponibles</div>
             </div>
           </div>
@@ -319,7 +319,7 @@ const AnticorruptionPage = () => {
             <button className="bg-primary hover:bg-primary text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 mr-4">
               Acceder al Portal Anticorrupción
             </button>
-            <button className="border-2 border-red-600 text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary transition-colors duration-200">
+            <button className="border-2 border-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary transition-colors duration-200">
               Descargar Guía de Uso
             </button>
           </div>
@@ -327,17 +327,17 @@ const AnticorruptionPage = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-r from-red-600 to-orange-600 text-white">
+      <section className="py-20 !bg-primary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">
             ¿Detectaste un posible caso de corrupción?
           </h2>
-          <p className="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
             Utiliza nuestras herramientas para reportar, analizar y dar seguimiento a casos 
             de corrupción de manera segura y efectiva.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary transition-colors duration-200">
+            <button className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-white transition-colors duration-200">
               Hacer un Reporte
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">

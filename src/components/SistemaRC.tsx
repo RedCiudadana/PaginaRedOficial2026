@@ -29,7 +29,7 @@ const SistemaRC = () => {
     <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-blue-800 rounded-full text-sm font-semibold mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-full text-sm font-semibold mb-6">
             <Database className="w-4 h-4" />
             <span>Plataforma de Transparencia</span>
           </div>

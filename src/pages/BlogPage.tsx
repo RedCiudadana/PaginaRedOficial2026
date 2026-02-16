@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Calendar, User, Eye, Tag, Search, TrendingUp } from 'lucide-react';
 import { parseCSV } from '../lib/csvParser';
+import bannerHero from '../assets/banner/BANNER_03.png';
 
 interface BlogPost {
   id: string;
@@ -69,8 +70,11 @@ const BlogPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div
+        className="relative text-white py-20 bg-cover bg-center"
+        style={{ backgroundImage: `url(${bannerHero})` }}
+      >
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Blog Red Ciudadana
@@ -161,7 +165,7 @@ const BlogPage = () => {
                         <User size={16} />
                         <span>{post.author}</span>
                       </div>
-                      <button className="text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+                      <button className="text-white font-semibold rounded p-2 hover:text-primary transition-colors">
                         Leer más →
                       </button>
                     </div>
@@ -223,7 +227,7 @@ const BlogPage = () => {
                         <User size={14} />
                         <span>{post.author}</span>
                       </div>
-                      <button className="text-blue-600 font-semibold text-sm hover:text-blue-700 transition-colors">
+                      <button className="text-white font-semibold rounded p-2 hover:text-primary transition-colors">
                         Leer más →
                       </button>
                     </div>

@@ -9,9 +9,9 @@ const DigitalTransformationPage = () => {
       id: 'digital-government',
       title: 'Gobierno Digital',
       icon: Cpu,
-      color: 'from-blue-500 to-blue-600',
+      color: 'from-primary-500 to-primary-600',
       bgColor: 'bg-primary',
-      textColor: 'text-blue-600',
+      textColor: 'text-primary-600',
       description: 'Implementamos soluciones tecnológicas integrales para modernizar la administración pública, mejorando la eficiencia operativa y la experiencia ciudadana a través de servicios digitales.',
       objectives: [
         'Digitalizar procesos administrativos clave',
@@ -116,7 +116,7 @@ const DigitalTransformationPage = () => {
   ];
 
   const overallStats = [
-    { icon: Cpu, number: '25+', label: 'Instituciones Digitalizadas', color: 'text-blue-600' },
+    { icon: Cpu, number: '25+', label: 'Instituciones Digitalizadas', color: 'text-primary-600' },
     { icon: GraduationCap, number: '340', label: 'Funcionarios Capacitados', color: 'text-green-600' },
     { icon: FileText, number: '12', label: 'Marcos Normativos', color: 'text-purple-600' },
     { icon: Network, number: '67', label: 'Sistemas Interconectados', color: 'text-orange-600' }
@@ -128,16 +128,16 @@ const DigitalTransformationPage = () => {
       <section className="bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700 text-white py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-primary text-purple-300 px-6 py-3 rounded-full mb-6">
+            <div className="inline-flex items-center bg-primary text-white px-6 py-3 rounded-full mb-6">
               <TrendingUp className="mr-2" size={20} />
               <span className="font-semibold">Objetivo Estratégico 4</span>
             </div>
             
-            <h1 className="text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-5xl lg:text-6xl font-bold mb-6 text-primary">
               Transformación Digital
             </h1>
             
-            <p className="text-xl lg:text-2xl text-purple-100 max-w-4xl mx-auto font-light leading-relaxed">
+            <p className="text-xl lg:text-2xl max-w-4xl mx-auto font-light leading-relaxed text-primary">
               Lideramos la adopción de tecnologías emergentes para modernizar el sector público 
               y construir un Estado digital inclusivo y eficiente
             </p>
@@ -146,12 +146,12 @@ const DigitalTransformationPage = () => {
           {/* Overall Stats */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {overallStats.map((stat, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center bg-primary rounded-2xl p-6">
                 <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="text-white" size={24} />
                 </div>
                 <div className="text-3xl font-bold mb-2">{stat.number}</div>
-                <div className="text-purple-200 text-sm">{stat.label}</div>
+                <div className={`text-white text-sm ${stat.color}`}>{stat.label}</div>
               </div>
             ))}
           </div>
@@ -271,7 +271,7 @@ const DigitalTransformationPage = () => {
       </section>
 
       {/* Digital Innovation Section */}
-      <section className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
+      <section className="py-20 bg-gradient-to-br from-purple-50 to-primary-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
@@ -286,31 +286,31 @@ const DigitalTransformationPage = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
               <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Cpu className="text-blue-600" size={24} />
+                <Cpu className="text-white" size={24} />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Inteligencia Artificial</h3>
               <p className="text-gray-600 mb-4">Automatización de procesos y análisis predictivo</p>
-              <div className="text-2xl font-bold text-blue-600">8</div>
+              <div className="text-2xl font-bold text-primary-600">8</div>
               <div className="text-gray-500 text-sm">Proyectos IA Activos</div>
             </div>
 
             <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
               <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Network className="text-green-600" size={24} />
+                <Network className="text-white" size={24} />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Blockchain</h3>
               <p className="text-gray-600 mb-4">Transparencia y trazabilidad en procesos públicos</p>
-              <div className="text-2xl font-bold text-green-600">3</div>
+              <div className="text-2xl font-bold text-primary-600">3</div>
               <div className="text-gray-500 text-sm">Implementaciones Piloto</div>
             </div>
 
             <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
               <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Eye className="text-purple-600" size={24} />
+                <Eye className="text-white" size={24} />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">IoT Ciudadano</h3>
               <p className="text-gray-600 mb-4">Sensores y dispositivos para ciudades inteligentes</p>
-              <div className="text-2xl font-bold text-purple-600">15</div>
+              <div className="text-2xl font-bold text-primary-600">15</div>
               <div className="text-gray-500 text-sm">Sensores Desplegados</div>
             </div>
           </div>
@@ -319,7 +319,7 @@ const DigitalTransformationPage = () => {
             <button className="bg-primary hover:bg-primary text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 mr-4">
               Explorar Tecnologías
             </button>
-            <button className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary transition-colors duration-200">
+            <button className="border-2 px-8 py-4 rounded-lg font-semibold hover:bg-primary transition-colors duration-200">
               Ver Casos de Uso
             </button>
           </div>
@@ -327,7 +327,7 @@ const DigitalTransformationPage = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+      <section className="py-20 !bg-primary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">
             ¿Tu institución está lista para la transformación digital?
@@ -337,7 +337,7 @@ const DigitalTransformationPage = () => {
             con metodologías probadas y tecnologías de vanguardia.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary transition-colors duration-200">
+            <button className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-white transition-colors duration-200">
               Solicitar Consultoría Digital
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">

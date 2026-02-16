@@ -9,9 +9,9 @@ const JournalismStrengtheningPage = () => {
       id: 'community-leadership',
       title: 'Liderazgo Comunitario y Activismo',
       icon: Users,
-      color: 'from-blue-500 to-blue-600',
+      color: 'from-primary-500 to-primary-600',
       bgColor: 'bg-primary',
-      textColor: 'text-blue-600',
+      textColor: 'text-primary-600',
       description: 'Capacitamos líderes comunitarios y activistas en habilidades de liderazgo transformacional, organización comunitaria y gestión de iniciativas ciudadanas para fortalecer el tejido social.',
       objectives: [
         'Formar líderes en técnicas de organización comunitaria',
@@ -143,7 +143,7 @@ const JournalismStrengtheningPage = () => {
   ];
 
   const overallStats = [
-    { icon: Users, number: '420+', label: 'Líderes Capacitados', color: 'text-blue-600' },
+    { icon: Users, number: '420+', label: 'Líderes Capacitados', color: 'text-primary-600' },
     { icon: Target, number: '85', label: 'Organizaciones Fortalecidas', color: 'text-green-600' },
     { icon: Shield, number: '52', label: 'Iniciativas Ciudadanas', color: 'text-red-600' },
     { icon: Heart, number: '95%', label: 'Satisfacción Promedio', color: 'text-orange-600' }
@@ -155,16 +155,16 @@ const JournalismStrengtheningPage = () => {
       <section className="bg-gradient-to-br from-green-900 via-green-800 to-green-700 text-white py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-primary text-green-300 px-6 py-3 rounded-full mb-6">
+            <div className="inline-flex items-center bg-primary text-white px-6 py-3 rounded-full mb-6">
               <Users className="mr-2" size={20} />
-              <span className="font-semibold">Objetivo Estratégico 2</span>
+              <span className="font-semibold text-primary">Objetivo Estratégico 2</span>
             </div>
 
-            <h1 className="text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-5xl lg:text-6xl font-bold mb-6 text-primary">
               Fortalecimiento de Espacios Cívicos
             </h1>
 
-            <p className="text-xl lg:text-2xl text-green-100 max-w-4xl mx-auto font-light leading-relaxed">
+            <p className="text-xl lg:text-2xl text-primary max-w-4xl mx-auto font-light leading-relaxed">
               Capacitamos líderes comunitarios y activistas en habilidades de liderazgo, incidencia política
               y movilización social. Promovemos el uso de datos abiertos para monitorear el estado de los
               espacios cívicos y la libertad de expresión y asociación.
@@ -174,12 +174,12 @@ const JournalismStrengtheningPage = () => {
           {/* Overall Stats */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {overallStats.map((stat, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center bg-primary rounded-2xl p-6">
                 <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="text-white" size={24} />
                 </div>
                 <div className="text-3xl font-bold mb-2">{stat.number}</div>
-                <div className="text-green-200 text-sm">{stat.label}</div>
+                <div className={`text-white text-sm ${stat.color}`}>{stat.label}</div>
               </div>
             ))}
           </div>
@@ -299,7 +299,7 @@ const JournalismStrengtheningPage = () => {
       </section>
 
       {/* Academia de Liderazgo Section */}
-      <section className="py-20 bg-gradient-to-br from-green-50 to-blue-50">
+      <section className="py-20 bg-gradient-to-br from-green-50 to-primary-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
@@ -313,32 +313,32 @@ const JournalismStrengtheningPage = () => {
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
-              <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Users className="text-blue-600" size={24} />
+              <div className="w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center mx-auto mb-4">
+                <Users size={24} />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Talleres de Liderazgo</h3>
               <p className="text-gray-600 mb-4">Programas intensivos de 8-16 semanas con metodologías participativas</p>
-              <div className="text-2xl font-bold text-blue-600">18+</div>
+              <div className="text-2xl font-bold text-primary-600">18+</div>
               <div className="text-gray-500 text-sm">Talleres Disponibles</div>
             </div>
 
             <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
-              <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Award className="text-green-600" size={24} />
+              <div className="w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center mx-auto mb-4">
+                <Award size={24} />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Certificaciones</h3>
               <p className="text-gray-600 mb-4">Reconocimiento oficial de competencias en liderazgo</p>
-              <div className="text-2xl font-bold text-green-600">420</div>
+              <div className="text-2xl font-bold text-primary-600">420</div>
               <div className="text-gray-500 text-sm">Líderes Certificados</div>
             </div>
 
             <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
-              <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-4">
-                <Heart className="text-purple-600" size={24} />
+              <div className="w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center mx-auto mb-4">
+                <Heart size={24} />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Red de Activismo</h3>
               <p className="text-gray-600 mb-4">Comunidad activa de líderes y mentores</p>
-              <div className="text-2xl font-bold text-purple-600">650+</div>
+              <div className="text-2xl font-bold text-primary-600">650+</div>
               <div className="text-gray-500 text-sm">Miembros Activos</div>
             </div>
           </div>
@@ -347,7 +347,7 @@ const JournalismStrengtheningPage = () => {
             <button className="bg-primary hover:bg-primary text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 mr-4">
               Explorar la Academia
             </button>
-            <button className="border-2 border-green-600 text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary transition-colors duration-200">
+            <button className="border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary transition-colors duration-200">
               Ver Talleres Disponibles
             </button>
           </div>
@@ -355,17 +355,17 @@ const JournalismStrengtheningPage = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">
+      <section className="py-20 !bg-primary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">
             ¿Eres líder comunitario o activista?
           </h2>
-          <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
             Únete a nuestra comunidad de líderes comprometidos con el fortalecimiento
             de los espacios cívicos y la defensa de las libertades democráticas en Guatemala.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary transition-colors duration-200">
+            <button className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-800 transition-colors duration-200">
               Aplicar a la Academia
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
