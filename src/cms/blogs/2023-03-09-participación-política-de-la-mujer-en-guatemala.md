@@ -1,0 +1,82 @@
+---
+title: Participación política de la mujer en Guatemala
+image: /assets/img/posts/screenshot_11.jpg
+description: Guatemala es el único país en Latinoamérica que no tiene reformas
+  encaminadas a las llamadas democracias paritarias.
+autor: Steffany Figueroa
+correo: info@redciudadana.org.gt
+date: 2023-03-08T06:35:00.000Z
+highlight: true
+---
+Guatemala es el único país en Latinoamérica que no tiene reformas encaminadas a las llamadas democracias paritarias. En Centroamérica y el Caribe, Costa Rica (1996), Panamá (1997), República Dominicana (1997), Honduras (2000) y El Salvador (2013) han incorporado cuotas en la legislación de partidos políticos. Nicaragua (2012) reformó la Ley de Municipios, que actualmente establece cuotas para optar a cargos municipales. Guatemala ha prosperado en el cumplimiento de los marcos normativos internacionales para el avance de las mujeres. Sin embargo, los avances en términos de igualdad política no han sido muchos, a pesar de que desde hace más de 25 años las mujeres organizadas del país han luchado por incorporar reformas a la Ley Electoral y de Partidos Políticos (LEPP) con propuestas diversas.
+
+
+No se puede hablar realmente de democracia en el país sin tomar en cuenta a todos los sectores sociales que componen nuestra sociedad porque sin la participación política de toda la ciudadanía sin distinción, no pueden generarse condiciones democráticas dentro del sistema. Históricamente, los partidos políticos no han hecho esfuerzos para que las democracias en la actualidad sean incluyentes, según Freidenberg (2019), son como los gatekeepers que impiden la participación de las personas y a través de sus prácticas se resisten a la inclusión. Dado este contexto, la hipótesis en la que gira en torno dentro de este trabajo es que el diseño electoral de género fuerte incrementa la representación política de las mujeres y por ende, la calidad democrática de un país.
+
+
+En una revisión de los acontecimientos tanto recientes como pasados, puede identificarse que las mujeres no se han visto exentas a sufrir las consecuencias del pasado dictatorial y represivo del país, puesto que es hasta 1945 cuando a las mujeres se les reconoce por primera vez con la calidad de ciudadana. La participación y el involucramiento de la mujer en el ámbito político resulta muy reciente, sin embargo a lo largo de la historia han habido diversos hechos que constatan la batalla que muchas mujeres han librado para ganar derechos y abrirse espacios dentro de la arena política del país. De acuerdo con Alarcón (2011) pueden vislumbrar tres hitos fundamentales en lo que respecta la participación de las mujeres en la política: Revolución de Octubre, Teología de Liberación (en la década 1960-1970) y la transición democrática (1982-1985).
+
+<div class="flourish-embed flourish-chart" data-src="visualisation/12830233"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+
+
+Aunando a la falta de participación política de la mujer, Guatemala es uno de los países de América Latina que menos ha avanzado en la igualdad de género. El Foro Económico Mundial en su Global Gender Gap Report 2016, (fem, 2016), lo sitúa en el puesto 105 de 144 países catalogándolo entre los que mantienen más inequidad a comparación de los demás países de la región. A pesar de eso, el país sí posee un marco jurídico e institucional orientado al impulso de la participación, en general, que establece compromisos relativos a la participación política en particular de las mujeres. Este marco anteriormente mencionado, así como las políticas públicas y la institucionalidad vigente se encuentran en la Constitución Política de la República, los contenidos de los Acuerdos de Paz, su Ley Marco y Reglamento; toda la legislación referida a la igualdad y la participación local; los mecanismos gubernamentales  y las políticas y los planes para la promoción e igualdad de las mujeres guatemaltecas (Santa Cruz, 2010). Si bien aunque las demandas de derechos políticos de las guatemaltecas están presentes, la normativa actual es débil y necesita de más fortalecimiento y acciones afirmativas. 
+
+
+Por otra parte cuando se habla de la cantidad de mujeres ocupando puestos de poder , de acuerdo con el estudio “La Participación Política de las Mujeres en Guatemala: Una mirada hacia la Paridad Democrática” realizado por la Organización de las Naciones Unidas (2018), durante las elecciones generales de 2015 se alcanzó una histórica mayoría de mujeres en el padrón electoral, con un 54% de electoras, sin embargo, este aumento de votos femeninos no se ha traducido en un incremento de mujeres electas. Para efectos de este trabajo se recopiló información respecto a la participación política de la mujer en los distintos poderes del estado y espacios de toma de decisión. Los datos derivados de esta investigación realmente son desalentadores y, a su vez, amplían el espectro sobre los niveles de desigualdad y violencia política que sufren las mujeres, no sólo en términos de quienes son escogidas a través de las elecciones, sino incluso las optan a altos cargos por designación, como es el caso del poder ejecutivo.
+
+<div class="flourish-embed flourish-chart" data-src="visualisation/12830239"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+
+
+De los 68 ministerios y viceministerios que integran al ejecutivo actualmente, únicamente hay 12 mujeres ocupando estos cargos, frente a 56 hombres que forman un 82.35% del gabinete de ministros. En lo local la situación se profundiza y puede visualizarse aún más esta falta de representatividad que no es anuente a ningún espacio político. Al desagregar los datos se halló que de los 3718 cargos que componen las corporaciones municipales, 3266 son delegadas a los hombres. En cambio sólo un 12.16%, que se encuentra alrededor de 452 de los puestos municipales son ocupados por mujeres. Asimismo, en el poder legislativo la situación no dista de los otros espacios porque únicamente 31 mujeres que integran el 19.4% de las 160 curules dentro del Congreso de la República. 
+
+<div class="flourish-embed flourish-chart" data-src="visualisation/12835245"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+
+
+En cuanto al sistema de justicia, entre los altos cargos por designación del organismo judicial aparentemente la integración entre hombres y mujeres es equitativa. Esto se debe a que la CSJ se compone de 6 mujeres y 6 hombres magistrados vocales. Parte del sector justicia, es fundamental la labor de control que realiza la Corte de Constitucionalidad, que a su vez también ejerce mucho poder en temas de género. Dentro de este órgano, que es integrado a través de las comisiones de postulación, se conforma actualmente por 4 mujeres (40%) frente a 6 hombres (60%) completando las 10 magistraturas. Cabe resaltar que de estas 4 mujeres, 3 son titulares y 1 es suplente. En lo que respecta al órgano electoral, que resulta trascendental para la implementación de reformas y cuotas de género dentro del sistema electoral del país, actualmente se encuentra integrado por 5 magistrados y magistradas titulares. De estos 5, 3 son hombres (80%) y 2 son mujeres, que son las únicas que integran este órgano.
+
+<div class="flourish-embed flourish-chart" data-src="visualisation/12830453"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+
+
+Indudablemente los desafíos que se presentan para impulsar la participación de las mujeres son múltiples y esto, aunado a la poca cantidad de mujeres en puestos de toma de decisión que pueden ayudar a llevar a cabo estas posibles reformas, leyes y políticas públicas. Es preciso atraer la atención a las problemáticas de género porque como se ha constatado anteriormente, sin mujeres no puede haber un ejercicio de democracia plena. Existe una deuda histórica en este sector y el país se ha quedado corto en poder solventarla, sin embargo el ejemplo del resto de países latinoamericanos demuestra diversas vías para solucionar estas problemáticas. El primer paso radica en el ámbito electoral, sin embargo no puede dejarse atrás los otros espacios que también pueden darle fuerza a esta demanda de todas las mujeres en Guatemala.
+
+
+
+## Hallazgos
+
+<div class="flourish-embed flourish-hierarchy" data-src="visualisation/12835116"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+
+Los datos derivados de esta investigación realmente son desalentadores y, a su vez, amplían el espectro sobre los niveles de desigualdad y violencia política que sufren las mujeres, no sólo en términos de quienes son escogidas a través de las elecciones, sino incluso las optan a altos cargos por designación, como es el caso del poder ejecutivo.
+De los 68 ministerios y viceministerios que integran al ejecutivo actualmente, únicamente hay 12 mujeres ocupando estos cargos, frente a 56 hombres que forman un 82.35% del gabinete de ministros. En lo local la situación se profundiza y puede visualizarse aún más esta falta de representatividad que no es anuente a ningún espacio político. Al desagregar los datos se halló que de los 3718 cargos que componen las corporaciones municipales, 3266 son delegadas a los hombres. En cambio sólo un 12.16%, que se encuentra alrededor de 452 de los puestos municipales son ocupados por mujeres. Asimismo, en el poder legislativo la situación no dista de los otros espacios porque únicamente 31 mujeres que integran el 19.4% de las 160 curules dentro del Congreso de la República. 
+
+
+En cuanto al sistema de justicia, entre los altos cargos por designación del organismo judicial aparentemente la integración entre hombres y mujeres es equitativa. Esto se debe a que la CSJ se compone de 6 mujeres y 6 hombres magistrados vocales. Parte del sector justicia, es fundamental la labor de control que realiza la Corte de Constitucionalidad, que a su vez también ejerce mucho poder en temas de género. Dentro de este órgano, que es integrado a través de las comisiones de postulación, se conforma actualmente por 4 mujeres (40%) frente a 6 hombres (60%) completando las 10 magistraturas. Cabe resaltar que de estas 4 mujeres, 3 son titulares y 1 es suplente. En lo que respecta al órgano electoral, que resulta trascendental para la implementación de reformas y cuotas de género dentro del sistema electoral del país, actualmente se encuentra integrado por 5 magistrados y magistradas titulares. De estos 5, 3 son hombres (80%) y 2 son mujeres, que son las únicas que integran este órgano.
+
+<!--StartFragment-->
+
+<blockquote class="twitter-tweet"><p lang="es" dir="ltr">En el 2023, las <a href="https://twitter.com/hashtag/mujeres?src=hash&amp;ref_src=twsrc%5Etfw">#mujeres</a> seremos más de la mitad de la población del país. Pero ¿estamos siendo representadas en la política? <br><br>Conversa con nosotros la diputada Sonia Gutiérrez y Steffanie Figueroa de Red Ciudadana. <a href="https://twitter.com/hashtag/RadarElectoral?src=hash&amp;ref_src=twsrc%5Etfw">#RadarElectoral</a> <br><br>⏰<a href="https://t.co/OlX9oBfytm">https://t.co/OlX9oBfytm</a> <a href="https://t.co/Wy5uMVqBko">pic.twitter.com/Wy5uMVqBko</a></p>&mdash; Plaza Pública (@PlazaPublicaGT) <a href="https://twitter.com/PlazaPublicaGT/status/1633799804550610945?ref_src=twsrc%5Etfw">March 9, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<!--EndFragment-->
+
+## Recomendaciones
+
+Guatemala es uno de los países de América Latina que menos ha avanzado en la igualdad de género. El Foro Económico Mundial en su Global Gender Gap Report 2016, (fem, 2016), lo sitúa en el puesto 105 de 144 países catalogándolo entre los que mantienen más inequidad a comparación de los demás países de la región. Con el fin de derribar las diversas barreras que enfrentan las mujeres en términos de participar activa y políticamente para alcanzar la equidad en todos los espacios, organizaciones de gran peso de la comunidad internacional y con experiencia en temas de igualdad de género, han emitido una serie de recomendaciones a los países con menos avances como Guatemala. Entre estas recomendaciones, se encuentra el mecanismo de Atenea que enlista las siguientes sugerencias:
+
+Promover nuevamente ante el Congreso de la República las reformas constitucionales, para garantizar la no discriminación contra las mujeres. Estas debieran estar más explícitas en la Carta Magna, al momento de la discusión de las reformas constitucionales que se están planteando.
+
+1. Promover que la Comisión de Asuntos Electorales en el Congreso de la República incluya en el dictamen de las reformas a la LEPP, el principio de paridad, alternabilidad e inclusión de pueblos indígenas (maya, garífuna, xinca), ladino o mestizo en todos los cargos.
+2. Promover que el Pleno del Congreso de la República conozca la propuesta de reforma a la LEPP que presentó el TSE, pues incluye el principio de paridad y alternabilidad, como lo dictaminado por la CC.
+3. Implementar acciones de incidencia y cabildeo político de manera conjunta con la institucionalidad de las mujeres, mujeres de partidos políticos y organizaciones de mujeres de sociedad civil, para garantizar que el Congreso de la República dictamine favorablemente al artículo 212 de las reformas a la LEPP.
+4.  Velar por el seguimiento para tipificar como delito la violencia política que se ejerce contra las mujeres, a través de aprobación de la Iniciativa de Ley propuesta. Asimismo, asegurar un observatorio de género previo, durante y posterior a las elecciones generales, para garantizar la seguridad tanto de las ciudadanas, como de las candidatas y autoridades electas en todos los ámbitos. En caso de que no se apruebe dicha ley, garantizar que el TSE, a través de la Unidad de Delitos Electorales, pueda considerar las denuncias en esta materia.
+5. Proponer reformas a la LOE que incorpore la paridad de género, que contemple la designación de cargos en los gabinetes ministeriales, y otros altos cargos de confianza política, considerando medidas afirmativas.
+6. Dar seguimiento a la iniciativa de Ley que crea el Ministerio de la Mujer en la estructura del Poder Ejecutivo, asegurando una adecuada dotación de recursos humanos y presupuestarios para el cumplimiento de sus funciones, en correspondencia con las recomendaciones de CEDAW.
+7. Revisión de los Acuerdos gubernativos de creación tanto de SEPREM como del GEM, para evitar la duplicidad de funciones.
+8. Garantizar la producción y la sistematización de datos oficiales sobre la participación de las mujeres en los tres poderes del Estado de manera periódica, actualizada y accesible, para observar la presencia y crecimiento de la participación política de las mujeres en todos los ámbitos. Esta responsabilidad si bien se ha hecho a través de la SEPREM y el INE, no se actualiza y solo contempla datos generales y no desagregados por pertenencia étnica y edad.
+9. Impulsar la adopción de medidas afirmativas para asegurar el pleno acceso a cargos de elección pública de mujeres en los Gabinetes de Estado, Ministerios, secretarias y demás dependencias del Organismo Ejecutivo.
+10. Garantizar la incorporación de criterios de paridad de género o aplicación de medidas afirmativas en la designación de magistrados en la CSJ y el TSE, tanto para titulares como suplentes.
+11. Verificar la debida implementación de la Política de Género de la CSJ (OJ) y del TSE.
+12. Promover la inclusión del Principio de no discriminación y de Igualdad en la Ley del OJ (Decreto 2-89), Ley de la Carrera Judicial (Decreto 32-2016) y acuerdos emanados de la CSJ.
+13. En el marco de la Convención de la CEDAW, promover la aplicación de medidas afirmativas en el proceso de selección, designación, ascenso y capacitación de personal en la CSJ, OJ y el TSE.
+14.  Promover en el TSE la creación de la Unidad de Género al más alto nivel, para el seguimiento e implementación de su Política de Equidad de Género; entre otras.
+
+>
+> "El concepto de democracia sólo tendrá un significado verdadero y dinámico cuando las políticas y la legislación nacional sean decididas conjuntamente por hombres y mujeres y presten una atención equitativa a los intereses y las aptitudes de las dos mitades de la población."

@@ -1,0 +1,5 @@
+{
+    "tags": "proyectos_departamental",
+    "permalink": "proyectos_departamental/{{ page.fileSlug }}/{{departamento}}/index.html",
+    "layout": "layouts/proyectos_departamental.njk"
+}

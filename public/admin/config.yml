@@ -1,0 +1,355 @@
+backend:
+  name: git-gateway
+  repo: RedCiudadana/PaginaRedOficial2026
+  branch: main
+  identity_url: https://auth.decapbridge.com/sites/b500e2e4-3a80-43c9-a50c-2d2d3201f71a
+  gateway_url: https://gateway.decapbridge.com
+
+  commit_messages:
+    create: Create {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    update: Update {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    delete: Delete {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    uploadMedia: Upload “{{path}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    deleteMedia: Delete “{{path}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    openAuthoring: Message {{message}} - {{author-name}} <{{author-login}}> via DecapBridge
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "proyectos"
+    label: "Proyectos"
+    folder: "src/cms/proyectos"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      previer: false
+    fields:
+      - { name: "title", label: "Title" }
+      - { name: "enlace", label: "Enlace" }
+      - {
+          name: "programa",
+          label: "Programa",
+          widget: "relation",
+          collection: "programas",
+          searchFields: ["nombre"],
+          valueField: "nombre",
+          multiple: false,
+        }
+      - { name: "descripcion", label: "Descripcion", widget: "markdown" }
+      - { name: "ano", label: "Año" }
+      - { label: "Foto", name: "foto", widget: "image" }
+  - name: "mediciones"
+    label: "Mediciones"
+    folder: "src/cms/mediciones"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      previer: false
+    fields:
+      - { name: "title", label: "Title" }
+      - { name: "enlace", label: "Enlace" }
+      - {
+          name: "programa",
+          label: "Programa",
+          widget: "relation",
+          collection: "programas",
+          searchFields: ["nombre"],
+          valueField: "nombre",
+          multiple: false,
+        }
+      - { name: "descripcion", label: "Descripcion", widget: "markdown" }
+      - { name: "ano", label: "Año" }
+      - { label: "Foto", name: "foto", widget: "image" }
+  - name: "publicaciones" # Used in routes, e.g., /admin/collections/blog
+    label: "Publicaciones" # Used in the UI
+    folder: "src/cms/publicaciones" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    editor:
+      preview: false # Disable the editor preview and use instead 'preview links'
+    fields: # The fields for each document, usually in front matter
+      - { name: "title", label: "Title" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { name: "description", label: "Description" }
+      - { name: "enlace", label: "Enlace Publicación" }
+      - { name: "autor", label: "Autor" }
+      - { name: "correo", label: "Correo" }
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "body", label: "Body", widget: "markdown" }
+      - {
+          name: "highlight",
+          label: "Highlight",
+          widget: "boolean",
+          default: false,
+          hint: "Display posts in home's highlights",
+        }
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "src/cms/blogs" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    editor:
+      preview: false # Disable the editor preview and use instead 'preview links'
+    fields: # The fields for each document, usually in front matter
+      - { name: "title", label: "Title" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { name: "description", label: "Description" }
+      - { name: "autor", label: "Autor" }
+      - { name: "correo", label: "Correo" }
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "body", label: "Body", widget: "markdown" }
+      - {
+          name: "highlight",
+          label: "Highlight",
+          widget: "boolean",
+          default: false,
+          hint: "Display posts in home's highlights",
+        }
+  - name: "eventos" # Used in routes, e.g., /admin/collections/blog
+    label: "Eventos" # Used in the UI
+    folder: "src/cms/eventos" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    editor:
+      preview: false # Disable the editor preview and use instead 'preview links'
+    fields: # The fields for each document, usually in front matter
+      - { name: "title", label: "Title" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { name: "description", label: "Description" }
+      - { name: "enlace", label: "Enlace" }
+      - { name: "autor", label: "Autor" }
+      - { name: "correo", label: "Correo" }
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "body", label: "Body", widget: "markdown" }
+      - {
+          name: "highlight",
+          label: "Highlight",
+          widget: "boolean",
+          default: false,
+          hint: "Display posts in home's highlights",
+        }
+  - name: "video" # Used in routes, e.g., /admin/collections/video
+    label: "Video" # Used in the UI
+    folder: "src/cms/videos" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    editor:
+      preview: false # Disable the editor preview and use instead 'preview links'
+    fields: # The fields for each document, usually in front matter
+      - { name: "title", label: "Title" }
+      - { name: "description", label: "Description" }
+      - { name: "link", label: "Enlace de video" }
+      - { name: "date", label: "Date", widget: "datetime" }
+  - name: "podcast" # Used in routes, e.g., /admin/collections/podcast
+    label: "Podcast" # Used in the UI
+    folder: "src/cms/podcasts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    editor:
+      preview: false # Disable the editor preview and use instead 'preview links'
+    fields: # The fields for each document, usually in front matter
+      - { name: "title", label: "Title" }
+      - { name: "description", label: "Description" }
+      - { name: "link", label: "Enlace de podcast" }
+      - { name: "date", label: "Date", widget: "datetime" }
+      - {
+          name: "highlight",
+          label: "Highlight",
+          widget: "boolean",
+          default: false,
+          hint: "Display podcast in home's highlights",
+        }
+  - name: "programas"
+    label: "Programas"
+    folder: "src/cms/programas"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: nombre
+    fields:
+      - { label: "Nombre", name: "nombre", widget: "string" }
+      - { name: "description", label: "Description" }
+      - { name: "slider", label: "Slider", widget: "image" }
+      - { name: "icono", label: "Icono", widget: "image" }
+      - { label: "Foto", name: "foto", widget: "image" }
+      - { label: "Foto Preview", name: "fotop", widget: "image" }
+      - { name: "mediciones", label: "Mediciones", widget: "markdown" }
+      - { name: "procesos", label: "Procesos de formación", widget: "markdown" }
+      - {
+          name: "datos",
+          label: "Datos Abiertos para Combatir la Corrupción (PIDA)",
+          widget: "markdown",
+        }
+      - { label: "Enlace de Página", name: "enlace" }
+  - name: "adds"
+    label: "Ads"
+    folder: "src/cms/adds"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: nombre
+    fields:
+      - { label: "Nombre", name: "nombre" }
+      - {
+          name: "enlaceh",
+          label: "Enlace Ad Horizontal",
+          widget: "image",
+          required: false,
+        }
+      - {
+          name: "enlacev",
+          label: "Enlace Ad Vertical",
+          widget: "image",
+          required: false,
+        }
+      - {
+          name: "enlacered",
+          label: "Enlace de redirección de Ad Vertical",
+          required: false,
+        }
+      - {
+          name: "enlacev2",
+          label: "Enlace Ad Vertical 2",
+          widget: "image",
+          required: false,
+        }
+      - {
+          name: "enlacered2",
+          label: "Enlace de redirección de Ad Vertical 2",
+          required: false,
+        }
+      - {
+          name: "highlight",
+          label: "Highlight",
+          widget: "boolean",
+          default: false,
+          hint: "Anuncio Activo",
+        }
+  - name: "departamental"
+    label: "Departamental"
+    folder: "src/cms/departamental"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: nombre
+    fields:
+      - { name: "nombre", label: "Nombre del Departamento" }
+      - { name: "titulo", label: "Título" }
+      - { name: "description", label: "Descripión", widget: "markdown" }
+      - { name: "image", label: "Imagen del Departamento", widget: "image" }
+      - { name: "slider", label: "Slider del Departamento", widget: "image" }
+  - name: "estretegia_departamental"
+    label: "Estrategia Departamental"
+    folder: "src/cms/estrategia_departamental"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { name: "title", label: "Title" }
+      - { name: "description", label: "Descripción", widget: "markdown" }
+      - { name: "enlace", label: "enlace", widget: "string" }
+      - { name: "image", label: "Imagen", widget: "image" }
+  - name: "proyecto_departamental"
+    label: "Proyecto Departamental"
+    folder: "src/cms/proyecto_departamental"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { name: "title", label: "Title" }
+      - { name: "description", label: "Descripción", widget: "markdown" }
+      - { name: "enlace", label: "enlace", widget: "string" }
+      - { name: "image", label: "Imagen", widget: "image" }
+  - name: "cursos_talleres_departamental"
+    label: "Cursos y Talleres"
+    folder: "src/cms/cursos_talleres_departamental"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { name: "title", label: "Title" }
+      - { name: "description", label: "Descripción", widget: "markdown" }
+      - { name: "enlace", label: "enlace", widget: "string" }
+      - { name: "image", label: "Imagen", widget: "image" }
+  - name: "hacknights_departamental"
+    label: "Hacknights Departamental"
+    folder: "src/cms/hacknights_departamental"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { name: "title", label: "Title" }
+      - { name: "description", label: "Descripción", widget: "markdown" }
+      - { name: "enlace", label: "enlace", widget: "string" }
+      - { name: "image", label: "Imagen", widget: "image" }
+  - name: "red_departamental"
+    label: "Red Departamental"
+    folder: "src/cms/red_departamental"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { name: "title", label: "Title" }
+      - { name: "description", label: "Descripción", widget: "markdown" }
+      - { name: "enlace", label: "enlace", widget: "string" }
+      - { name: "image", label: "Imagen", widget: "image" }
+  - name: "video_recursos_departamental"
+    label: "Video y Recursos Departamental"
+    folder: "src/cms/video_recursos_"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { name: "title", label: "Title" }
+      - { name: "description", label: "Descripción", widget: "markdown" }
+      - { name: "enlace", label: "enlace", widget: "string" }
+      - { name: "image", label: "Imagen", widget: "image" }
+  - name: "tiktoks"
+    label: "Tik Toks"
+    folder: "src/cms/tiktoks"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { name: "title", label: "Título del TikTok" }
+      - { name: "enlace", label: "Enlace del Embed", widget: "string" }
+      - { name: "autor", label: "Autor", widget: "string" }
+      - { name: "image", label: "Imagen", widget: "image" }
+      - {
+          name: "highlight",
+          label: "Highlight",
+          widget: "boolean",
+          default: false,
+          hint: "Anuncio Activo",
+        }
+  - name: "oportunidades" # Used in routes, e.g., /admin/collections/blog
+    label: "Oportunidades Laborales" # Used in the UI
+    folder: "src/cms/oportunidades" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    editor:
+      preview: false # Disable the editor preview and use instead 'preview links'
+    fields: # The fields for each document, usually in front matter
+      - { name: "title", label: "Title" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { name: "description", label: "Description" }
+      - { name: "autor", label: "Autor" }
+      - { name: "correo", label: "Correo" }
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "body", label: "Body", widget: "markdown" }
+      - {
+          name: "highlight",
+          label: "Highlight",
+          widget: "boolean",
+          default: false,
+          hint: "Display posts in home's highlights",
+        }
+      - { name: "enlace", label: "Enlace de Formulario" }
+
+show_preview_links: true
+

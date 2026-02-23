@@ -1,0 +1,4 @@
+{
+    "tags": "red_departamental",
+    "permalink": "red_departamental/{{ page.fileSlug }}/{{departamento}}/index.html"
+}

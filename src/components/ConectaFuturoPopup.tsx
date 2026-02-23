@@ -52,7 +52,7 @@ const ConectaFuturoPopup = () => {
           <X size={16} className="text-gray-600" />
         </button>
 
-        <div className="bg-gradient-to-br from-green-600 to-blue-600 p-6 pb-4">
+        <div className="bg-primary p-6 pb-4">
           <div className="flex items-center mb-3">
             <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center mr-3">
               <GraduationCap className="text-white" size={28} />
@@ -71,12 +71,12 @@ const ConectaFuturoPopup = () => {
         <div className="p-6 pt-4">
           <p className="text-gray-700 text-sm leading-relaxed mb-4">
             Fortalece tus habilidades en liderazgo, incidencia política y activismo digital.
-            <span className="font-semibold text-green-600"> Cursos 100% gratuitos</span> con certificación.
+            <span className="font-semibold text-primary"> Cursos 100% gratuitos</span> con certificación.
           </p>
 
           <button
             onClick={handleClick}
-            className="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white py-3 px-4 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center group shadow-md hover:shadow-lg"
+            className="w-full bg-primary hover:from-green-700 hover:to-blue-700 text-white py-3 px-4 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center group shadow-md hover:shadow-lg"
           >
             Explorar Cursos
             <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />

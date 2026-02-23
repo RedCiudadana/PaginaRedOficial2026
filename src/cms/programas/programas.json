@@ -1,0 +1,5 @@
+{
+    "tags": "programas",
+    "permalink": "programas/{{ page.fileSlug }}/index.html",
+    "layout": "layouts/programa.njk"
+}

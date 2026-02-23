@@ -1,0 +1,5 @@
+{
+    "tags": "video_departamental",
+    "permalink": "video_departamental/{{ page.fileSlug }}/{{departamento}}/index.html",
+    "layout": "layouts/videos_recursos_departamental.njk"
+}

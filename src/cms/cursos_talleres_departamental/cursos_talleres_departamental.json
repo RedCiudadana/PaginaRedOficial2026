@@ -1,0 +1,4 @@
+{
+    "tags": "cursos_talleres_departamental",
+    "permalink": "cursos_talleres_departamental/{{ page.fileSlug }}/{{departamento}}/index.html"
+}
