@@ -1,6 +1,6 @@
 ---
 title: "Nuevo Horizonte: El Gabinete del Gobierno de Arévalo y Herrera"
-image: /assets/img/posts/02_nueva-administración-2024-2028.png
+image: /src/assets/img/posts/02_nueva-administración-2024-2028.png
 description: El aire en Guatemala se llena de expectativa y esperanza con la
   reciente toma de posesión de Bernardo Arévalo y Karin Herrera.
 autor: Red Ciudadana

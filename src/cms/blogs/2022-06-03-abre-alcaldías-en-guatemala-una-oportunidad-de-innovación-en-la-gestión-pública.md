@@ -1,7 +1,7 @@
 ---
 title: "Abre Alcaldías en Guatemala: una oportunidad de innovación en la gestión
   pública "
-image: /assets/img/posts/cópia-de-08-shapes-1-.png
+image: /src/assets/img/posts/cópia-de-08-shapes-1-.png
 description: Le damos la bienvenida a la Fundación Ciudadanía Inteligente con su
   proyecto "Abre Alcaldías" que viene siendo un esfuerzo de fortalecimiento de
   capacidades a funcionarios, funcionarias locales, equipos de trabajo de
@@ -50,4 +50,4 @@ Para conocer más sobre el proyecto, sus etapas y postular a esta iniciativa, pu
 
 **¡Tienes hasta el 20 de junio para postularte!**
 
-![](/assets/img/posts/abre_1.gif)
+![](/src/assets/img/posts/abre_1.gif)

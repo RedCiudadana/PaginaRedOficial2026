@@ -1,6 +1,6 @@
 ---
 title: Red Ciudadana Presenta el Índice de Gobierno Digital 2024
-image: /assets/img/posts/indice-de-gobierno-digital.png
+image: /src/assets/img/posts/indice-de-gobierno-digital.png
 description: Ciudad de Guatemala, 11 de junio de 2024 – Red Ciudadana,
   organización sin fines de lucro dedicada a promover la transparencia y la
   participación ciudadana, presentó hoy el Índice de Gobierno Digital 2024.

@@ -1,6 +1,6 @@
 ---
 title: "Proceso de formación: Diseño de Servicios Públicos"
-image: /assets/img/posts/diagnostico-justicia-abierta.png
+image: /src/assets/img/posts/diagnostico-justicia-abierta.png
 description: El proceso de formación de Diseño de Servicios Públicos
   profundizará sobre la aplicación de una filosofía de estado abierto en las
   instituciones del sector justicia.

@@ -1,6 +1,6 @@
 ---
 title: Consultoría de Asistencia de proyectos 2025
-image: /assets/img/posts/02_cover-youtube.png
+image: /src/assets/img/posts/02_cover-youtube.png
 description: La consultoria busca brindar apoyo técnico y operativo en la
   gestión de proyectos de Red Ciudadana, asegurando el cumplimiento de objetivos
   en las áreas de transformación digital, innovación pública y anticorrupción.

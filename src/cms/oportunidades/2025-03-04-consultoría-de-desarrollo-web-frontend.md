@@ -1,6 +1,6 @@
 ---
 title: Consultoría de Desarrollo Web Frontend
-image: /assets/img/posts/02_cover-youtube.png
+image: /src/assets/img/posts/02_cover-youtube.png
 description: Esta consultoría tiene como objetivo contribuir al desarrollo e
   implementación de soluciones frontend para los proyectos de Red Ciudadana en
   el marco de la transformación digital, innovación pública y lucha contra la

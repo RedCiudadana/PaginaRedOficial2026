@@ -1,6 +1,6 @@
 ---
 title: "OGP Summit 2023: Resilience, Transparency and Technology"
-image: /assets/img/posts/ogpestonia.jpeg
+image: /src/assets/img/posts/ogpestonia.jpeg
 description: OGP as a collaborative space where governments and civil society
   unite to create national action plans that make governments more inclusive,
   responsive, and accountable.

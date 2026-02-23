@@ -1,6 +1,6 @@
 ---
 title: Participación política de la mujer en Guatemala
-image: /assets/img/posts/screenshot_11.jpg
+image: /src/assets/img/posts/screenshot_11.jpg
 description: Guatemala es el único país en Latinoamérica que no tiene reformas
   encaminadas a las llamadas democracias paritarias.
 autor: Steffany Figueroa

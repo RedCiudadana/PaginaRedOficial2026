@@ -1,6 +1,6 @@
 ---
 title: Índice De Gobierno Digital 2024
-image: /assets/img/posts/indice-de-gobierno-digital.png
+image: /src/assets/img/posts/indice-de-gobierno-digital.png
 description: El IGD es una herramienta de evaluación que integra elementos
   esenciales de mediciones internacionales aplicándolos a nivel institucional en
   Guatemala.

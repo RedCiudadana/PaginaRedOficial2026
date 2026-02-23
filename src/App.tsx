@@ -16,6 +16,7 @@ import KnowledgePage from './pages/KnowledgePage';
 import ContactPage from './pages/ContactPage';
 import BusinessPage from './pages/BusinessPage';
 import BlogPage from './pages/BlogPage';
+import BlogDetailPage from './pages/BlogDetailPage';
 import PodcastPage from './pages/PodcastPage';
 import Anniversary15Page from './pages/Anniversary15Page';
 import PressRoomPage from './pages/PressRoomPage';
@@ -40,6 +41,7 @@ function App() {
               <Route path="/transformacion-digital" element={<DigitalTransformationPage />} />
               <Route path="/conocimiento" element={<KnowledgePage />} />
               <Route path="/blog" element={<BlogPage />} />
+              <Route path="/blog/:slug" element={<BlogDetailPage />} />
               <Route path="/podcast" element={<PodcastPage />} />
               <Route path="/15-anos" element={<Anniversary15Page />} />
               <Route path="/sala-de-prensa" element={<PressRoomPage />} />

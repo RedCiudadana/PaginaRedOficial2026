@@ -1,7 +1,7 @@
 ---
 title: "Red Ciudadana participa en América Abierta 2024: Fortaleciendo el camino
   hacia un Estado Abierto"
-image: /assets/img/posts/cover_america-abierta-2024.png
+image: /src/assets/img/posts/cover_america-abierta-2024.png
 description: Red Ciudadana participo en América Abierta, celebrado en Brasilia.
   Este evento reunió a líderes, organizaciones y expertos de toda la región para
   dialogar y promover iniciativas relacionadas con la transparencia, los datos
@@ -32,7 +32,7 @@ El **Director de Red Ciudadana**, **Julio Herrera**, tuvo una destacada particip
 * **El Gobierno Abierto como motor de innovación pública**: Resaltó cómo la colaboración entre diversos actores puede generar soluciones sostenibles para los desafíos actuales.
 * **La articulación regional como clave para el desarrollo**: Destacó la necesidad de fortalecer alianzas internacionales para compartir conocimientos y experiencias exitosas.
 
-![](/assets/img/posts/0e10c8e7-9a4f-4a3a-ab2e-04a9b9828d2d.jpeg)
+![](/src/assets/img/posts/0e10c8e7-9a4f-4a3a-ab2e-04a9b9828d2d.jpeg)
 
 ### Un compromiso renovado
 

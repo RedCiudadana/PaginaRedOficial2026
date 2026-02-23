@@ -1,7 +1,7 @@
 ---
 title: "Formación en Datos Abiertos: fortaleciendo capacidades ciudadanas para
   una Centroamérica más transparente"
-image: /assets/img/posts/plantilla_covers-blogs-red-ciudadana-6-.jpg
+image: /src/assets/img/posts/plantilla_covers-blogs-red-ciudadana-6-.jpg
 description: Impulsamos procesos de formación en datos abiertos a nivel nacional
   y regional, diseñados para responder a las realidades, necesidades y niveles
   de alfabetización digital

@@ -1,6 +1,6 @@
 ---
 title: "Cambio y Continuidad: Nuevos Alcaldes en Guatemala 2024-2028"
-image: /assets/img/posts/05_municipalidades-2024-2028.png
+image: /src/assets/img/posts/05_municipalidades-2024-2028.png
 description: El período 2024-2028 trae consigo una mezcla de caras nuevas y
   conocidas en el liderazgo local, cada una portando la antorcha del cambio o de
   la continuidad.

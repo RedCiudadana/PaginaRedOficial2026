@@ -1,6 +1,6 @@
 ---
 title: Los Beneficios del Estándar de Datos para Contrataciones Abiertas en Guatemala
-image: /assets/img/posts/whatsapp-image-2024-05-22-at-02.11.04.jpeg
+image: /src/assets/img/posts/whatsapp-image-2024-05-22-at-02.11.04.jpeg
 description: La adopción del Estándar de Datos para Contrataciones Abiertas
   (OCDS) en Guatemala representa un paso fundamental hacia una administración
   pública más transparente y accesible.
@@ -33,7 +33,7 @@ Uno de los pilares de un gobierno abierto es la participación ciudadana. El OCD
 
 La disponibilidad de información detallada y estructurada dificulta la ocultación de actos corruptos y facilita la detección de anomalías en las contrataciones públicas. El OCDS es una herramienta poderosa en la lucha contra la corrupción, ya que mejora los mecanismos de control y permite una vigilancia más efectiva por parte de todos los sectores de la sociedad.
 
-![](/assets/img/posts/whatsapp-image-2024-05-22-at-02.11.04.jpeg)
+![](/src/assets/img/posts/whatsapp-image-2024-05-22-at-02.11.04.jpeg)
 
 ### Conclusión
 

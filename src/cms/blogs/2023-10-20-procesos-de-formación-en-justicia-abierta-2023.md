@@ -1,6 +1,6 @@
 ---
 title: Procesos de Formación en Justicia Abierta 2023
-image: /assets/img/posts/diagnostico-justicia-abierta.png
+image: /src/assets/img/posts/diagnostico-justicia-abierta.png
 description: ¡Aprende y Participa! Descubre Nuestros Procesos de Formación en
   Justicia Abierta
 autor: Red Ciudadana y RIJA
@@ -12,7 +12,7 @@ highlight: true
 
 En el mundo actual, el acceso a la información y la comprensión de la justicia abierta son fundamentales para empoderar a los ciudadanos y promover la transparencia en las instituciones. En Red Ciudadana y la Red Internacional de Justicia Abierta (RIJA), estamos comprometidos en ofrecer oportunidades de aprendizaje que ayuden a las personas a entender y aprovechar al máximo estos conceptos vitales. Te invitamos a descubrir nuestros emocionantes procesos de formación que te permitirán explorar temas cruciales como la justicia abierta, el acceso a la información y los datos abiertos.
 
-![](/assets/img/posts/general-cursos_01.png)
+![](/src/assets/img/posts/general-cursos_01.png)
 
 
 

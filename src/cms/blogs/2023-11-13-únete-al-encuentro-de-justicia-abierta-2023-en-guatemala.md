@@ -1,6 +1,6 @@
 ---
 title: " Únete al Encuentro de Justicia Abierta 2023 en Guatemala"
-image: /assets/img/posts/diagnostico-justicia-abierta.png
+image: /src/assets/img/posts/diagnostico-justicia-abierta.png
 description: ¿Te apasiona la justicia abierta y estás interesado en formar parte
   de un evento que reúne a expertos de todo el mundo para discutir los avances
   más recientes en este campo? ¡Entonces el Encuentro de Justicia Abierta 2023
@@ -39,9 +39,9 @@ No pierdas la oportunidad de ser parte de este evento destacado en el mundo de l
 
 **Agenda:** 
 
-![](/assets/img/posts/dia-1-encuentro-de-ja.jpg)
+![](/src/assets/img/posts/dia-1-encuentro-de-ja.jpg)
 
-![](/assets/img/posts/dia-2-encuentro-de-ja.jpg)
+![](/src/assets/img/posts/dia-2-encuentro-de-ja.jpg)
 
 **¡Regístrate ahora y sé parte del cambio hacia una justicia más abierta y transparente!**
 

@@ -1,7 +1,7 @@
 ---
 title: "ABRELATAM + CONDATOS 2026: Guatemala abre sus puertas a la comunidad de
   datos abiertos de América Latina"
-image: /assets/img/posts/plantilla_covers-blogs-red-ciudadana-7-.jpg
+image: /src/assets/img/posts/plantilla_covers-blogs-red-ciudadana-7-.jpg
 description: "En 2026, Guatemala será el punto de encuentro de la comunidad
   regional más importante en materia de datos abiertos, tecnología cívica,
   gobierno abierto y derechos digitales: ABRELATAM + CONDATOS."
@@ -58,6 +58,6 @@ ABRELATAM + CONDATOS 2026 será una invitación a encontrarnos, escucharnos e im
 **Guatemala abre sus puertas.**\
 La próxima década de datos abiertos en Guatemala comienza aquí.
 
-![Abrelatam / ConDatos](/assets/img/posts/whatsapp-image-2026-02-11-at-10.31.23-am.jpeg "Abrelatam / ConDatos")
+![Abrelatam / ConDatos](/src/assets/img/posts/whatsapp-image-2026-02-11-at-10.31.23-am.jpeg "Abrelatam / ConDatos")
 
 <!--EndFragment-->

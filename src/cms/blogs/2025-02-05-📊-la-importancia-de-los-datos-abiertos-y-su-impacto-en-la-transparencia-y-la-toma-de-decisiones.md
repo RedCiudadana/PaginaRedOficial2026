@@ -1,7 +1,7 @@
 ---
 title: 📊 La importancia de los Datos Abiertos y su impacto en la transparencia
   y la toma de decisiones
-image: /assets/img/posts/cover_05.png
+image: /src/assets/img/posts/cover_05.png
 description: La disponibilidad de información pública en formatos accesibles
   permite no solo fortalecer la rendición de cuentas, sino también potenciar el
   desarrollo de soluciones basadas en datos para enfrentar los desafíos del

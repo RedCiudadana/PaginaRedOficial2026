@@ -1,6 +1,6 @@
 ---
 title: En busca de la legitimidad perdida en el sector justicia
-image: /assets/img/posts/imagenes-web-curso-perfil.png
+image: /src/assets/img/posts/imagenes-web-curso-perfil.png
 description: La última medición del Latinobarómetro del año 2020 arrojo cifras
   preocupantes respecto a la confianza de la ciudadanía con el sector justicia
   de América Latina.

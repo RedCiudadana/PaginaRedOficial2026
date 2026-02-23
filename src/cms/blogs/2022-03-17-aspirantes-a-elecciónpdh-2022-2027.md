@@ -1,6 +1,6 @@
 ---
 title: "Aspirantes a #ElecciónPDH 2022-2027"
-image: /assets/img/posts/eleccionpdh.jpg
+image: /src/assets/img/posts/eleccionpdh.jpg
 description: La Comisión de Derechos Humanos del Congreso de la República ya dió
   por cerrada la primera fase de recepción de expedientes de postulantes para
   Procurador/a 2022-20227.

@@ -1,6 +1,6 @@
 ---
 title: RED CIUDADANA SE PRONUNCIA EN DEFENSA DE LA DEMOCRACIA EN GUATEMALA
-image: /assets/img/posts/02_cover-youtube.png
+image: /src/assets/img/posts/02_cover-youtube.png
 description: En vista de la suspensión de la personalidad jurídica del
   Movimiento Semilla y la inminente segunda vuelta electoral, Red Ciudadana
   recalca la importancia de la transparencia, la equidad y el respeto a la

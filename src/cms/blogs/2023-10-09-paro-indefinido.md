@@ -1,6 +1,6 @@
 ---
 title: "Paro Indefinido "
-image: /assets/img/posts/paroind.gif
+image: /src/assets/img/posts/paroind.gif
 description: Un paro nacional indefinido se ha desatado en Guatemala como una
   poderosa protesta contra lo que se percibe como amenazas a la democracia
   después de las recientes elecciones, con una amplia coalición de sectores de

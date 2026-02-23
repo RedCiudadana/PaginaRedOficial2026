@@ -1,6 +1,6 @@
 ---
 title: Hoja de ruta para una Justicia Abierta - Parte 4
-image: /assets/img/posts/diagnostico-justicia-abierta.png
+image: /src/assets/img/posts/diagnostico-justicia-abierta.png
 description: Se desarrolló la cuarta sesión del Proceso de Formación sobre
   Justicia Abierta, en las cuales se abordará a profundidad el tema de Justicia
   Abierta.

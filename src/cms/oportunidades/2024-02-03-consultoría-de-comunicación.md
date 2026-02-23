@@ -1,6 +1,6 @@
 ---
 title: Consultoría de Comunicación
-image: /assets/img/posts/02_cover-youtube.png
+image: /src/assets/img/posts/02_cover-youtube.png
 description: La consultoría busca desarrollar una estrategia de comunicación
   integral que refleje la misión, visión y objetivos de Red Ciudadana.
 autor: Red Ciudadana

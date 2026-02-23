@@ -1,7 +1,7 @@
 ---
 title: "La Importancia de la Formación en Datos Abiertos: Clave para la
   Transparencia y el Desarrollo"
-image: /assets/img/posts/portal-de-datos-abiertos-finanzas.png
+image: /src/assets/img/posts/portal-de-datos-abiertos-finanzas.png
 description: La formación en datos abiertos es esencial para que comprendan cómo
   publicar y gestionar la información de manera transparente y accesible
 autor: Julio Herrera

@@ -1,6 +1,6 @@
 ---
 title: "Portal de Datos Abiertos SEGEPLAN: Datos para el Desarrollo"
-image: /assets/img/posts/portal-de-datos-abiertos-segeplan.png
+image: /src/assets/img/posts/portal-de-datos-abiertos-segeplan.png
 description: El portal es una herramienta fundamental para empoderar a los
   ciudadanos, facilitando su participación activa en la toma de decisiones y
   promoviendo la rendición de cuentas.
@@ -24,7 +24,7 @@ Uno de los aspectos más destacables del Portal de Datos Abiertos de SEGEPLAN es
 
 Estos conjuntos de datos están disponibles en varios formatos descargables (CSV y XLSX), lo que facilita su uso en análisis y estudios. Además, el portal incluye herramientas de visualización que permiten explorar la información de manera interactiva, haciendo más accesible el entendimiento de los datos para personas que no necesariamente tienen experiencia técnica en análisis de datos.
 
-![](/assets/img/posts/portal-da-segeplan.png "Portal de Datos Abiertos SEGEPLAN")
+![](/src/assets/img/posts/portal-da-segeplan.png "Portal de Datos Abiertos SEGEPLAN")
 
 ### ¿Cómo Acceder al Portal?
 

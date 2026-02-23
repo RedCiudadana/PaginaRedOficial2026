@@ -1,6 +1,6 @@
 ---
 title: Primera Encuesta de Interoperabilidad Gubernamental en Guatemala
-image: /assets/img/posts/encuesta-nacional-de-interoperabilidad.png
+image: /src/assets/img/posts/encuesta-nacional-de-interoperabilidad.png
 description: Es un esfuerzo pionero para conocer el estado actual del
   intercambio de información entre instituciones y sus principales desafíos.
 autor: Red Ciudadana

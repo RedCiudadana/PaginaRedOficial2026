@@ -34,5 +34,5 @@ descripcion: >-
 
   El IGD utiliza diversas herramientas para recopilar y evaluar datos de las instituciones, incluyendo ejercicios de usuario simulado, autoevaluaciones de capacidades institucionales y entrevistas de adaptación digital. Estas herramientas permiten obtener una visión integral del estado de la digitalización gubernamental en Guatemala.
 ano: "2024"
-foto: https://redciudadana.org/assets/img/posts/indice-de-gobierno-digital.png
+foto: https://redciudadana.org/src/assets/img/posts/indice-de-gobierno-digital.png
 ---

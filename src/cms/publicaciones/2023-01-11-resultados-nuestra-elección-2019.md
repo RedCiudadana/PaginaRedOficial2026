@@ -1,6 +1,6 @@
 ---
 title: Resultados Nuestra Elección 2019
-image: /assets/img/posts/imagenes-04.png
+image: /src/assets/img/posts/imagenes-04.png
 description: Resultados Nuestra Elección 2019
 enlace: https://publicaciones.redciudadana.org/2019/Nuestra%20Elección/2.%20Resultados%20Nuestra%20Eleccion.pdf
 autor: Red Ciudadana

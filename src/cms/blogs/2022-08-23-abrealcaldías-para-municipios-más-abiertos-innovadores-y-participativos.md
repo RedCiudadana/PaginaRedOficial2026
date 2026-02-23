@@ -1,6 +1,6 @@
 ---
 title: AbreAlcaldías para municipios más abiertos, innovadores y participativos
-image: /assets/img/posts/cópia-de-08-shapes-1-.png
+image: /src/assets/img/posts/cópia-de-08-shapes-1-.png
 description: "¿Cómo devolvemos el poder a la ciudadanía para que estén al centro
   de las políticas públicas? "
 autor: Natalia Carranza

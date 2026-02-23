@@ -1,7 +1,7 @@
 ---
 title: "El Impacto de los Datos Abiertos en las Contrataciones Públicas: Un
   Camino Hacia la Transparencia y la Confianza Ciudadana"
-image: /assets/img/posts/portal-de-datos-abiertos-finanzas.png
+image: /src/assets/img/posts/portal-de-datos-abiertos-finanzas.png
 description: Los datos abiertos son información pública que se encuentra
   disponible de manera accesible, gratuita y reutilizable para cualquier
   persona.
@@ -24,7 +24,7 @@ En el ámbito de las contrataciones públicas, el uso de datos abiertos se ha co
 
 Esto no solo permite a la ciudadanía observar en tiempo real cómo se gastan los fondos públicos, sino que también ofrece la posibilidad de identificar irregularidades y patrones que puedan indicar la presencia de **banderas rojas** (red flags) en el proceso.
 
-![](/assets/img/posts/whatsapp-image-2024-05-22-at-02.11.04.jpeg)
+![](/src/assets/img/posts/whatsapp-image-2024-05-22-at-02.11.04.jpeg)
 
 ### **El valor de la transparencia y la participación ciudadana**
 

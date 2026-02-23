@@ -1,6 +1,6 @@
 ---
 title: Manual de herramientas de activismo
-image: /assets/img/posts/imagenes-06.png
+image: /src/assets/img/posts/imagenes-06.png
 description: Manual de herramientas de activismo
 enlace: https://publicaciones.redciudadana.org/
 autor: Ciudadanía Inteligente y Red Ciudadana

@@ -30,6 +30,6 @@ enlace: '<blockquote class="tiktok-embed"
   Lo-fi hip hop - NAO-K</a> </section> </blockquote> <script async
   src="https://www.tiktok.com/embed.js"></script>'
 autor: Red Ciudadana
-image: /assets/img/posts/01_formación-justicia-abierta_post-.png
+image: /src/assets/img/posts/01_formación-justicia-abierta_post-.png
 highlight: false
 ---

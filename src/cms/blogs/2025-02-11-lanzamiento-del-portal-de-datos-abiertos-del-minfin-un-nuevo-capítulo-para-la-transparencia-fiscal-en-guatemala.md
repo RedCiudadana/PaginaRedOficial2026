@@ -1,7 +1,7 @@
 ---
 title: "Lanzamiento del portal de datos abiertos del MINFIN: un nuevo capítulo
   para la transparencia fiscal en Guatemala"
-image: /assets/img/posts/cover_01.png
+image: /src/assets/img/posts/cover_01.png
 description: En un mundo donde la información es poder, los datos abiertos se
   han convertido en una herramienta clave para fortalecer la democracia y
   promover la rendición de cuentas.
@@ -14,7 +14,7 @@ En un mundo donde la información es poder, los datos abiertos se han convertido
 
 El evento de lanzamiento, realizado en el Palacio Nacional de Guatemala, reunió a representantes del sector público, la sociedad civil y la cooperación internacional, reafirmando el compromiso con la transparencia y la apertura gubernamental.
 
-![](/assets/img/posts/captura-de-pantalla-2025-02-10-a-la-s-16.46.45.png)
+![](/src/assets/img/posts/captura-de-pantalla-2025-02-10-a-la-s-16.46.45.png)
 
 ### **¿Por qué es importante este relanzamiento?**
 
@@ -22,7 +22,7 @@ Durante años, el acceso a la información pública ha sido un desafío en Guate
 
 Este nuevo portal ofrece mejoras significativas, como visualizaciones interactivas, acceso simplificado a bases de datos y mecanismos de participación ciudadana para solicitar información y dar retroalimentación sobre la usabilidad de la plataforma.
 
-![](/assets/img/posts/img_7162.jpg)
+![](/src/assets/img/posts/img_7162.jpg)
 
 ### **Un esfuerzo conjunto por la transparencia**
 
@@ -32,7 +32,7 @@ Desde Red Ciudadana, hemos impulsado iniciativas para fomentar el uso de datos a
 
 Este esfuerzo no sería posible sin el apoyo del Ministerio Federal de Cooperación Económica y Desarrollo de Alemania (BMZ) y el Programa Buena Gobernanza Financiera de GIZ, quienes han acompañado el proceso de modernización de la plataforma y su implementación.
 
-![](/assets/img/posts/img_7114.jpg)
+![](/src/assets/img/posts/img_7114.jpg)
 
 ### **Próximos pasos: datos abiertos para la acción**
 

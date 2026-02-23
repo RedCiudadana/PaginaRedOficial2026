@@ -1,6 +1,6 @@
 ---
 title: Reflexiones sobre el "Encuentro de Justicia Abierta 2023
-image: /assets/img/posts/whatsapp-image-2023-11-22-at-09.42.00.jpeg
+image: /src/assets/img/posts/whatsapp-image-2023-11-22-at-09.42.00.jpeg
 description: Innovación y Compromiso en el Segundo Encuentro de Justicia Abierta
 autor: Red Ciudadana
 correo: info@redciudadana.org.gt

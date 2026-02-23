@@ -1,7 +1,7 @@
 ---
 title: "Innovar con datos abiertos: una oportunidad para las organizaciones de
   sociedad civil"
-image: /assets/img/posts/plantilla_covers-blogs-red-ciudadana-9-.jpg
+image: /src/assets/img/posts/plantilla_covers-blogs-red-ciudadana-9-.jpg
 description: Abrimos la convocatoria al Fondo de Mini-Grants para Innovación
   Cívica con Datos Abiertos, una oportunidad exclusiva para organizaciones de
   sociedad civil de 🇬🇹 Guatemala, 🇨🇷 Costa Rica y 🇵🇦 Panamá.
@@ -142,4 +142,4 @@ Datos abiertos para fortalecer la transparencia, la inclusión y la participaci�
 
 <!--EndFragment-->
 
-![](/assets/img/posts/plantilla_covers-blogs-red-ciudadana-9-.jpg)
+![](/src/assets/img/posts/plantilla_covers-blogs-red-ciudadana-9-.jpg)

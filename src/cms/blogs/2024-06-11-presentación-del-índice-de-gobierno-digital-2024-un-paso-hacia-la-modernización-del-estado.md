@@ -1,7 +1,7 @@
 ---
 title: "Presentación del Índice de Gobierno Digital 2024: Un Paso Hacia la
   Modernización del Estado"
-image: /assets/img/posts/indice-de-gobierno-digital.png
+image: /src/assets/img/posts/indice-de-gobierno-digital.png
 description: "La transformación digital es un proceso esencial para mejorar la
   calidad y eficiencia de los servicios públicos en Guatemala. "
 autor: Red Ciudadana
@@ -54,4 +54,4 @@ Para más información sobre el IGD 2024 y otros proyectos de Red Ciudadana, vis
 
 **\#GobiernoDigital #TransformaciónDigital #Innovación #RedCiudadana #Guatemala**
 
-![](/assets/img/posts/igd-2024_01.png)
+![](/src/assets/img/posts/igd-2024_01.png)

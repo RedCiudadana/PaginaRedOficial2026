@@ -10,6 +10,6 @@ description: >-
 
 
   ¡Ven y únete a la Red Ciudadana!
-image: /assets/img/posts/mapa.png
-slider: /assets/img/posts/webverapazslider.png
+image: /src/assets/img/posts/mapa.png
+slider: /src/assets/img/posts/webverapazslider.png
 ---

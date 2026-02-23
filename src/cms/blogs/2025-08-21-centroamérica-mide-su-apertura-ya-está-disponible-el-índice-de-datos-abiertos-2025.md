@@ -1,7 +1,7 @@
 ---
 title: "Centroamérica mide su apertura: ya está disponible el Índice de Datos
   Abiertos 2025"
-image: /assets/img/posts/dsc08797.jpg
+image: /src/assets/img/posts/dsc08797.jpg
 description: El Índice de Datos Abiertos de Centroamérica 2025, una iniciativa
   regional que visibiliza los avances, brechas y oportunidades en la publicación
   y uso de datos públicos.

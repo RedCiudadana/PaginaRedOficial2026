@@ -1,6 +1,6 @@
 ---
 title: Avances hacia un marco legal en ciberseguridad
-image: /assets/img/posts/plantilla_covers-blogs-red-ciudadana.png
+image: /src/assets/img/posts/plantilla_covers-blogs-red-ciudadana.png
 description: La seguridad digital de los ciudadanos guatemaltecos debe estar en
   el centro de la transformación digital del país
 autor: Red Ciudadana

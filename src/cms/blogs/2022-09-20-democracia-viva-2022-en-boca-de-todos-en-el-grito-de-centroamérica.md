@@ -1,6 +1,6 @@
 ---
 title: "Democracia Viva 2022: en boca de todos, en el grito de Centroamérica"
-image: /assets/img/posts/01_portada_01.png
+image: /src/assets/img/posts/01_portada_01.png
 description:  De acuerdo con el Monitor de Seguimiento del espacio cívico de
   CIVICUS (2020),en Latinoamérica se ha reducido el espacio en 22 de 32 países;
   siendo obstruido y cerrado en 8 de ellos.
@@ -37,6 +37,6 @@ Esta forma de activismo emerge en un contexto regional específico de crecientes
 
 ## **Democracia Viva 2022: en boca de todos, en el grito de Centroamérica.**
 
-![](/assets/img/posts/01_portada_01.png)
+![](/src/assets/img/posts/01_portada_01.png)
 
 <!--EndFragment-->

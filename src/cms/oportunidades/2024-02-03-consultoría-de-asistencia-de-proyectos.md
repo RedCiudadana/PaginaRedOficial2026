@@ -1,6 +1,6 @@
 ---
 title: Consultoría de Asistencia de proyectos
-image: /assets/img/posts/02_cover-youtube.png
+image: /src/assets/img/posts/02_cover-youtube.png
 description: Apoyando la gestión y ejecución de las actividades y asegurando que
   los proyectos se desarrollen según lo planeado.
 autor: Red Ciudadana

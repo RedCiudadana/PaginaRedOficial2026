@@ -1,6 +1,6 @@
 ---
 title: MuniAprende - Manual para la Innovación Municipal
-image: /assets/img/posts/imagenes-09.png
+image: /src/assets/img/posts/imagenes-09.png
 description: MuniAprende - Manual para la Innovación Municipal
 enlace: https://publicaciones.redciudadana.org/2019/MuniAprende/MuniAprende%20-%20Manual%20para%20la%20Innovaci%C3%B3n%20Municipal.pdf
 autor: Red Ciudadana

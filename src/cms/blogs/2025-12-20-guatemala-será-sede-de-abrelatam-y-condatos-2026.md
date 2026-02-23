@@ -1,6 +1,6 @@
 ---
 title: Guatemala será sede de Abrelatam y ConDatos 2026
-image: /assets/img/posts/plantilla_covers-blogs-red-ciudadana-7-.jpg
+image: /src/assets/img/posts/plantilla_covers-blogs-red-ciudadana-7-.jpg
 description: Guatemala ha sido confirmada como país anfitrión de ABRELATAM +
   CONDATOS 2026, el evento más importante de América Latina dedicado a los datos
   abiertos, el gobierno digital, la tecnología cívica, la transparencia y los

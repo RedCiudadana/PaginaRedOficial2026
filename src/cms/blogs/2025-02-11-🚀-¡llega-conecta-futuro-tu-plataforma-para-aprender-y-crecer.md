@@ -1,6 +1,6 @@
 ---
 title: " 🚀 ¡Llega Conecta Futuro! Tu plataforma para aprender y crecer"
-image: /assets/img/posts/cover_02.png
+image: /src/assets/img/posts/cover_02.png
 description: Es un espacio de formación en línea donde aprenderás herramientas
   esenciales para mejorar tu productividad, trabajar con datos y aprovechar la
   tecnología en tu día a día.

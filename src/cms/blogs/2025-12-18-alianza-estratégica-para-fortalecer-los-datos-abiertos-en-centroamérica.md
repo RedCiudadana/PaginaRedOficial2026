@@ -1,6 +1,6 @@
 ---
 title: Alianza estratégica para fortalecer los datos abiertos en Centroamérica
-image: /assets/img/posts/plantilla_covers-blogs-red-ciudadana-5-.jpg
+image: /src/assets/img/posts/plantilla_covers-blogs-red-ciudadana-5-.jpg
 description: Red Ciudadana y la Embajada del Reino Unido en Panamá firman una
   alianza estratégica para fortalecer los datos abiertos en Centroamérica
 autor: Red Ciudadana

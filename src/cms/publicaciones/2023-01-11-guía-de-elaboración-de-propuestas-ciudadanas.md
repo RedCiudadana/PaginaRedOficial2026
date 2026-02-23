@@ -1,6 +1,6 @@
 ---
 title: Guía de elaboración de propuestas ciudadanas
-image: /assets/img/posts/imagenes-05.png
+image: /src/assets/img/posts/imagenes-05.png
 description: Guía de elaboración de propuestas ciudadanas
 enlace: https://publicaciones.redciudadana.org/2019/Nuestra%20Elección/3.%20Guía%20de%20elaboración%20de%20propuestas%20ciudadanas.pdf
 autor: Ciudadanía Inteligente y Red Ciudadana

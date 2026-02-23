@@ -1,6 +1,6 @@
 ---
 title: ImpactaLatam - Herramientas para Medición de Impacto
-image: /assets/img/posts/02_cover-youtube.png
+image: /src/assets/img/posts/02_cover-youtube.png
 description: ImpactaLatam - Herramientas para Medición de Impacto
 enlace: https://publicaciones.redciudadana.org/2021/ImpactaLatam%20-%20Herramientas%20para%20Medicio%CC%81n%20%20de%20Impacto.pdf
 autor: Red Ciudadana

@@ -1,6 +1,6 @@
 ---
 title: Proceso de formación sobre la Justicia Abierta
-image: /assets/img/posts/imagenes-web-curso-portada-1-.png
+image: /src/assets/img/posts/imagenes-web-curso-portada-1-.png
 description: El proceso de formación de Justicia Abierta profundizará sobre la
   aplicación de una filosofía de estado abierto en las instituciones del sector
   justicia.
@@ -9,7 +9,7 @@ correo: info@redciudadana.org.gt
 date: 2022-10-05T00:34:22.580Z
 highlight: false
 ---
-![Proceso de formación: Justicia Abierta](/assets/img/posts/01_formación-justicia-abierta_post-.png "Proceso de formación: Justicia Abierta")
+![Proceso de formación: Justicia Abierta](/src/assets/img/posts/01_formación-justicia-abierta_post-.png "Proceso de formación: Justicia Abierta")
 
 La Justicia Abierta tiene su origen en el modelo de Gobierno Abierto y se basa en los principios de **colaboración, transparencia, participación y usos de tecnologías**. La aplicación de los principios mencionados en el marco de la Justicia Abierta pretende mejorar el desempeño y eficiencia de los **servicios prestados por el sector justicia**, contribuyendo a mejorar la legitimidad de los órganos que lo conforman. Además, se enfatiza los desarrollos tecnológicos como elementos esenciales para la apertura del sector justicia. 
 

@@ -1,6 +1,6 @@
 ---
 title: "Informe de Labores 2024: Un Año de Cambios, Desafíos y Esperanza"
-image: /assets/img/posts/informe-de-labores-2024.png
+image: /src/assets/img/posts/informe-de-labores-2024.png
 description: El 2024 fue un año crucial para Guatemala y para Red Ciudadana. La
   llegada del nuevo gobierno liderado por Bernardo Arévalo trajo consigo una ola
   de esperanza y expectativas.
@@ -19,7 +19,7 @@ La lucha contra la corrupción sigue siendo uno de los pilares fundamentales de 
 
 Otra de nuestras iniciativas clave fue la expansión de **Justiciapedia**, una plataforma que ofrece perfiles de actores clave del sistema judicial. Esto ayuda a los ciudadanos a comprender mejor el sistema de justicia y a exigir rendición de cuentas. Además, consolidamos el **Observatorio Fiscal**, una herramienta que permite analizar cómo el gobierno utiliza los recursos públicos y fomenta la vigilancia ciudadana.
 
-![](/assets/img/posts/whatsapp-image-2024-05-20-at-13.15.56.jpeg)
+![](/src/assets/img/posts/whatsapp-image-2024-05-20-at-13.15.56.jpeg)
 
 ### Innovación en el Gobierno: Haciendo Más con Tecnología
 
@@ -27,7 +27,7 @@ Uno de los mayores avances de este año fue el desarrollo del **portal de datos 
 
 La tecnología también tuvo un papel importante en nuestros proyectos de **inteligencia artificial (IA)**. Implementamos pilotos que demostraron cómo la IA puede ser una herramienta poderosa para optimizar la planificación pública y mejorar los servicios gubernamentales. Por ejemplo, utilizamos IA para analizar datos y evaluar políticas públicas de manera más eficiente. Estos avances posicionan a Guatemala como un referente en innovación estatal en la región.
 
-![](/assets/img/posts/segeplan-ia-red-ciudadana.jpg)
+![](/src/assets/img/posts/segeplan-ia-red-ciudadana.jpg)
 
 ### Fortaleciendo la Participación Ciudadana
 

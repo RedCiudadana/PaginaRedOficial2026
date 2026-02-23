@@ -6,10 +6,10 @@ description: Nuestro cuarto objetivo estratégico se centra en la Transformació
   participación ciudadana. Este objetivo busca integrar la tecnología de manera
   estratégica en todas las áreas de la organización y en los servicios que
   prestamos a la comunidad.
-slider: /assets/img/posts/nuevoweb-red-36.png
-icono: /assets/img/posts/nuevoweb-red-29.png
-foto: /assets/img/posts/web-19.png
-fotop: /assets/img/posts/web-23.png
+slider: /src/assets/img/posts/nuevoweb-red-36.png
+icono: /src/assets/img/posts/nuevoweb-red-29.png
+foto: /src/assets/img/posts/web-19.png
+fotop: /src/assets/img/posts/web-23.png
 mediciones: Mediciones de servicios públicos que se han digitalizado y están
   disponibles en línea.
 procesos: Ofrecer formación a ciudadanos para mejorar sus habilidades digitales

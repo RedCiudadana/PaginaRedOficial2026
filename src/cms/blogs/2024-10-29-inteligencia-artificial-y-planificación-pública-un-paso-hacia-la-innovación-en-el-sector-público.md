@@ -1,7 +1,7 @@
 ---
 title: "Inteligencia Artificial y Planificación Pública: Un paso hacia la
   Innovación en el Sector Público"
-image: /assets/img/posts/01_ai.png
+image: /src/assets/img/posts/01_ai.png
 description: La Inteligencia Artificial (IA) se posiciona como una herramienta
   clave para transformar el sector público.
 autor: Red Ciudadana
@@ -23,7 +23,7 @@ La estructura de esta capacitación fue diseñada para que cada módulo abordara
 2. **Aplicaciones prácticas en la planificación pública**: Mediante casos de estudio y ejercicios prácticos, mostramos a los participantes cómo la IA puede integrarse en su trabajo cotidiano, especialmente en el análisis y gestión de grandes volúmenes de datos. Este módulo incluyó herramientas de automatización que permiten agilizar tareas administrativas, analizar patrones en los datos y mejorar la capacidad de predicción en la toma de decisiones.
 3. **Ética en el uso de la IA**: El uso de IA en el sector público implica responsabilidades éticas, especialmente cuando se trata de la transparencia y la rendición de cuentas. A través de debates y ejemplos concretos, abordamos la importancia de mitigar los sesgos en los algoritmos, garantizar que los sistemas de IA sean auditables y alinear su implementación con los valores de justicia y equidad.
 
-![](/assets/img/posts/segeplan-ia-red-ciudadana.jpg)
+![](/src/assets/img/posts/segeplan-ia-red-ciudadana.jpg)
 
 ### Resultados y beneficios a futuro
 

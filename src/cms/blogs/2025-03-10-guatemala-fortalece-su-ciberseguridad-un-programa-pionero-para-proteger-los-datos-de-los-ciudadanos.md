@@ -1,7 +1,7 @@
 ---
 title: "Guatemala fortalece su ciberseguridad: Un programa para proteger los
   datos de los ciudadanos"
-image: /assets/img/posts/plantilla_covers-blogs-red-ciudadana.png
+image: /src/assets/img/posts/plantilla_covers-blogs-red-ciudadana.png
 description: "Red Ciudadana y Guatemala No Se Detiene realiza el lanzamiento del
   programa de capacitación en ciberseguridad, dirigido a 150 funcionarios del
   sector público. "
@@ -16,7 +16,7 @@ La transformación digital en Guatemala avanza a pasos agigantados, y con ella, 
 
 Este programa llega en un momento crucial, ya que el último informe del **Foro Económico Mundial** ha identificado el ciberespionaje y la guerra cibernética como dos de los principales riesgos globales para los próximos años. Para enfrentar estos desafíos, es imprescindible fortalecer las competencias digitales del sector público y garantizar la protección de la información de los ciudadanos.
 
-![](/assets/img/posts/f0e18e72-942a-4f7d-9ff1-3ea044e8bcab.jpeg)
+![](/src/assets/img/posts/f0e18e72-942a-4f7d-9ff1-3ea044e8bcab.jpeg)
 
 ## **Un enfoque práctico para una mayor protección**
 
@@ -36,7 +36,7 @@ Para garantizar la calidad del programa, se ha reunido a un equipo de especialis
 👩‍💻 **Janett García Marín**, experta en cibercrimen.\
 🎓 **Emanuel Ortiz, PhD(c)** en Ciberseguridad.
 
-![](/assets/img/posts/bcead5bb-4062-41d8-ab54-5cab3ece1122.jpeg)
+![](/src/assets/img/posts/bcead5bb-4062-41d8-ab54-5cab3ece1122.jpeg)
 
 ### **Red Ciudadana: Compromiso con la innovación y la transparencia**
 

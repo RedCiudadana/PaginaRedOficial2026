@@ -1,6 +1,6 @@
 ---
 title: Agenda Encuentro de Justicia Abierta 2023
-image: /assets/img/posts/diagnostico-justicia-abierta.png
+image: /src/assets/img/posts/diagnostico-justicia-abierta.png
 description: El Encuentro de Justicia Abierta profundizará sobre la aplicación
   de una filosofía de estado abierto en las instituciones del sector justicia.
 autor: Red Ciudadana
@@ -18,28 +18,28 @@ El Encuentro de Justicia Abierta profundizará sobre la aplicación de una filos
 
 Si tiene interés en saber más sobre la importancia de **Justicia Abierta**, no dude en inscribirse y se parte, en el cual podrá aprender de la mano de expertos internacionales, y así fortalecer sus capacidades técnicas en la materia de Justicia Abierta. 
 
-![Encuentro de Justicia Abierta 2023](/assets/img/posts/invitacion-encuentro-de-justicia-abierta-guatemala-2023.png "Encuentro de Justicia Abierta 2023")
+![Encuentro de Justicia Abierta 2023](/src/assets/img/posts/invitacion-encuentro-de-justicia-abierta-guatemala-2023.png "Encuentro de Justicia Abierta 2023")
 
 ## Agenda:
 
-![Agenda 7 de Marzo](/assets/img/posts/agenda-encuentro-justicia-dia-1-7-de-marzo.png "Agenda 7 de Marzo ")
+![Agenda 7 de Marzo](/src/assets/img/posts/agenda-encuentro-justicia-dia-1-7-de-marzo.png "Agenda 7 de Marzo ")
 
-![Agenda 8 de Marzo](/assets/img/posts/agenda-encuentro-justicia-dia-2-8-de-marzo.png "Agenda 8 de Marzo")
+![Agenda 8 de Marzo](/src/assets/img/posts/agenda-encuentro-justicia-dia-2-8-de-marzo.png "Agenda 8 de Marzo")
 
 ## Expositores:
 
-![](/assets/img/posts/plantilla-expositores_justicia-abierta.png)
+![](/src/assets/img/posts/plantilla-expositores_justicia-abierta.png)
 
-![](/assets/img/posts/plantilla-expositores_justicia-abierta-1-.png)
+![](/src/assets/img/posts/plantilla-expositores_justicia-abierta-1-.png)
 
-![](/assets/img/posts/plantilla-expositores_justicia-abierta-2-.png)
+![](/src/assets/img/posts/plantilla-expositores_justicia-abierta-2-.png)
 
-![](/assets/img/posts/plantilla-expositores_justicia-abierta-3-.png)
+![](/src/assets/img/posts/plantilla-expositores_justicia-abierta-3-.png)
 
-![](/assets/img/posts/plantilla-expositores_justicia-abierta-17-.png)
+![](/src/assets/img/posts/plantilla-expositores_justicia-abierta-17-.png)
 
-![](/assets/img/posts/plantilla-expositores_justicia-abierta-14-.png)
+![](/src/assets/img/posts/plantilla-expositores_justicia-abierta-14-.png)
 
-![](/assets/img/posts/plantilla-expositores_justicia-abierta-15-.png)
+![](/src/assets/img/posts/plantilla-expositores_justicia-abierta-15-.png)
 
-![](/assets/img/posts/plantilla-expositores_justicia-abierta-8-.png)
+![](/src/assets/img/posts/plantilla-expositores_justicia-abierta-8-.png)

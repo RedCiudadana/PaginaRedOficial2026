@@ -7,6 +7,6 @@ description: Red Ciudadana Alta Verapaz es el capítulo de la Asociación Civil
   tiene el objetivo de  construir, compartir y aprender sobre herramientas para
   crear, apoyar y servir al bien público en Alta Verapaz. ¡Ven y únete a la Red
   Ciudadana!
-image: /assets/img/posts/mapa.png
-slider: /assets/img/posts/01_slider.png
+image: /src/assets/img/posts/mapa.png
+slider: /src/assets/img/posts/01_slider.png
 ---

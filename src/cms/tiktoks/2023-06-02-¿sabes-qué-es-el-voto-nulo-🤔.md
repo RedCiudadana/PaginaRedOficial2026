@@ -33,6 +33,6 @@ enlace: '<blockquote class="tiktok-embed"
   sonido original - Red Ciudadana</a> </section> </blockquote> <script async
   src="https://www.tiktok.com/embed.js"></script>'
 autor: Red Ciudadana
-image: /assets/img/posts/voto-nulo_reel.png
+image: /src/assets/img/posts/voto-nulo_reel.png
 highlight: true
 ---

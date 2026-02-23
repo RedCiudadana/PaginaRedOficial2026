@@ -7,5 +7,5 @@ descripcion: Realización de una encuesta para evaluar el nivel de
   gubernamentales, identificando barreras y oportunidades para la integración de
   datos.
 ano: "2024"
-foto: https://redciudadana.org/assets/img/posts/encuesta-nacional-de-interoperabilidad.png
+foto: https://redciudadana.org/src/assets/img/posts/encuesta-nacional-de-interoperabilidad.png
 ---

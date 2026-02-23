@@ -1,6 +1,6 @@
 ---
 title: "Consultoría: Formación de Funcionarios Públicos en Power BI"
-image: /assets/img/posts/02_cover-youtube.png
+image: /src/assets/img/posts/02_cover-youtube.png
 description: El objetivo de esta consultoría es proporcionar una formación
   práctica y técnica a funcionarios de gobierno en el uso de Power BI
 autor: Red Ciudadana

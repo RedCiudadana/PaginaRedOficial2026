@@ -1,6 +1,6 @@
 ---
 title: 🚀 Desafío de Inteligencia Artificial para el Desarrollo Local
-image: /assets/img/posts/plantilla_covers-blogs-red-ciudadana-11-.jpg
+image: /src/assets/img/posts/plantilla_covers-blogs-red-ciudadana-11-.jpg
 description: Un desafio de innovación abierta para diseñar y prototipar
   soluciones prácticas basadas en inteligencia artificial que impulsen el
   emprendimiento local y mejoren los servicios municipales.

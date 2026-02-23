@@ -1,6 +1,6 @@
 ---
 title: Consultoría de Coordinación de proyectos
-image: /assets/img/posts/02_cover-youtube.png
+image: /src/assets/img/posts/02_cover-youtube.png
 description: Esta consultoría es esencial para fortalecer la capacidad de Red
   Ciudadana para liderar y ejecutar proyectos que promuevan su misión,
   aumentando su impacto y eficacia en la consecución de objetivos sociales

@@ -1,14 +1,14 @@
 ---
 title: Proceso de Formación de Datos Abiertos - 29 de noviembre y 6 de diciembre
   de 2023
-image: /assets/img/posts/diagnostico-justicia-abierta.png
+image: /src/assets/img/posts/diagnostico-justicia-abierta.png
 description: Desbloquea el Potencial de los Datos Abiertos
 autor: Red Ciudadana
 correo: info@redciudadana.org.gt
 date: 2023-10-20T14:38:58.770Z
 highlight: true
 ---
-![](/assets/img/posts/c_formacion_mail_03.png)
+![](/src/assets/img/posts/c_formacion_mail_03.png)
 
 <!--StartFragment-->
 

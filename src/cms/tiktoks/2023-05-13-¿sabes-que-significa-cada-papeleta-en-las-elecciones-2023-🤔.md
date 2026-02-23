@@ -32,6 +32,6 @@ enlace: '<blockquote class="tiktok-embed"
   Levitating - Dua Lipa</a> </section> </blockquote> <script async
   src="https://www.tiktok.com/embed.js"></script>'
 autor: Red Ciudadana
-image: /assets/img/posts/captura-de-pantalla-2023-05-13-a-la-s-08.16.01.png
+image: /src/assets/img/posts/captura-de-pantalla-2023-05-13-a-la-s-08.16.01.png
 highlight: true
 ---

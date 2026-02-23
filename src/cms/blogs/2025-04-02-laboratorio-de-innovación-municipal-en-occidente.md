@@ -1,6 +1,6 @@
 ---
 title: Laboratorio de Innovación Municipal en Occidente
-image: /assets/img/posts/plantilla_covers-blogs-red-ciudadana-1-.png
+image: /src/assets/img/posts/plantilla_covers-blogs-red-ciudadana-1-.png
 description: Red Ciudadana y la Mancomunidad Metrópoli de Los Altos firman
   alianza para lanzar el primer Laboratorio de Innovación Municipal en Occidente
 autor: Red Ciudadana
@@ -17,7 +17,7 @@ Este espacio, que nace con el espíritu de innovación, colaboración y acción,
 “Estamos convencidos de que el desarrollo local requiere tecnología, creatividad y alianzas estratégicas. Este laboratorio busca demostrar que desde lo local también se puede innovar con impacto,”\
 — Julio Herrera, Director Ejecutivo de Red Ciudadana
 
-![](/assets/img/posts/foto-4.jpg)
+![](/src/assets/img/posts/foto-4.jpg)
 
 ## ¿Qué incluye el laboratorio?
 
@@ -34,7 +34,7 @@ Este laboratorio representa un modelo pionero de articulación entre sociedad ci
 
 La Mancomunidad de Los Altos, que agrupa a varios municipios del occidente del país, ha mostrado un firme compromiso con la mejora de los servicios públicos y el desarrollo de capacidades en sus territorios. Esta alianza permitirá combinar experiencia técnica con conocimiento del territorio, generando soluciones que respondan realmente a las necesidades locales.
 
-![](/assets/img/posts/foto.jpg)
+![](/src/assets/img/posts/foto.jpg)
 
 ## Próximos pasos
 

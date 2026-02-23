@@ -1,6 +1,6 @@
 ---
 title: Participación y co-creación para una Justicia Abierta - Parte 3
-image: /assets/img/posts/diagnostico-justicia-abierta.png
+image: /src/assets/img/posts/diagnostico-justicia-abierta.png
 description: Se desarrolló la tercera de cuatro sesiones del Proceso de
   Formación sobre Justicia Abierta, en las cuales se abordará a profundidad el
   tema de Justicia Abierta.
@@ -23,4 +23,4 @@ Finalmente, explicó el caso de Justicia 2020- Argentina, describiéndolo como e
 
 Destacó que el caso de Justicia 2020 no conllevó mayor recurso humano, pero en dicho caso de contó con un gran apoyo y respaldo de máximas autoridades del gobierno. En ese sentido, mencionó que el contar con el respaldo de las máximas autoridades de la institución define el impulso que tendrá el programa a implementarse, de tal forma que se le da potencia a las iniciativas y determina en gran medida los avances que las políticas puede tener. 
 
-![](/assets/img/posts/diagrama-10.png)
+![](/src/assets/img/posts/diagrama-10.png)

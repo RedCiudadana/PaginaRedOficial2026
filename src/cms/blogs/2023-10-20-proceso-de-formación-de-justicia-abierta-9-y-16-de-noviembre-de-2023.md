@@ -1,6 +1,6 @@
 ---
 title: Proceso de Formación de Justicia Abierta - 9 y 16 de noviembre de 2023
-image: /assets/img/posts/diagnostico-justicia-abierta.png
+image: /src/assets/img/posts/diagnostico-justicia-abierta.png
 description: "Descubre la Justicia Abierta: Un Viaje hacia la Transparencia y la
   Participación"
 autor: Red Ciudadana
@@ -8,7 +8,7 @@ correo: info@redciudadana.org.gt
 date: 2023-10-20T14:30:30.683Z
 highlight: false
 ---
-![](/assets/img/posts/c_formacion_post_01.png)
+![](/src/assets/img/posts/c_formacion_post_01.png)
 
 <!--StartFragment-->
 

@@ -1,6 +1,6 @@
 ---
 title: Oportunidades para Guatemala en 2025
-image: /assets/img/posts/cover_03.png
+image: /src/assets/img/posts/cover_03.png
 description: Con la llegada de 2025, Guatemala tiene frente a sí muchas
   oportunidades emocionantes que pueden cambiar su futuro.
 autor: Red Ciudadana
@@ -10,7 +10,7 @@ highlight: false
 ---
 Con la llegada de 2025, Guatemala tiene frente a sí muchas oportunidades emocionantes que pueden cambiar su futuro. A medida que el mundo avanza en tecnología, transparencia y modernización, nuestro país puede destacarse en temas importantes como la transformación digital, la lucha contra la corrupción y la innovación en el sector público. Aquí te contamos cómo estos temas pueden hacer la diferencia.
 
-![](/assets/img/posts/01_cierre-de-gobierno-2020-2024.png)
+![](/src/assets/img/posts/01_cierre-de-gobierno-2020-2024.png)
 
 #### 1. Transformación Digital: Conectando el Futuro
 

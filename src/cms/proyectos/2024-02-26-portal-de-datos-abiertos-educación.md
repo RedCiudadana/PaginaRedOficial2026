@@ -6,5 +6,5 @@ descripcion: Implementación de un portal que proporcione datos sobre el sistema
   educativo, incluyendo estadísticas de matrícula, resultados de pruebas
   estandarizadas y recursos para escuelas.
 ano: "2023"
-foto: /assets/img/posts/portal-de-datos-abiertos-educacion.png
+foto: /src/assets/img/posts/portal-de-datos-abiertos-educacion.png
 ---

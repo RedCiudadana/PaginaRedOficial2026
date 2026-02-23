@@ -1,6 +1,6 @@
 ---
 title: Consultoría de Edición de videos
-image: /assets/img/posts/02_cover-youtube.png
+image: /src/assets/img/posts/02_cover-youtube.png
 description: Esta consultoría tiene como fin fortalecer la comunicación visual
   de Red Ciudadana, aumentando su impacto a través de la producción de contenido
   audiovisual que capte la atención y transmita efectivamente los mensajes de la

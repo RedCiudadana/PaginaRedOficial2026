@@ -1,7 +1,7 @@
 ---
 title: ¿Protegemos Nuestros Datos? La Urgencia de una Ley de Protección de Datos
   en Guatemala
-image: /assets/img/posts/cover_04.png
+image: /src/assets/img/posts/cover_04.png
 description: En este 28 de enero, reflexionemos juntos y promovamos un cambio
   real. 💬 ¿Qué opinas? ¿Crees que es hora de tener una ley de protección de
   datos en Guatemala?

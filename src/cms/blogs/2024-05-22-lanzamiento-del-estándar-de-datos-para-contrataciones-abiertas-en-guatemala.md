@@ -1,6 +1,6 @@
 ---
 title: Lanzamiento del Estándar de Datos para Contrataciones Abiertas en Guatemala
-image: /assets/img/posts/whatsapp-image-2024-05-20-at-13.15.56-1-.jpeg
+image: /src/assets/img/posts/whatsapp-image-2024-05-20-at-13.15.56-1-.jpeg
 description: El pasado 20 de mayo marcó un hito significativo en la historia de
   la transparencia y la gobernanza en Guatemala.
 autor: Red Ciudadana
@@ -12,7 +12,7 @@ highlight: false
 
 El pasado 20 de mayo marcó un hito significativo en la historia de la transparencia y la gobernanza en Guatemala. En una colaboración ejemplar entre el Ministerio de Finanzas Públicas y Red Ciudadana, se llevó a cabo el lanzamiento oficial del Estándar de Datos para Contrataciones Abiertas (OCDS, por sus siglas en inglés). Este evento no solo simboliza un paso adelante en la lucha contra la corrupción, sino que también establece un nuevo paradigma en cómo los ciudadanos pueden interactuar con su gobierno, asegurando una participación más activa y consciente en la fiscalización de los recursos públicos.
 
-![](/assets/img/posts/whatsapp-image-2024-05-20-at-13.16.42.jpeg)
+![](/src/assets/img/posts/whatsapp-image-2024-05-20-at-13.16.42.jpeg)
 
 ### ¿Qué es el OCDS?
 
@@ -37,7 +37,7 @@ Aunque el lanzamiento del OCDS es un avance considerable, todavía enfrentamos d
 
 Mirando hacia el futuro, Red Ciudadana continuará colaborando con el gobierno y otras entidades para expandir y profundizar la implementación del OCDS. Estamos comprometidos con el seguimiento continuo y la evaluación del impacto del estándar, así como con la mejora continua de las herramientas y procesos asociados.
 
-![](/assets/img/posts/whatsapp-image-2024-05-20-at-13.15.56.jpeg)
+![](/src/assets/img/posts/whatsapp-image-2024-05-20-at-13.15.56.jpeg)
 
 ### Conclusión
 

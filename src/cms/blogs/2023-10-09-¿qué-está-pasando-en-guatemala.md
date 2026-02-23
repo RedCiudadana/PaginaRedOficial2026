@@ -1,6 +1,6 @@
 ---
 title: ¿Qué está pasando en Guatemala?
-image: /assets/img/posts/popup-indice-justicia-abierta-copy-1-.gif
+image: /src/assets/img/posts/popup-indice-justicia-abierta-copy-1-.gif
 description: Según el Tribunal Supremo Electoral el total de documentos
   confiscados por el MP es alrededor de 125,000, por lo que varias juntas
   electorales departamentales, municipales y juntas receptoras de votos,

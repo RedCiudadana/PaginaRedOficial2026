@@ -1,7 +1,7 @@
 ---
 title: "Análisis del Índice de Gobierno Digital 2024: Resultados y
   Recomendaciones para la Transformación Digital en Guatemala"
-image: /assets/img/posts/indice-de-gobierno-digital.png
+image: /src/assets/img/posts/indice-de-gobierno-digital.png
 description: El Índice de Gobierno Digital 2024, elaborado por Red Ciudadana,
   ofrece una evaluación del estado y progreso de la digitalización en el sector
   público guatemalteco.

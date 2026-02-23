@@ -1,6 +1,6 @@
 ---
 title: Encuesta Ciudadana - Evaluación Plataforma pnd.gt
-image: /assets/img/posts/arte-3.png
+image: /src/assets/img/posts/arte-3.png
 description: ¡Participa en la evaluación de la plataforma pnd.gt (incluyendo
   módulo ODS) y aporta tus recomendaciones para el fortalecimiento de
   funcionalidad y contenido!

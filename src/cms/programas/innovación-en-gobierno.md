@@ -4,10 +4,10 @@ description: Nuestro primer objetivo estratégico es fomentar la Innovación en 
   Gobierno. Creemos que la adopción de tecnologías y prácticas innovadoras puede
   transformar la manera en que el gobierno presta servicios a los ciudadanos,
   mejora la transparencia y fomenta la participación ciudadana.
-slider: /assets/img/posts/nuevoweb-red-35.png
-icono: /assets/img/posts/nuevoweb-red-30.png
-foto: /assets/img/posts/web-16.png
-fotop: /assets/img/posts/web-20.png
+slider: /src/assets/img/posts/nuevoweb-red-35.png
+icono: /src/assets/img/posts/nuevoweb-red-30.png
+foto: /src/assets/img/posts/web-16.png
+fotop: /src/assets/img/posts/web-20.png
 mediciones: Mediciones de instituciones gubernamentales que implementan
   soluciones tecnológicas innovadoras.
 procesos: Programas de formación para funcionarios públicos sobre el uso y

@@ -1,6 +1,6 @@
 ---
 title: ¿Qué es Justicia Abierta? - Parte 2
-image: /assets/img/posts/diagnostico-justicia-abierta.png
+image: /src/assets/img/posts/diagnostico-justicia-abierta.png
 description: Se desarrolló la segunda de cuatro sesiones del Proceso de
   Formación sobre Justicia Abierta, en las cuales se abordará a profundidad el
   tema de Justicia Abierta.
@@ -15,7 +15,7 @@ La sesión fue impartida por Sandra Elena, experta en el tema y consultora inter
 
 Además, se destacó la importancia de crear políticas de datos abiertos y como son un medio de fiscalizar la actividad de las instituciones públicas. Asimismo, mencionó la utilidad que estas políticas tienen para las personas. Indicó que los datos son fundamentales para orientar el accionar de la institución pública. Explicó que los datos abiertos en el sector justicia es un concepto novedoso y reciente. El cual aún tiene mucho por delante.
 
-![](/assets/img/posts/diagrama-10.png)
+![](/src/assets/img/posts/diagrama-10.png)
 
 En la sesión se mencionó que las características de los datos abiertos son: 1) accesibilidad, que se refiere a los datos puedan ser consultados y descargables como un todo; 2) no-discriminación, la cual se enfoca en que cualquier persona puede usarla y beneficiar de dichos datos, respetando la normativa legal aplicable; 3) re-usabilidad, en cuanto a que los datos sean en formatos abiertos, de tal forma que puedan ser re utilizados; 4) sostenibilidad, quiere decir que los datos se deben actualizar de forma constante, de forma estandarizada y automatizada; y 5) relevancia: lo cual se refiere a que los datos deben ser de interés y una herramienta que permita, en cierta medida, ayudar a los ciudadanos.
 

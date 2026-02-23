@@ -1,6 +1,6 @@
 ---
 title: Eventos de Innovación – Sector Justicia
-image: /assets/img/posts/evento-virtual_01.png
+image: /src/assets/img/posts/evento-virtual_01.png
 description: "¡Llega una nueva serie de emocionantes eventos de innovación!
   Invitamos a todos los interesados a formar parte de este increíble viaje para
   generar soluciones transformadoras en diversas áreas. "

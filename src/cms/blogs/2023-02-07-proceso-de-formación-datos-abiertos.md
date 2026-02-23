@@ -1,6 +1,6 @@
 ---
 title: "Proceso de formación: Datos Abiertos"
-image: /assets/img/posts/diagnostico-justicia-abierta.png
+image: /src/assets/img/posts/diagnostico-justicia-abierta.png
 description: El proceso de formación de Datos Abiertos profundizará sobre la
   aplicación de una filosofía de estado abierto en las instituciones del sector
   justicia.
@@ -9,7 +9,7 @@ correo: info@redciudadana.org.gt
 date: 2023-02-07T15:25:54.768Z
 highlight: false
 ---
-![Proceso de formación: Datos Abiertos](/assets/img/posts/03_formacion-en-datos-abiertos.png "Proceso de formación: Datos Abiertos")
+![Proceso de formación: Datos Abiertos](/src/assets/img/posts/03_formacion-en-datos-abiertos.png "Proceso de formación: Datos Abiertos")
 
 La Justicia Abierta tiene su origen en el modelo de Gobierno Abierto y se basa en los principios de **colaboración, transparencia, participación y usos de tecnologías**. La aplicación de los principios mencionados en el marco de la Justicia Abierta pretende mejorar el desempeño y eficiencia de los **servicios prestados por el sector justicia**, contribuyendo a mejorar la legitimidad de los órganos que lo conforman. Además, se enfatiza los desarrollos tecnológicos como elementos esenciales para la apertura del sector justicia. 
 

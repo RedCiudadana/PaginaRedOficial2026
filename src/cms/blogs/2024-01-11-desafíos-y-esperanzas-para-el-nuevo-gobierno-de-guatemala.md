@@ -1,6 +1,6 @@
 ---
 title: Desafíos y Esperanzas para el Nuevo Gobierno de Guatemala
-image: /assets/img/posts/01_cierre-de-gobierno-2020-2024.png
+image: /src/assets/img/posts/01_cierre-de-gobierno-2020-2024.png
 description: El año 2024 amanece en Guatemala con una mezcla de incertidumbre y
   esperanza. El nuevo gobierno, bajo la dirección de Bernardo Arévalo y Karin
   Herrera, se enfrenta a un panorama lleno de desafíos críticos, pero también de

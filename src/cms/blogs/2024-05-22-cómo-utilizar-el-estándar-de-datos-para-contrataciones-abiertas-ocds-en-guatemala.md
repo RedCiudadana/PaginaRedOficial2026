@@ -1,7 +1,7 @@
 ---
 title: ¿Cómo Utilizar el Estándar de Datos para Contrataciones Abiertas (OCDS)
   en Guatemala?
-image: /assets/img/posts/whatsapp-image-2024-05-22-at-02.11.04.jpeg
+image: /src/assets/img/posts/whatsapp-image-2024-05-22-at-02.11.04.jpeg
 description: Aquí te ofrecemos una guía paso a paso sobre cómo utilizar el OCDS
   a través del portal [Guatecompras OCDS](https://ocds.guatecompras.gt/), donde
   podrás acceder a toda la información relevante sobre contrataciones del Estado

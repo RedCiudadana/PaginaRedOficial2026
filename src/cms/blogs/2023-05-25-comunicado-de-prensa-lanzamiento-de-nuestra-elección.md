@@ -1,6 +1,6 @@
 ---
 title: "COMUNICADO DE PRENSA:  Lanzamiento de Nuestra Elección"
-image: /assets/img/posts/publicaciones.png
+image: /src/assets/img/posts/publicaciones.png
 description: La Asociación Civil Red Ciudadana en conjunto con Global Shapers
   Guatemala City presento el proyecto Nuestra Elección
 autor: Red Ciudadana

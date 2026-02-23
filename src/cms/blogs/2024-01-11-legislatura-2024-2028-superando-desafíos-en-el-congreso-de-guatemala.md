@@ -1,6 +1,6 @@
 ---
 title: "Legislatura 2024-2028: Superando Desafíos en el Congreso de Guatemala"
-image: /assets/img/posts/04_congreso-de-la-república-2024-2028.png
+image: /src/assets/img/posts/04_congreso-de-la-república-2024-2028.png
 description: La décima legislatura del Congreso se inaugura en un contexto de
   grandes expectativas y enormes desafíos.
 autor: Red Ciudadana

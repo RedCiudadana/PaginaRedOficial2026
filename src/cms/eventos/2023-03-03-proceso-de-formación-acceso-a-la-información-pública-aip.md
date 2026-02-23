@@ -1,6 +1,6 @@
 ---
 title: "Proceso de formación: Acceso a la Información Pública (AIP)"
-image: /assets/img/posts/diagnostico-justicia-abierta.png
+image: /src/assets/img/posts/diagnostico-justicia-abierta.png
 description: El proceso de formación de Acceso a la Información Pública (AIP)
   profundizará sobre la aplicación de una filosofía de estado abierto en las
   instituciones del sector justicia.

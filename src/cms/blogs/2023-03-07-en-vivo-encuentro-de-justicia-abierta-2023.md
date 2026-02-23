@@ -1,6 +1,6 @@
 ---
 title: "[En vivo] Encuentro De Justicia Abierta 2023"
-image: /assets/img/posts/diagnostico-justicia-abierta.png
+image: /src/assets/img/posts/diagnostico-justicia-abierta.png
 description: El Encuentro de Justicia Abierta profundizará sobre la aplicación
   de una filosofía de estado abierto en las instituciones del sector justicia.
 autor: Red Ciudadana

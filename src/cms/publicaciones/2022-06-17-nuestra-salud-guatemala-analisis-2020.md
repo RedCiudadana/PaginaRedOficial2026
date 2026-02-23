@@ -1,6 +1,6 @@
 ---
 title: "Nuestra Salud Guatemala: Análisis 2020"
-image: /assets/img/posts/imagenes-14.png
+image: /src/assets/img/posts/imagenes-14.png
 description: "Nuestra Salud Guatemala: Análisis 2020"
 enlace: https://publicaciones.redciudadana.org/2020/Nuestra%20Salud/INFORME%20FINAL_NUESTRA%20SALUD.pdf
 autor: Red Ciudadana

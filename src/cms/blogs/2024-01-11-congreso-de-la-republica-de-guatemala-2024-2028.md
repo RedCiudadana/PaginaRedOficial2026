@@ -1,6 +1,6 @@
 ---
 title: Congreso de la Republica de Guatemala 2024-2028"
-image: /assets/img/posts/04_congreso-de-la-república-2024-2028.png
+image: /src/assets/img/posts/04_congreso-de-la-república-2024-2028.png
 description: La política guatemalteca está en un punto de inflexión. Con el
   inicio de la décima legislatura del Congreso, el país se embarca en un nuevo
   viaje político.

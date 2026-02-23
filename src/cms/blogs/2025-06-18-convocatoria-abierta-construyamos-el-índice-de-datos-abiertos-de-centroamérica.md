@@ -1,6 +1,6 @@
 ---
 title: "Convocatoria Abierta: Iniciativa de Datos Abiertos para GT, HN y DO"
-image: /assets/img/posts/plantilla_covers-blogs-red-ciudadana-2-.jpg
+image: /src/assets/img/posts/plantilla_covers-blogs-red-ciudadana-2-.jpg
 description: Esta iniciativa busca fortalecer la transparencia y la eficiencia
   en la gestión pública, promoviendo el uso de datos abiertos como una
   herramienta clave para la participación ciudadana y la transformación
@@ -78,4 +78,4 @@ Este proyecto parte de la convicción de que el acceso a la información y el us
 
 <!--EndFragment-->
 
-![](/assets/img/posts/arte-convocatoria.png)
+![](/src/assets/img/posts/arte-convocatoria.png)

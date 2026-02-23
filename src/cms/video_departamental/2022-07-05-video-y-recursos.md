@@ -10,5 +10,5 @@ description: >-
 
 
   <iframe width="560" height="315" src="[https://www.youtube.com/​embed/8GMZ0TWd9PQ](https://www.youtube.com/embed/8GMZ0TWd9PQ)" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-image: /assets/img/posts/iconos-09.png
+image: /src/assets/img/posts/iconos-09.png
 ---
