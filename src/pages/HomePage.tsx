@@ -19,8 +19,14 @@ const HomePage = () => {
       image: homeHeroImage,
       stats: [],
       cta: {
-        primary: { text: 'Plan Estratégico 2024-2028', action: '/estrategia' },
-        secondary: { text: 'Conocer Más', action: '/quienes-somos' }
+        primary: { 
+          text: 'Plan Estratégico 2024-2028', 
+          action: '/estrategia' 
+        },
+        secondary: { 
+          text: 'Conocer Más', 
+          action: '/quienes-somos' 
+        }
       }
     }
   ];
