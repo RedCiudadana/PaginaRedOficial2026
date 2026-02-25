@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Calendar, User, Search, TrendingUp } from 'lucide-react';
+import { Calendar, User, Search, TrendingUp, ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { getAllBlogs, BlogPost } from '../lib/cmsBlogs';
 import bannerHero from '../assets/banner/BANNER_03.png';
@@ -9,6 +9,10 @@ const BlogPage = () => {
   const [featuredPosts, setFeaturedPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
+  const [featuredPage, setFeaturedPage] = useState(1);
+  const [regularPage, setRegularPage] = useState(1);
+  const featuredPerPage = 4;
+  const regularPerPage = 6;
 
   useEffect(() => {
     const allPosts = getAllBlogs();
@@ -25,11 +29,24 @@ const BlogPage = () => {
                          post.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesSearch;
   });
+  const featuredTotalPages = Math.max(1, Math.ceil(featuredPosts.length / featuredPerPage));
+  const featuredSafePage = Math.min(featuredPage, featuredTotalPages);
+  const featuredStart = (featuredSafePage - 1) * featuredPerPage;
+  const featuredPaginated = featuredPosts.slice(featuredStart, featuredStart + featuredPerPage);
+
+  const regularTotalPages = Math.max(1, Math.ceil(filteredPosts.length / regularPerPage));
+  const regularSafePage = Math.min(regularPage, regularTotalPages);
+  const regularStart = (regularSafePage - 1) * regularPerPage;
+  const regularPaginated = filteredPosts.slice(regularStart, regularStart + regularPerPage);
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('es-GT', { year: 'numeric', month: 'long', day: 'numeric' });
   };
+
+  useEffect(() => {
+    setRegularPage(1);
+  }, [searchTerm]);
 
   if (loading) {
     return (
@@ -85,7 +102,7 @@ const BlogPage = () => {
               <h2 className="text-3xl font-bold text-gray-900">Artículos Destacados</h2>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {featuredPosts.map((post) => (
+              {featuredPaginated.map((post) => (
                 <Link
                   key={post.slug}
                   to={`/blog/${post.slug}`}
@@ -129,6 +146,62 @@ const BlogPage = () => {
                 </Link>
               ))}
             </div>
+            <div className="flex items-center justify-center gap-2 mt-10">
+                <button
+                  className={`h-10 w-10 rounded-lg border transition-all duration-200 flex items-center justify-center text-center leading-none ${
+                    featuredSafePage === 1
+                      ? 'border-gray-200 text-gray-300 cursor-not-allowed'
+                      : 'border-gray-300 text-gray-600 hover:bg-gray-100'
+                  }`}
+                  onClick={() => setFeaturedPage(1)}
+                  disabled={featuredSafePage === 1}
+                  aria-label="Primera"
+                >
+                  <ChevronsLeft size={18} />
+                </button>
+                <button
+                  className={`h-10 w-10 rounded-lg border transition-all duration-200 flex items-center justify-center text-center leading-none ${
+                    featuredSafePage === 1
+                      ? 'border-gray-200 text-gray-300 cursor-not-allowed'
+                      : 'border-gray-300 text-gray-600 hover:bg-gray-100'
+                  }`}
+                  onClick={() => setFeaturedPage((page) => Math.max(1, page - 1))}
+                  disabled={featuredSafePage === 1}
+                  aria-label="Anterior"
+                >
+                  <ChevronLeft size={18} />
+                </button>
+                <button
+                  className="h-10 w-10 rounded-lg border border-primary bg-primary text-white transition-all duration-200 flex items-center justify-center text-center leading-none"
+                  onClick={() => setFeaturedPage(featuredSafePage)}
+                >
+                  {featuredSafePage}
+                </button>
+                <button
+                  className={`h-10 w-10 rounded-lg border transition-all duration-200 flex items-center justify-center text-center leading-none ${
+                    featuredSafePage === featuredTotalPages
+                      ? 'border-gray-200 text-gray-300 cursor-not-allowed'
+                      : 'border-gray-300 text-gray-600 hover:bg-gray-100'
+                  }`}
+                  onClick={() => setFeaturedPage((page) => Math.min(featuredTotalPages, page + 1))}
+                  disabled={featuredSafePage === featuredTotalPages}
+                  aria-label="Siguiente"
+                >
+                  <ChevronRight size={18} />
+                </button>
+                <button
+                  className={`h-10 w-10 rounded-lg border transition-all duration-200 flex items-center justify-center text-center leading-none ${
+                    featuredSafePage === featuredTotalPages
+                      ? 'border-gray-200 text-gray-300 cursor-not-allowed'
+                      : 'border-gray-300 text-gray-600 hover:bg-gray-100'
+                  }`}
+                  onClick={() => setFeaturedPage(featuredTotalPages)}
+                  disabled={featuredSafePage === featuredTotalPages}
+                  aria-label="Última"
+                >
+                  <ChevronsRight size={18} />
+                </button>
+              </div>
           </div>
         )}
 
@@ -144,7 +217,7 @@ const BlogPage = () => {
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredPosts.map((post) => (
+              {regularPaginated.map((post) => (
                 <Link
                   key={post.slug}
                   to={`/blog/${post.slug}`}
@@ -185,6 +258,65 @@ const BlogPage = () => {
             </div>
           )}
         </div>
+
+        {filteredPosts.length > 0 && (
+          <div className="flex items-center justify-center gap-2 mt-12">
+            <button
+              className={`h-10 w-10 rounded-lg border transition-all duration-200 flex items-center justify-center text-center leading-none ${
+                regularSafePage === 1
+                  ? 'border-gray-200 text-gray-300 cursor-not-allowed'
+                  : 'border-gray-300 text-gray-600 hover:bg-gray-100'
+              }`}
+              onClick={() => setRegularPage(1)}
+              disabled={regularSafePage === 1}
+              aria-label="Primera"
+            >
+              <ChevronsLeft size={18} />
+            </button>
+            <button
+              className={`h-10 w-10 rounded-lg border transition-all duration-200 flex items-center justify-center text-center leading-none ${
+                regularSafePage === 1
+                  ? 'border-gray-200 text-gray-300 cursor-not-allowed'
+                  : 'border-gray-300 text-gray-600 hover:bg-gray-100'
+              }`}
+              onClick={() => setRegularPage((page) => Math.max(1, page - 1))}
+              disabled={regularSafePage === 1}
+              aria-label="Anterior"
+            >
+              <ChevronLeft size={18} />
+            </button>
+            <button
+              className="h-10 w-10 rounded-lg border border-primary bg-primary text-white transition-all duration-200 flex items-center justify-center text-center leading-none"
+              onClick={() => setRegularPage(regularSafePage)}
+            >
+              {regularSafePage}
+            </button>
+            <button
+              className={`h-10 w-10 rounded-lg border transition-all duration-200 flex items-center justify-center text-center leading-none ${
+                regularSafePage === regularTotalPages
+                  ? 'border-gray-200 text-gray-300 cursor-not-allowed'
+                  : 'border-gray-300 text-gray-600 hover:bg-gray-100'
+              }`}
+              onClick={() => setRegularPage((page) => Math.min(regularTotalPages, page + 1))}
+              disabled={regularSafePage === regularTotalPages}
+              aria-label="Siguiente"
+            >
+              <ChevronRight size={18} />
+            </button>
+            <button
+              className={`h-10 w-10 rounded-lg border transition-all duration-200 flex items-center justify-center text-center leading-none ${
+                regularSafePage === regularTotalPages
+                  ? 'border-gray-200 text-gray-300 cursor-not-allowed'
+                  : 'border-gray-300 text-gray-600 hover:bg-gray-100'
+              }`}
+              onClick={() => setRegularPage(regularTotalPages)}
+              disabled={regularSafePage === regularTotalPages}
+              aria-label="Última"
+            >
+              <ChevronsRight size={18} />
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

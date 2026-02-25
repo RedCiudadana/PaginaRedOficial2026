@@ -1,51 +1,40 @@
-import React, { useState } from 'react';
-import { FileText, Download } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { FileText, Download, User } from 'lucide-react';
+import { getAllPublicaciones, Publication } from '../lib/cmsPublicaciones';
 
 const Knowledge = () => {
   const [activeTab, setActiveTab] = useState('publications');
-
-  const publications = [
-    {
-      title: 'Guía Práctica de Gobierno Abierto para Municipalidades',
-      type: 'Guía Metodológica',
-      pages: 84,
-      downloads: 3420,
-      date: 'Diciembre 2023',
-      description: 'Manual completo para implementar principios de gobierno abierto a nivel municipal.',
-      format: 'PDF'
-    },
-    {
-      title: 'Estado de la Transparencia en Guatemala 2023',
-      type: 'Informe Anual',
-      pages: 156,
-      downloads: 5680,
-      date: 'Noviembre 2023',
-      description: 'Análisis comprehensivo del nivel de transparencia en instituciones públicas guatemaltecas.',
-      format: 'PDF'
-    },
-    {
-      title: 'Toolkit de Verificación para Periodistas',
-      type: 'Herramientas',
-      pages: 45,
-      downloads: 2890,
-      date: 'Octubre 2023',
-      description: 'Conjunto de herramientas y metodologías para la verificación de información.',
-      format: 'PDF + Excel'
-    },
-    {
-      title: 'Diagnóstico de Contrataciones Públicas 2023',
-      type: 'Investigación',
-      pages: 198,
-      downloads: 4230,
-      date: 'Septiembre 2023',
-      description: 'Estudio detallado sobre patrones y riesgos en contrataciones públicas guatemaltecas.',
-      format: 'PDF'
-    }
-  ];
+  const [publications, setPublications] = useState<Publication[]>([]);
+  const [loading, setLoading] = useState(true);
 
   const tabs = [
     { id: 'publications', label: 'Publicaciones', icon: FileText }
   ];
+
+  useEffect(() => {
+    setPublications(getAllPublicaciones());
+    setLoading(false);
+  }, []);
+
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    if (Number.isNaN(date.getTime())) {
+      return dateString;
+    }
+    return date.toLocaleDateString('es-GT', { year: 'numeric', month: 'long', day: 'numeric' });
+  };
+
+  if (loading) {
+    return (
+      <section id="conocimiento" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="min-h-[240px] flex items-center justify-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="conocimiento" className="py-20 bg-white">
@@ -83,15 +72,15 @@ const Knowledge = () => {
         {activeTab === 'publications' && (
           <div>
             <div className="grid lg:grid-cols-2 gap-8 mb-12">
-              {publications.map((publication, index) => (
-                <div key={index} className="bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-colors duration-200">
+              {publications.map((publication) => (
+                <div key={publication.slug} className="bg-gray-50 rounded-2xl p-6 hover:bg-gray-100 transition-colors duration-200">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
                       <div className="flex items-center mb-2">
                         <span className="bg-primary text-white px-3 py-1 rounded-full text-xs font-medium mr-3">
-                          {publication.type}
+                          {publication.highlight ? 'Destacado' : 'Publicación'}
                         </span>
-                        <span className="text-sm text-gray-500">{publication.date}</span>
+                        <span className="text-sm text-gray-500">{formatDate(publication.date)}</span>
                       </div>
                       
                       <h3 className="text-xl font-bold text-gray-900 mb-2">
@@ -106,17 +95,27 @@ const Knowledge = () => {
                   
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-4 text-sm text-gray-500">
-                      <span>{publication.pages} páginas</span>
-                      <span>•</span>
-                      <span>{publication.format}</span>
-                      <span>•</span>
-                      <span>{publication.downloads.toLocaleString()} descargas</span>
+                      {publication.autor && (
+                        <span className="flex items-center gap-2">
+                          <User size={14} />
+                          {publication.autor}
+                        </span>
+                      )}
                     </div>
                     
-                    <button className="bg-primary hover:bg-primary text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 flex items-center">
-                      <Download size={16} className="mr-2" />
-                      Descargar
-                    </button>
+                    {publication.enlace ? (
+                      <a
+                        href={publication.enlace}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-primary hover:bg-primary text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 flex items-center"
+                      >
+                        <Download size={16} className="mr-2" />
+                        Descargar
+                      </a>
+                    ) : (
+                      <span className="text-sm text-gray-400">Enlace no disponible</span>
+                    )}
                   </div>
                 </div>
               ))}

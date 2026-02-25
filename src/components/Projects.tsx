@@ -1,158 +1,69 @@
-import React, { useState } from 'react';
-import { Filter, Search, Calendar, MapPin, Users, ExternalLink, Award } from 'lucide-react';
+import React, { useEffect, useMemo, useState } from 'react';
+import { Search, Calendar, ExternalLink, ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight } from 'lucide-react';
 import impactIcon1 from '../assets/iconos/11_ICON.png';
 import impactIcon2 from '../assets/iconos/12_ICON.png';
 import impactIcon3 from '../assets/iconos/13_ICON.png';
 import impactIcon4 from '../assets/iconos/14_ICON.png';
+import { getAllProjects, Project } from '../lib/cmsProyectos';
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 4;
 
-  const filters = [
-    { id: 'all', label: 'Todos los Proyectos' },
-    { id: 'government', label: 'Innovación en Gobierno' },
-    { id: 'journalism', label: 'Periodismo' },
-    { id: 'anticorruption', label: 'Anticorrupción' },
-    { id: 'digital', label: 'Transformación Digital' }
-  ];
+  useEffect(() => {
+    setProjects(getAllProjects());
+    setLoading(false);
+  }, []);
 
-  const projects = [
-    {
-      id: 1,
-      title: 'Portal de Transparencia Municipal',
-      category: 'government',
-      description: 'Plataforma que permite a los ciudadanos acceder a información presupuestaria y de gestión de sus municipalidades.',
-      image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-      results: {
-        municipalities: 45,
-        users: 125000,
-        transparency: '87%'
-      },
-      year: '2023',
-      location: 'Nacional',
-      status: 'Activo',
-      testimonial: {
-        text: "Gracias a esta plataforma, ahora sabemos exactamente cómo se invierte el presupuesto municipal.",
-        author: "María González, Vecina de Quetzaltenango"
-      }
-    },
-    {
-      id: 2,
-      title: 'Escuela de Periodismo de Investigación',
-      category: 'journalism',
-      description: 'Programa de capacitación integral para fortalecer las capacidades de periodistas en investigación y verificación.',
-      image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-      results: {
-        journalists: 284,
-        investigations: 67,
-        impact: '156%'
-      },
-      year: '2024',
-      location: 'Guatemala, Quetzaltenango',
-      status: 'En desarrollo',
-      testimonial: {
-        text: "Este programa transformó mi manera de hacer periodismo. Ahora tengo herramientas profesionales para investigar.",
-        author: "Jorge Morales, Periodista"
-      }
-    },
-    {
-      id: 3,
-      title: 'Sistema de Alertas Anticorrupción',
-      category: 'anticorruption',
-      description: 'Herramienta de inteligencia artificial que detecta patrones sospechosos en contrataciones públicas.',
-      image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-      results: {
-        contracts: 12500,
-        alerts: 156,
-        saved: 'Q2.4M'
-      },
-      year: '2023',
-      location: 'Nacional',
-      status: 'Activo',
-      testimonial: {
-        text: "Las alertas nos han permitido intervenir antes de que se consoliden procesos irregulares.",
-        author: "Ana Pérez, Funcionaria de Contraloría"
-      }
-    },
-    {
-      id: 4,
-      title: 'Gobierno Digital Piloto',
-      category: 'digital',
-      description: 'Transformación digital integral de servicios municipales con enfoque en experiencia ciudadana.',
-      image: 'https://images.pexels.com/photos/3184431/pexels-photo-3184431.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-      results: {
-        services: 25,
-        satisfaction: '94%',
-        time_saved: '70%'
-      },
-      year: '2024',
-      location: 'Antigua Guatemala',
-      status: 'Piloto',
-      testimonial: {
-        text: "Ahora puedo hacer todos mis trámites municipales desde casa. Es increíble la diferencia.",
-        author: "Carlos Mendez, Empresario"
-      }
-    },
-    {
-      id: 5,
-      title: 'Red Nacional de Verificadores',
-      category: 'journalism',
-      description: 'Plataforma colaborativa para la verificación de información y combate a la desinformación.',
-      image: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-      results: {
-        verifiers: 89,
-        fact_checks: 234,
-        reach: '890K'
-      },
-      year: '2023',
-      location: 'Nacional',
-      status: 'Activo',
-      testimonial: {
-        text: "La red nos permite trabajar colaborativamente y llegar a más personas con información verificada.",
-        author: "Elena Ruiz, Verificadora"
-      }
-    },
-    {
-      id: 6,
-      title: 'Observatorio de Contrataciones',
-      category: 'anticorruption',
-      description: 'Monitoreo ciudadano de procesos de contratación pública con análisis de riesgos automatizado.',
-      image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-      results: {
-        institutions: 18,
-        contracts_monitored: 8900,
-        reports: 45
-      },
-      year: '2024',
-      location: 'Ciudad de Guatemala',
-      status: 'En desarrollo',
-      testimonial: {
-        text: "El observatorio nos da la información necesaria para hacer un seguimiento efectivo de las contrataciones.",
-        author: "Roberto Silva, Auditor Social"
-      }
-    }
-  ];
+  const slugify = (value: string) => value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
 
-  const filteredProjects = projects.filter(project => {
-    const matchesFilter = activeFilter === 'all' || project.category === activeFilter;
+  const filters = useMemo(() => {
+    const programSet = new Set(projects.map((project) => project.programa).filter(Boolean));
+    const programFilters = Array.from(programSet).map((programa) => ({
+      id: slugify(programa),
+      label: programa,
+    }));
+
+    return [
+      { id: 'all', label: 'Todos los Proyectos' },
+      ...programFilters,
+    ];
+  }, [projects]);
+
+  const filteredProjects = projects.filter((project) => {
+    const projectFilter = project.programa ? slugify(project.programa) : 'sin-programa';
+    const matchesFilter = activeFilter === 'all' || projectFilter === activeFilter;
     const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         project.description.toLowerCase().includes(searchTerm.toLowerCase());
+      project.descripcion.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesFilter && matchesSearch;
   });
+  const totalPages = Math.max(1, Math.ceil(filteredProjects.length / itemsPerPage));
+  const safePage = Math.min(currentPage, totalPages);
+  const pageStart = (safePage - 1) * itemsPerPage;
+  const paginatedProjects = filteredProjects.slice(pageStart, pageStart + itemsPerPage);
 
-  const getStatusColor = (status) => {
-    switch (status) {
-      case 'Activo':
-        return 'bg-primary text-white';
-      case 'En desarrollo':
-        return 'bg-primary text-white';
-      case 'Piloto':
-        return 'bg-primary text-white';
-      default:
-        return 'bg-gray-100 text-white';
-    }
-  };
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [activeFilter, searchTerm]);
+
+  if (loading) {
+    return (
+      <section id="proyectos" className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="min-h-[240px] flex items-center justify-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="proyectos" className="py-20 bg-gray-50">
@@ -204,50 +115,167 @@ const Projects = () => {
 
         {/* Projects Grid */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
-          {filteredProjects.map((project) => (
-            <div key={project.id} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          {paginatedProjects.map((project) => (
+            <div key={project.slug} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               {/* Image */}
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                />
-                <div className="absolute top-4 left-4">
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(project.status)}`}>
-                    {project.status}
-                  </span>
-                </div>
+              <div className="relative h-48 overflow-hidden bg-gray-100">
+                {project.enlace ? (
+                  <a
+                    href={project.enlace}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block h-full"
+                  >
+                    {project.foto ? (
+                      <img
+                        src={project.foto}
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center text-gray-400 text-sm">
+                        Imagen no disponible
+                      </div>
+                    )}
+                  </a>
+                ) : (
+                  <>
+                    {project.foto ? (
+                      <img
+                        src={project.foto}
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center text-gray-400 text-sm">
+                        Imagen no disponible
+                      </div>
+                    )}
+                  </>
+                )}
               </div>
 
               {/* Content */}
               <div className="p-6">
                 <div className="flex items-start justify-between mb-4">
-                  <h3 className="text-xl font-bold text-gray-900 flex-1">{project.title}</h3>
-                  <button className="text-blue-600 hover:text-blue-700 ml-4">
-                    <ExternalLink size={20} />
-                  </button>
+                  {project.enlace ? (
+                    <a
+                      href={project.enlace}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xl font-bold text-gray-900 flex-1 hover:text-primary transition-colors"
+                    >
+                      {project.title}
+                    </a>
+                  ) : (
+                    <h3 className="text-xl font-bold text-gray-900 flex-1">{project.title}</h3>
+                  )}
+                  {project.enlace && (
+                    <a
+                      href={project.enlace}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-700 ml-4"
+                      aria-label={`Abrir ${project.title}`}
+                    >
+                      <ExternalLink size={20} />
+                    </a>
+                  )}
                 </div>
 
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  {project.description}
-                </p>
+                {project.programa && (
+                  <div className="text-xs font-semibold text-primary mb-3">
+                    {project.programa}
+                  </div>
+                )}
+
+                {project.enlace ? (
+                  <a
+                    href={project.enlace}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 mb-6 leading-relaxed block hover:text-gray-800 transition-colors"
+                  >
+                    {project.descripcion}
+                  </a>
+                ) : (
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    {project.descripcion}
+                  </p>
+                )}
 
                 {/* Meta Info */}
-                <div className="flex items-center gap-4 text-sm text-gray-500">
-                  <div className="flex items-center">
-                    <Calendar size={16} className="mr-1" />
-                    {project.year}
+                {project.ano && (
+                  <div className="flex items-center gap-4 text-sm text-gray-500">
+                    <div className="flex items-center">
+                      <Calendar size={16} className="mr-1" />
+                      {project.ano}
+                    </div>
                   </div>
-                  <div className="flex items-center">
-                    <MapPin size={16} className="mr-1" />
-                    {project.location}
-                  </div>
-                </div>
+                )}
               </div>
             </div>
           ))}
         </div>
+
+        {filteredProjects.length > 0 && (
+          <div className="flex items-center justify-center gap-2 mb-16">
+            <button
+              className={`h-10 w-10 rounded-lg border transition-all duration-200 flex items-center justify-center text-center leading-none ${
+                safePage === 1
+                  ? 'border-gray-200 text-gray-300 cursor-not-allowed'
+                  : 'border-gray-300 text-gray-600 hover:bg-gray-100'
+              }`}
+              onClick={() => setCurrentPage(1)}
+              disabled={safePage === 1}
+              aria-label="Primera"
+            >
+              <ChevronsLeft size={18} />
+            </button>
+            <button
+              className={`h-10 w-10 rounded-lg border transition-all duration-200 flex items-center justify-center text-center leading-none ${
+                safePage === 1
+                  ? 'border-gray-200 text-gray-300 cursor-not-allowed'
+                  : 'border-gray-300 text-gray-600 hover:bg-gray-100'
+              }`}
+              onClick={() => setCurrentPage((page) => Math.max(1, page - 1))}
+              disabled={safePage === 1}
+              aria-label="Anterior"
+            >
+              <ChevronLeft size={18} />
+            </button>
+            <button
+              className="h-10 w-10 rounded-lg border border-primary bg-primary text-white transition-all duration-200 flex items-center justify-center text-center leading-none"
+              onClick={() => setCurrentPage(safePage)}
+            >
+              {safePage}
+            </button>
+            <button
+              className={`h-10 w-10 rounded-lg border transition-all duration-200 flex items-center justify-center text-center leading-none ${
+                safePage === totalPages
+                  ? 'border-gray-200 text-gray-300 cursor-not-allowed'
+                  : 'border-gray-300 text-gray-600 hover:bg-gray-100'
+              }`}
+              onClick={() => setCurrentPage((page) => Math.min(totalPages, page + 1))}
+              disabled={safePage === totalPages}
+              aria-label="Siguiente"
+            >
+              <ChevronRight size={18} />
+            </button>
+            <button
+              className={`h-10 w-10 rounded-lg border transition-all duration-200 flex items-center justify-center text-center leading-none ${
+                safePage === totalPages
+                  ? 'border-gray-200 text-gray-300 cursor-not-allowed'
+                  : 'border-gray-300 text-gray-600 hover:bg-gray-100'
+              }`}
+              onClick={() => setCurrentPage(totalPages)}
+              disabled={safePage === totalPages}
+              aria-label="Última"
+            >
+              <ChevronsRight size={18} />
+            </button>
+          </div>
+        )}
 
         {/* Impact Summary */}
         <div className="bg-gray-800 rounded-3xl p-8 text-white text-center">
@@ -283,9 +311,9 @@ const Projects = () => {
             Trabajamos con metodologías probadas y medimos nuestro impacto constantemente.
           </p>
 
-          <button className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-800 transition-colors duration-200 mb-8">
+          {/* <button className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-800 transition-colors duration-200 mb-8">
             Ver Todos los Proyectos
-          </button>
+          </button> */}
         </div>
       </div>
     </section>
