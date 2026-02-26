@@ -1,26 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { Play, Pause, Calendar, Clock, Users, Tag, Headphones, Search, Radio } from 'lucide-react';
-import { parseCSV } from '../lib/csvParser';
+import React, { useState, useEffect, useMemo } from 'react';
+import { Play, Pause, Calendar, Clock, Users, Headphones, Search, Radio } from 'lucide-react';
+import { getAllPodcasts, PodcastEpisode } from '../lib/cmsPodcasts';
 import bannerHero from '../assets/banner/BANNER_02.png';
 import banner3 from '../assets/banner/BANNER_03.png';
-
-interface PodcastEpisode {
-  id: string;
-  title: string;
-  slug: string;
-  description: string;
-  episode_number: number;
-  season: number;
-  duration: string;
-  audio_url: string;
-  cover_image: string;
-  published_date: string;
-  hosts: string;
-  guests: string | null;
-  topics: string[];
-  listen_count: number;
-  featured: boolean;
-}
 
 const PodcastPage = () => {
   const [episodes, setEpisodes] = useState<PodcastEpisode[]>([]);
@@ -30,7 +12,13 @@ const PodcastPage = () => {
   const [selectedTopic, setSelectedTopic] = useState('Todos');
   const [playingEpisode, setPlayingEpisode] = useState<string | null>(null);
 
-  const topics = ['Todos', 'Democracia', 'Transparencia', 'Tecnología', 'Periodismo', 'Anticorrupción', 'Innovación'];
+  const topics = useMemo(() => {
+    const allTopics = new Set<string>();
+    episodes.concat(featuredEpisodes).forEach((episode) => {
+      episode.topics.forEach((topic) => allTopics.add(topic));
+    });
+    return ['Todos', ...Array.from(allTopics)];
+  }, [episodes, featuredEpisodes]);
 
   useEffect(() => {
     fetchEpisodes();
@@ -40,11 +28,11 @@ const PodcastPage = () => {
     try {
       setLoading(true);
 
-      const allEpisodes = await parseCSV('/data/podcast-episodes.csv');
+      const allEpisodes = getAllPodcasts();
 
 
-      const featured = allEpisodes.filter(ep => ep.featured) || [];
-      const regular = allEpisodes.filter(ep => !ep.featured) || [];
+      const featured = allEpisodes.filter((ep) => ep.highlight) || [];
+      const regular = allEpisodes.filter((ep) => !ep.highlight) || [];
 
       setFeaturedEpisodes(featured);
       setEpisodes(regular);
@@ -67,11 +55,20 @@ const PodcastPage = () => {
     return date.toLocaleDateString('es-GT', { year: 'numeric', month: 'long', day: 'numeric' });
   };
 
-  const handlePlayPause = (episodeId: string) => {
+  const handlePlayPause = (episodeId: string, episodeLink: string) => {
     if (playingEpisode === episodeId) {
       setPlayingEpisode(null);
     } else {
       setPlayingEpisode(episodeId);
+      if (episodeLink) {
+        window.open(episodeLink, '_blank', 'noopener,noreferrer');
+      }
+    }
+  };
+
+  const handleOpenEpisode = (episodeLink: string) => {
+    if (episodeLink) {
+      window.open(episodeLink, '_blank', 'noopener,noreferrer');
     }
   };
 
@@ -155,20 +152,24 @@ const PodcastPage = () => {
               {featuredEpisodes.map((episode) => (
                 <article
                   key={episode.id}
-                  className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group"
+                  className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group cursor-pointer"
+                  onClick={() => handleOpenEpisode(episode.link)}
                 >
                   <div className="flex flex-col md:flex-row">
                     <div className="relative md:w-48 h-48 flex-shrink-0">
                       <img
-                        src={episode.cover_image}
+                        src={episode.image || bannerHero}
                         alt={episode.title}
                         className="w-full h-full object-cover"
                       />
                       <button
-                        onClick={() => handlePlayPause(episode.id)}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handlePlayPause(episode.slug, episode.link);
+                        }}
                         className="absolute inset-0 flex items-center justify-center bg-primary hover:bg-primary transition-all"
                       >
-                        {playingEpisode === episode.id ? (
+                        {playingEpisode === episode.slug ? (
                           <Pause className="text-white" size={48} />
                         ) : (
                           <Play className="text-white" size={48} />
@@ -178,7 +179,7 @@ const PodcastPage = () => {
                     <div className="p-6 flex-1">
                       <div className="flex items-center gap-2 text-xs text-purple-600 font-semibold mb-2">
                         <span className="bg-primary text-white px-2 py-1 rounded">DESTACADO</span>
-                        <span className="text-primary">Episodio {episode.episode_number}</span>
+                        <span className="text-primary">Episodio {episode.episode || 1}</span>
                       </div>
                       <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
                         {episode.title}
@@ -191,14 +192,14 @@ const PodcastPage = () => {
                         </span>
                         <span className="flex items-center gap-1">
                           <Calendar size={14} />
-                          {formatDate(episode.published_date)}
+                          {formatDate(episode.date)}
                         </span>
                         <span className="flex items-center gap-1">
                           <Headphones size={14} />
-                          {episode.listen_count} escuchas
+                          {episode.listenCount} escuchas
                         </span>
                       </div>
-                      {episode.guests && (
+                      {episode.guests && episode.guests.trim().length > 0 && (
                         <div className="mt-3 flex items-start gap-1 text-xs text-gray-600">
                           <Users size={14} className="mt-0.5" />
                           <span>Invitado: {episode.guests}</span>
@@ -234,20 +235,24 @@ const PodcastPage = () => {
               {filteredEpisodes.map((episode) => (
                 <article
                   key={episode.id}
-                  className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 group"
+                  className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 group cursor-pointer"
+                  onClick={() => handleOpenEpisode(episode.link)}
                 >
                   <div className="flex flex-col md:flex-row">
                     <div className="relative md:w-40 h-40 flex-shrink-0">
                       <img
-                        src={episode.cover_image}
+                        src={episode.image || bannerHero}
                         alt={episode.title}
                         className="w-full h-full object-cover"
                       />
                       <button
-                        onClick={() => handlePlayPause(episode.id)}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handlePlayPause(episode.slug, episode.link);
+                        }}
                         className="absolute inset-0 flex items-center justify-center bg-primary hover:bg-primary transition-all"
                       >
-                        {playingEpisode === episode.id ? (
+                        {playingEpisode === episode.slug ? (
                           <Pause className="text-white" size={40} />
                         ) : (
                           <Play className="text-white" size={40} />
@@ -256,7 +261,7 @@ const PodcastPage = () => {
                     </div>
                     <div className="p-5 flex-1">
                       <div className="flex items-center gap-2 text-xs text-primary font-semibold mb-2">
-                        <span>Episodio {episode.episode_number}</span>
+                        <span>Episodio {episode.episode || 1}</span>
                         <span className="text-gray-400">•</span>
                         <span className="text-gray-600">Temporada {episode.season}</span>
                       </div>
@@ -271,14 +276,14 @@ const PodcastPage = () => {
                         </span>
                         <span className="flex items-center gap-1">
                           <Calendar size={14} />
-                          {formatDate(episode.published_date)}
+                          {formatDate(episode.date)}
                         </span>
                         <span className="flex items-center gap-1">
                           <Users size={14} />
                           {episode.hosts}
                         </span>
                       </div>
-                      {episode.guests && (
+                      {episode.guests && episode.guests.trim().length > 0 && (
                         <div className="mb-3 text-xs text-gray-600">
                           <span className="font-semibold">Invitado:</span> {episode.guests}
                         </div>
