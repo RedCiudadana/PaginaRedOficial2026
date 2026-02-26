@@ -50,6 +50,8 @@ const ExecutiveSummary = () => {
             Somos una organización guatemalteca que desde 2010 trabaja para construir una sociedad más transparente, 
             participativa e innovadora a través de la tecnología y la colaboración ciudadana.
           </p>
+
+          <div className="mt-8 mx-auto h-1 w-24 rounded-full bg-gradient-to-r from-[#86c9b9] via-[#87becf] to-[#88b3e4] mb-4 lg:mb-6" />
         </div>
 
         {/* Key Points */}
@@ -85,7 +87,7 @@ const ExecutiveSummary = () => {
             <h3 className="text-xl lg:text-2xl font-bold mb-3 lg:mb-4">
               Conoce Más Sobre Nuestro Trabajo
             </h3>
-            <p className="text-blue-100 mb-6 lg:mb-8 max-w-2xl mx-auto text-sm lg:text-base px-4">
+            <p className="text-white mb-6 lg:mb-8 max-w-2xl mx-auto text-sm lg:text-base px-4">
               Descubre cómo estamos transformando Guatemala a través de nuestros cuatro objetivos estratégicos 
               y más de 150 proyectos implementados.
             </p>

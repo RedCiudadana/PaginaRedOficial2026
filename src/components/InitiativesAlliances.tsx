@@ -231,22 +231,22 @@ const InitiativesAlliances = () => {
             <h3 className="text-2xl font-bold">Reconocimiento Internacional</h3>
           </div>
           
-          <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+          <p className="text-white mb-6 max-w-2xl mx-auto">
             Nuestro trabajo ha sido reconocido por organizaciones internacionales como referente en transparencia e innovación pública
           </p>
 
           <div className="grid md:grid-cols-3 gap-4 mb-6">
             <div className="bg-white/10 rounded-xl p-4">
               <div className="text-2xl font-bold mb-1">2023</div>
-              <div className="text-blue-100 text-sm">Premio Regional OEA</div>
+              <div className="text-white text-sm">Premio Regional OEA</div>
             </div>
             <div className="bg-white/10 rounded-xl p-4">
               <div className="text-2xl font-bold mb-1">2022</div>
-              <div className="text-blue-100 text-sm">Reconocimiento BID</div>
+              <div className="text-white text-sm">Reconocimiento BID</div>
             </div>
             <div className="bg-white/10 rounded-xl p-4">
               <div className="text-2xl font-bold mb-1">2021</div>
-              <div className="text-blue-100 text-sm">Mención Banco Mundial</div>
+              <div className="text-white text-sm">Mención Banco Mundial</div>
             </div>
           </div>
 

@@ -126,7 +126,7 @@ const Anniversary15Page = () => {
               15 Años Transformando
               <span className="block text-yellow-400">Guatemala</span>
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-8">
+            <p className="text-xl md:text-2xl text-white max-w-3xl mx-auto mb-8">
               Desde 2010, hemos trabajado incansablemente para fortalecer la democracia, la transparencia y la innovación cívica en Guatemala
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -266,7 +266,7 @@ const Anniversary15Page = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Visión hacia el Futuro
             </h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            <p className="text-xl text-white max-w-3xl mx-auto">
               Los próximos 15 años: metas ambiciosas para transformar Guatemala y América Latina
             </p>
           </div>
@@ -280,7 +280,7 @@ const Anniversary15Page = () => {
                     <Icon size={32} />
                   </div>
                   <h3 className="text-xl font-bold mb-3">{goal.title}</h3>
-                  <p className="text-blue-100">{goal.description}</p>
+                  <p className="text-white">{goal.description}</p>
                 </div>
               );
             })}

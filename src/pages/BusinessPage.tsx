@@ -443,7 +443,7 @@ const BusinessPage = () => {
               Gobernanza ética para empresas con propósito
             </h1>
             
-            <p className="text-xl lg:text-2xl text-blue-100 mb-8 font-light leading-relaxed">
+            <p className="text-xl lg:text-2xl text-white mb-8 font-light leading-relaxed">
               Acompañamos a empresas a construir confianza, prevenir riesgos y fortalecer su reputación
             </p>
 
@@ -854,7 +854,7 @@ const BusinessPage = () => {
                 {/* CTAs */}
                 <div className="bg-primary rounded-xl p-6 text-white text-center">
                   <h4 className="text-xl font-bold mb-3">¿Listo para el siguiente paso?</h4>
-                  <p className="text-blue-100 mb-4 max-w-xl mx-auto text-sm">
+                  <p className="text-white mb-4 max-w-xl mx-auto text-sm">
                     Nuestros expertos pueden ayudarte a implementar las mejoras necesarias 
                     para fortalecer la ética y gobernanza de tu empresa.
                   </p>
@@ -942,7 +942,7 @@ const BusinessPage = () => {
               <h2 className="text-3xl lg:text-4xl font-bold">Academia de Gobernanza Empresarial</h2>
             </div>
             
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-white mb-8">
               Plataforma de formación especializada para empresas aliadas con cursos, certificaciones 
               y recursos exclusivos en ética, compliance y gobernanza corporativa.
             </p>
@@ -950,15 +950,15 @@ const BusinessPage = () => {
             <div className="grid md:grid-cols-3 gap-8 mb-8">
               <div className="bg-white/10 rounded-xl p-6">
                 <div className="text-3xl font-bold mb-2">25+</div>
-                <div className="text-blue-100">Cursos Especializados</div>
+                <div className="text-white">Cursos Especializados</div>
               </div>
               <div className="bg-white/10 rounded-xl p-6">
                 <div className="text-3xl font-bold mb-2">500+</div>
-                <div className="text-blue-100">Ejecutivos Certificados</div>
+                <div className="text-white">Ejecutivos Certificados</div>
               </div>
               <div className="bg-white/10 rounded-xl p-6">
                 <div className="text-3xl font-bold mb-2">95%</div>
-                <div className="text-blue-100">Satisfacción</div>
+                <div className="text-white">Satisfacción</div>
               </div>
             </div>
 

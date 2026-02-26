@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Calendar, User, Search, TrendingUp, ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { getAllBlogs, BlogPost } from '../lib/cmsBlogs';
-import bannerHero from '../assets/banner/BANNER_03.png';
+import bannerHero from '../assets/banner/BANNER_01.png';
 
 const BlogPage = () => {
   const [posts, setPosts] = useState<BlogPost[]>([]);
@@ -68,7 +68,7 @@ const BlogPage = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Blog Red Ciudadana
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-white max-w-3xl mx-auto">
               Noticias, análisis y reflexiones sobre transparencia, democracia e innovación en Guatemala
             </p>
           </div>

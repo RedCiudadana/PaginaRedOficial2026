@@ -287,26 +287,26 @@ const Projects = () => {
             <div>
               <img src={impactIcon1} alt="" className="mx-auto mb-3 h-14 w-14" />
               <div className="text-4xl font-bold mb-2">156+</div>
-              <div className="text-blue-100">Proyectos Completados</div>
+              <div className="text-white">Proyectos Completados</div>
             </div>
             <div>
               <img src={impactIcon2} alt="" className="mx-auto mb-3 h-14 w-14" />
               <div className="text-4xl font-bold mb-2">2.8M+</div>
-              <div className="text-blue-100">Personas Beneficiadas</div>
+              <div className="text-white">Personas Beneficiadas</div>
             </div>
             <div>
               <img src={impactIcon3} alt="" className="mx-auto mb-3 h-14 w-14" />
               <div className="text-4xl font-bold mb-2">Q45M</div>
-              <div className="text-blue-100">Ahorro al Estado</div>
+              <div className="text-white">Ahorro al Estado</div>
             </div>
             <div>
               <img src={impactIcon4} alt="" className="mx-auto mb-3 h-14 w-14" />
               <div className="text-4xl font-bold mb-2">89%</div>
-              <div className="text-blue-100">Satisfacción Promedio</div>
+              <div className="text-white">Satisfacción Promedio</div>
             </div>
           </div>
 
-          <p className="text-blue-100 max-w-2xl mx-auto mb-16">
+          <p className="text-white max-w-2xl mx-auto mb-16">
             Cada proyecto representa nuestro compromiso con la transformación de Guatemala. 
             Trabajamos con metodologías probadas y medimos nuestro impacto constantemente.
           </p>

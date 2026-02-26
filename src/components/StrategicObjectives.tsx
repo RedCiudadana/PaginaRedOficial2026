@@ -115,6 +115,7 @@ const StrategicObjectives = () => {
           <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed px-4">
             Transformamos Guatemala a través de la innovación, transparencia y participación ciudadana
           </p>
+          <div className="mt-8 mx-auto h-1 w-24 rounded-full bg-gradient-to-r from-[#86c9b9] via-[#87becf] to-[#88b3e4] mb-4 lg:mb-6" />
         </div>
 
         {/* Interactive Objectives Grid */}

@@ -38,10 +38,7 @@ const HomePage = () => {
       {/* 15th Anniversary Celebration Banner */}
       <div className="relative overflow-hidden" style={{backgroundColor: 'rgb(35, 40, 48)'}}>
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
-            backgroundSize: '30px 30px'
-          }}></div>
+
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">

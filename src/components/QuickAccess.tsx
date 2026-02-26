@@ -115,6 +115,7 @@ const QuickAccess = () => {
           <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto px-4">
             Herramientas especializadas para diferentes actores del ecosistema democrático
           </p>
+          <div className="mt-8 mx-auto h-1 w-24 rounded-full bg-gradient-to-r from-[#86c9b9] via-[#87becf] to-[#88b3e4] mb-4 lg:mb-6" />
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-10">

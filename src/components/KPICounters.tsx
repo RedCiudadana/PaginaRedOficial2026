@@ -8,10 +8,10 @@ const KPICounters = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-primary rounded-xl lg:rounded-2xl p-4 sm:p-6 lg:p-8 shadow-lg border border-gray-100">
           <div className="text-center">
-            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-3 lg:mb-4">
+            <h2 className="text-xl sm:text-xl lg:text-3xl font-bold text-white mb-3 lg:mb-3">
               Transformación Medible
-            </h3>
-            <p className="text-sm lg:text-base text-white leading-relaxed mb-4 lg:mb-6">
+            </h2>
+            <p className="text-sm lg:text-base text-white leading-relaxed mb-3 lg:mb-6 font-['Sora'] font-normal">
               Cada logro representa vidas impactadas y una sociedad más informada.
               Nuestro compromiso se refleja en resultados concretos.
             </p>

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Play, Pause, Calendar, Clock, Users, Tag, Headphones, Search, Radio } from 'lucide-react';
 import { parseCSV } from '../lib/csvParser';
-import bannerHero from '../assets/banner/BANNER_03.png';
+import bannerHero from '../assets/banner/BANNER_02.png';
+import banner3 from '../assets/banner/BANNER_03.png';
 
 interface PodcastEpisode {
   id: string;
@@ -92,15 +93,14 @@ const PodcastPage = () => {
        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex items-center justify-center gap-3 mb-6">
-              <Radio size={48} />
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
                 Podcast Red Ciudadana
               </h1>
             </div>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-white max-w-3xl mx-auto">
               Conversaciones sobre democracia, transparencia, innovación y tecnología cívica
             </p>
-            <div className="mt-8 flex items-center justify-center gap-8 text-blue-100">
+            <div className="mt-8 flex items-center justify-center gap-8 text-white">
               <div className="flex items-center gap-2">
                 <Headphones size={24} />
                 <span className="text-lg">Nuevo episodio cada semana</span>
@@ -301,25 +301,25 @@ const PodcastPage = () => {
         {/* Subscribe Section */}
         <div
           className="relative mt-16 rounded-2xl p-8 md:p-12 text-white text-center bg-cover bg-center overflow-hidden"
-          style={{ backgroundImage: `url(${bannerHero})` }}
+          style={{ backgroundImage: `url(${banner3})` }}
         >
           <div className="relative">
             <Radio size={48} className="mx-auto mb-4" />
             <h2 className="text-3xl font-bold mb-4">Suscríbete a nuestro podcast</h2>
-            <p className="text-lg text-blue-100 mb-6 max-w-2xl mx-auto">
+            <p className="text-lg text-white mb-6 max-w-2xl mx-auto">
               No te pierdas ningún episodio. Disponible en todas las plataformas de podcast.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-white text-primary x-6 py-3 rounded-lg font-semibold hover:bg-primary transition-colors">
+              <button className="bg-white text-gray-900 x-6 p-3 rounded-lg font-semibold hover:bg-primary transition-colors">
                 Apple Podcasts
               </button>
-              <button className="bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary transition-colors">
+              <button className="bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-primary transition-colors">
                 Spotify
               </button>
-              <button className="bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary transition-colors">
+              <button className="bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-primary transition-colors">
                 Google Podcasts
               </button>
-              <button className="bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary transition-colors">
+              <button className="bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-primary transition-colors">
                 RSS Feed
               </button>
             </div>

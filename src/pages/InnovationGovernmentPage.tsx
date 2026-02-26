@@ -276,7 +276,7 @@ const InnovationGovernmentPage = () => {
           <h2 className="text-3xl font-bold mb-6">
             ¿Tu institución está lista para la transformación?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
             Trabajamos junto a instituciones públicas para implementar soluciones 
             de innovación gubernamental adaptadas a sus necesidades específicas.
           </p>

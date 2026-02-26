@@ -128,7 +128,7 @@ const HeroSlider: React.FC<HeroSliderProps> = ({
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full z-10">
         <div className="max-w-4xl">
           {/* Content */}
-          <div className="space-y-6 lg:space-y-8 text-white animate-fade-in-up">
+          <div className="space-y-6 lg:space-y-8 text-white animate-fade-in-up font-['Sora']">
             {/* Badge */}
             {currentSlideData.badge && (
               <div
@@ -146,11 +146,11 @@ const HeroSlider: React.FC<HeroSliderProps> = ({
                 {currentSlideData.title}
               </h1>
 
-              <h2 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl text-blue-100 font-light animate-slide-in-left" style={{ animationDelay: '0.5s' }}>
+              <p className="text-lg sm:text-xl lg:text-2xl xl:text-3xl text-white font-normal animate-slide-in-left" style={{ animationDelay: '0.5s' }}>
                 {currentSlideData.subtitle}
-              </h2>
+              </p>
 
-              <p className="text-base sm:text-lg lg:text-xl text-blue-100 leading-relaxed max-w-3xl animate-slide-in-left" style={{ animationDelay: '0.6s' }}>
+              <p className="text-base sm:text-lg lg:text-xl text-white font-normal leading-relaxed max-w-3xl animate-slide-in-left" style={{ animationDelay: '0.6s' }}>
                 {currentSlideData.description}
               </p>
             </div>
@@ -180,7 +180,7 @@ const HeroSlider: React.FC<HeroSliderProps> = ({
             <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 pt-4 animate-fade-in" style={{ animationDelay: '1s' }}>
               <a
                 href={currentSlideData.cta.primary.action.startsWith('/') ? currentSlideData.cta.primary.action : '#'}
-                className="group bg-primary hover:bg-primary text-white px-6 py-3 lg:px-8 lg:py-4 rounded-xl font-semibold flex items-center justify-center transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-xl hover:shadow-2xl text-sm lg:text-base"
+                className="group bg-primary hover:bg-primary text-white px-6 py-3 lg:px-8 lg:py-4 rounded-xl font-medium flex items-center justify-center transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-xl hover:shadow-2xl text-sm lg:text-base"
               >
                 {currentSlideData.cta.primary.text}
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" size={16} />
@@ -189,7 +189,7 @@ const HeroSlider: React.FC<HeroSliderProps> = ({
               {currentSlideData.cta.secondary && (
                 <a
                   href={currentSlideData.cta.secondary.action.startsWith('/') ? currentSlideData.cta.secondary.action : '#'}
-                  className="group border-2 border-white/30 hover:border-white text-white px-6 py-3 lg:px-8 lg:py-4 rounded-xl font-semibold flex items-center justify-center transition-all duration-300 hover:bg-white/10 backdrop-blur-md transform hover:scale-105 hover:-translate-y-1 text-sm lg:text-base"
+                  className="group border-2 border-white/30 hover:border-white text-white px-6 py-3 lg:px-8 lg:py-4 rounded-xl font-medium flex items-center justify-center transition-all duration-300 hover:bg-white/10 backdrop-blur-md transform hover:scale-105 hover:-translate-y-1 text-sm lg:text-base"
                 >
                   <Target className="mr-2" size={16} />
                   {currentSlideData.cta.secondary.text}

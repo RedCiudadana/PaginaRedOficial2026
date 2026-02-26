@@ -28,6 +28,7 @@ const StrategicAllies = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Organizaciones que confían en nosotros y apoyan nuestra misión de transformar Guatemala
           </p>
+          <div className=" mt-8 mx-auto h-1 w-24 rounded-full bg-gradient-to-r from-[#86c9b9] via-[#87becf] to-[#88b3e4]" />
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 items-center">

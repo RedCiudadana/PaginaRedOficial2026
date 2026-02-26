@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
 
 // TikTok icon component (since it's not in lucide-react)
 const TikTokIcon = ({ size = 20, className = "" }) => (
@@ -11,26 +10,17 @@ const TikTokIcon = ({ size = 20, className = "" }) => (
 );
 
 const Footer = () => {
-  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   const footerSections = [
     {
-      title: t('footer.programs'),
+      title: 'Secciones',
       links: [
-        { label: t('footer.programs.innovation'), href: '/innovacion-gobierno' },
-        { label: t('footer.programs.journalism'), href: '/fortalecimiento-periodismo' },
-        { label: t('footer.programs.anticorruption'), href: '/anticorrupcion' },
-        { label: t('footer.programs.digital'), href: '/transformacion-digital' }
-      ]
-    },
-    {
-      title: t('footer.resources'),
-      links: [
-        { label: t('footer.resources.blog'), href: '/blog' },
-        { label: t('footer.resources.publications'), href: '/conocimiento' },
-        { label: t('footer.resources.press'), href: '/sala-de-prensa' },
-        { label: t('footer.resources.tools'), href: '/proyectos' }
+        { label: 'Inicio', href: '/' },
+        { label: 'Nosotros', href: '/quienes-somos' },
+        { label: 'Proyectos', href: '/proyectos' },
+        { label: 'Novedades', href: '/blog' },
+        { label: 'Contacto', href: '/contacto' }
       ]
     }
   ];
@@ -45,40 +35,54 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cdefs%3E%3Cpattern%20id%3D%22footerGrid%22%20width%3D%2260%22%20height%3D%2260%22%20patternUnits%3D%22userSpaceOnUse%22%3E%3Cpath%20d%3D%22M%2060%200%20L%200%200%200%2060%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-width%3D%221%22/%3E%3C/pattern%3E%3C/defs%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22url(%23footerGrid)%22%20/%3E%3C/svg%3E')]"></div>
-      </div>
-      
+    <footer className="bg-black text-white">
       {/* Main Footer */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-20">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-16">
+        <div className="grid gap-8 lg:gap-12 lg:grid-cols-3">
           {/* Column 1: Brand */}
           <div>
             <div className="flex items-center mb-4 lg:mb-8">
               <img
                 src="/logo_red_ciudadana_alterno.png"
                 alt="Red Ciudadana"
-                className="h-12 sm:h-16 w-auto"
+                className="h-8 sm:h-9 lg:h-10 w-auto object-contain"
               />
             </div>
 
-            <p className="text-gray-300 leading-relaxed text-sm lg:text-base">
-              {t('footer.brand.description')}
+            <p className="text-gray-300 leading-relaxed text-sm lg:text-base max-w-sm">
+              En Red Ciudadana trabajamos para fortalecer la transparencia,
+              promover la participación activa y construir un futuro más
+              justo e inclusivo para todos los guatemaltecos.
             </p>
+
+            <div className="flex flex-wrap gap-3 mt-5">
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  className="w-9 h-9 rounded-full border border-white/30 flex items-center justify-center text-white/80 hover:text-white hover:border-white transition-all duration-300"
+                >
+                  <social.icon size={16} />
+                </a>
+              ))}
+            </div>
           </div>
 
-          {/* Column 2 & 3: Links Columns */}
+          {/* Column 2: Links */}
           {footerSections.map((section, index) => (
             <div key={index}>
-              <h4 className="text-base sm:text-lg lg:text-xl font-bold mb-3 lg:mb-6 text-white">{section.title}</h4>
-              <ul className="space-y-1 lg:space-y-3">
+              <h4 className="text-base sm:text-lg lg:text-xl font-semibold mb-3 lg:mb-4 text-white">
+                {section.title}
+              </h4>
+              <ul className="space-y-2 lg:space-y-2.5">
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
                     <Link
                       to={link.href}
-                      className="text-gray-400 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block text-xs sm:text-sm lg:text-base"
+                      className="text-gray-300 hover:text-white transition-all duration-300 inline-block text-sm lg:text-base"
                     >
                       {link.label}
                     </Link>
@@ -88,40 +92,25 @@ const Footer = () => {
             </div>
           ))}
 
-          {/* Column 4: Contact & Social */}
+          {/* Column 3: Contact */}
           <div>
-            <div className="space-y-4 mb-6">
-              <a href="mailto:info@redciudadana.org.gt" className="flex items-center group cursor-pointer">
-                <Mail size={20} className="text-gray-400 mr-3" />
-                <span className="text-gray-300 group-hover:text-white transition-colors duration-300 text-xs sm:text-sm lg:text-base">
-                  info@redciudadana.org.gt
-                </span>
-              </a>
-
-              <div className="flex items-start">
-                <MapPin size={20} className="text-gray-400 mr-3 mt-1" />
-                <div className="text-gray-300 text-xs sm:text-sm lg:text-base">
-                  <p>{t('footer.contact.location')}</p>
-                  <p>{t('footer.contact.country')}</p>
-                </div>
+            <div className="space-y-3 text-gray-300 text-sm lg:text-base">
+              <div>
+                <p className="text-white font-semibold">Dirección:</p>
+                <p>Zona 10, Ciudad de Guatemala, Guatemala</p>
               </div>
-            </div>
-
-            <div>
-              <h4 className="text-base sm:text-lg lg:text-xl font-bold mb-4 text-white">{t('footer.social')}</h4>
-              <div className="flex flex-wrap gap-3">
-                {socialLinks.map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={social.label}
-                    className="w-10 h-10 bg-gray-800/50 backdrop-blur-sm rounded-xl flex items-center justify-center text-gray-400 hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl"
-                  >
-                    <social.icon size={18} />
-                  </a>
-                ))}
+              <div>
+                <p className="text-white font-semibold">Correo electrónico:</p>
+                <a
+                  href="mailto:info@redciudadana.org.gt"
+                  className="hover:text-white transition-colors duration-300"
+                >
+                  info@redciudadana.org.gt
+                </a>
+              </div>
+              <div>
+                <p className="text-white font-semibold">Horario de atención:</p>
+                <p>Lunes a viernes, 8:00 a.m. - 5:00 p.m.</p>
               </div>
             </div>
           </div>
@@ -129,13 +118,11 @@ const Footer = () => {
       </div>
 
       {/* Bottom Footer */}
-      <div className="relative border-t border-gray-700 bg-gray-900/50 backdrop-blur-sm">
+      <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
-          <div className="flex justify-center">
-            <p className="text-gray-400 text-xs sm:text-sm text-center">
-              {t('footer.copyright')}
-            </p>
-          </div>
+          <p className="text-gray-400 text-xs sm:text-sm text-center">
+            © {currentYear} Red Ciudadana. Todos los derechos reservados.
+          </p>
         </div>
       </div>
     </footer>

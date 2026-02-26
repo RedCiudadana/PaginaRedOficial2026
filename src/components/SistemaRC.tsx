@@ -1,25 +1,33 @@
 import React from 'react';
-import { Database, FileText, DollarSign, BarChart3, ExternalLink, Shield } from 'lucide-react';
+import { Database, ExternalLink } from 'lucide-react';
+import iconFeature1 from '../assets/iconos/16_ICON.png';
+import iconFeature2 from '../assets/iconos/17_ICON.png';
+import iconFeature3 from '../assets/iconos/RC_2026_01-28.png';
+import iconFeature4 from '../assets/iconos/RC_2026_01-29.png';
 
 const SistemaRC = () => {
   const features = [
     {
-      icon: FileText,
+      iconSrc: iconFeature1,
+      iconAlt: 'Proyectos',
       title: 'Proyectos',
       description: 'Seguimiento detallado de todos nuestros proyectos activos y finalizados'
     },
     {
-      icon: DollarSign,
+      iconSrc: iconFeature2,
+      iconAlt: 'Donaciones',
       title: 'Donaciones',
       description: 'Transparencia total sobre fondos recibidos y su distribución'
     },
     {
-      icon: BarChart3,
+      iconSrc: iconFeature3,
+      iconAlt: 'Indicadores',
       title: 'Indicadores',
       description: 'Métricas de impacto y resultados de nuestras iniciativas'
     },
     {
-      icon: Shield,
+      iconSrc: iconFeature4,
+      iconAlt: 'Rendición de Cuentas',
       title: 'Rendición de Cuentas',
       description: 'Informes financieros y de actividades accesibles para todos'
     }
@@ -29,7 +37,7 @@ const SistemaRC = () => {
     <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-full text-sm font-semibold mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white text-gray-900 rounded-full text-sm font-semibold mb-6">
             <Database className="w-4 h-4" />
             <span>Plataforma de Transparencia</span>
           </div>
@@ -43,22 +51,19 @@ const SistemaRC = () => {
           </p>
 
           <div className="grid sm:grid-cols-2 gap-6 mb-12 text-left">
-            {features.map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <div key={index} className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-                      <Icon className="w-6 h-6 text-white" />
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">{feature.title}</h3>
-                    <p className="text-sm text-gray-600">{feature.description}</p>
+            {features.map((feature, index) => (
+              <div key={index} className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 bg-black text-white rounded-lg flex items-center justify-center">
+                    <img src={feature.iconSrc} alt={feature.iconAlt} className="w-100 h-100 object-contain" />
                   </div>
                 </div>
-              );
-            })}
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-1">{feature.title}</h3>
+                  <p className="text-sm text-gray-600">{feature.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
 
           <a

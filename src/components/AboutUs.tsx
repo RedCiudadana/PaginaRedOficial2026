@@ -1,5 +1,12 @@
 import React, { useState } from 'react';
-import { Award, Users, Target, Eye, Heart, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import iconMission from '../assets/iconos/01_ICON.png';
+import iconVision from '../assets/iconos/02_ICON.png';
+import iconValues from '../assets/iconos/03_ICON.png';
+import iconValue1 from '../assets/iconos/06_ICON.png';
+import iconValue2 from '../assets/iconos/07_ICON.png';
+import iconValue3 from '../assets/iconos/08_ICON.png';
+import iconValue4 from '../assets/iconos/09_ICON.png';
 
 const AboutUs = () => {
   const [currentYear, setCurrentYear] = useState(0);
@@ -51,22 +58,26 @@ const AboutUs = () => {
 
   const values = [
     {
-      icon: Target,
+      iconSrc: iconValue1,
+      iconAlt: 'Transparencia',
       title: 'Transparencia',
       description: 'Promovemos el acceso a la información y la rendición de cuentas en todas las instituciones.'
     },
     {
-      icon: Users,
+      iconSrc: iconValue2,
+      iconAlt: 'Participación',
       title: 'Participación',
       description: 'Fortalecemos la participación ciudadana informada y efectiva en los procesos democráticos.'
     },
     {
-      icon: Eye,
+      iconSrc: iconValue3,
+      iconAlt: 'Integridad',
       title: 'Integridad',
       description: 'Actuamos con ética y coherencia entre nuestros valores y acciones.'
     },
     {
-      icon: Heart,
+      iconSrc: iconValue4,
+      iconAlt: 'Impacto Social',
       title: 'Impacto Social',
       description: 'Buscamos generar cambios positivos y duraderos en la sociedad guatemalteca.'
     }
@@ -84,13 +95,14 @@ const AboutUs = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             15 años de logros, innovación y transformación social
           </p>
+          <div className="mt-8 mx-auto h-1 w-24 rounded-full bg-gradient-to-r from-[#86c9b9] via-[#87becf] to-[#88b3e4] mb-4 lg:mb-6" />
         </div>
 
         {/* Mission, Vision, Values */}
         <div className="grid lg:grid-cols-3 gap-8 mb-20">
           <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mb-6">
-              <Target className="text-white" size={32} />
+            <div className="w-16 h-16 flex items-center justify-center mb-6">
+              <img src={iconMission} alt="Misión" className="w-100 h-100 object-contain" />
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Misión</h3>
             <p className="text-gray-600 leading-relaxed">
@@ -100,8 +112,8 @@ const AboutUs = () => {
           </div>
 
           <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mb-6">
-              <Eye className="text-white" size={32} />
+            <div className="w-16 h-16 flex items-center justify-center mb-6">
+              <img src={iconVision} alt="Visión" className="w-100 h-100 object-contain" />
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Visión</h3>
             <p className="text-gray-600 leading-relaxed">
@@ -111,10 +123,10 @@ const AboutUs = () => {
           </div>
 
           <div className="bg-white rounded-2xl p-8 shadow-lg">
-            <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mb-6">
-              <Award className="text-white" size={32} />
+            <div className="w-16 h-16 flex items-center justify-center mb-6">
+              <img src={iconValues} alt="Valores" className="w-100 h-100 object-contain" />
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Impacto</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Valores</h3>
             <p className="text-gray-600 leading-relaxed">
               Más de 156 proyectos implementados, 2,840 periodistas capacitados y presencia 
               en 22 departamentos de Guatemala con reconocimiento internacional.
@@ -124,17 +136,18 @@ const AboutUs = () => {
 
         {/* Values */}
         <div className="mb-20">
-          <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
+          <h3 className="text-3xl font-bold text-gray-900 text-center mb-8">
             Nuestros Valores
           </h3>
+          <div className="mb-12 mt-2 mx-auto h-1 w-24 rounded-full bg-gradient-to-r from-[#86c9b9] via-[#87becf] to-[#88b3e4] " />
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, index) => (
               <div key={index} className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
-                <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mb-4">
-                  <value.icon className="text-white" size={24} />
+                <div className="w-16 h-16 flex items-center justify-center mb-4">
+                  <img src={value.iconSrc} alt={value.iconAlt} className="w-100 h-100 object-contain" />
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">{value.title}</h4>
-                <p className="text-gray-600 text-sm leading-relaxed">{value.description}</p>
+                <p className="text-gray-900 text-sm leading-relaxed font-['Sora']">{value.description}</p>
               </div>
             ))}
           </div>
@@ -142,10 +155,11 @@ const AboutUs = () => {
 
         {/* Timeline */}
         <div className="mb-20">
-          <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
+          <h3 className="text-3xl font-bold text-gray-900 text-center mb-8">
             Nuestra Trayectoria
           </h3>
-          
+          <div className="mt-2 mb-12 mx-auto h-1 w-24 rounded-full bg-gradient-to-r from-[#86c9b9] via-[#87becf] to-[#88b3e4]" />
+
           <div className="bg-white rounded-2xl p-8 shadow-lg">
             {/* Timeline Navigation */}
             <div className="flex items-center justify-between mb-8">

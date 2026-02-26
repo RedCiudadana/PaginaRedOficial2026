@@ -49,15 +49,15 @@ const BlogDetailPage = () => {
         />
         <div className="relative h-full flex items-end">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-            <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-blue-100 mb-6">
+            <Link to="/blog" className="inline-flex items-center gap-2 text-sm text-white mb-6">
               <ArrowLeft size={16} />
               Volver al blog
             </Link>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
               {post.title}
             </h1>
-            <p className="text-lg text-blue-100 mb-6">{post.description}</p>
-            <div className="flex flex-wrap items-center gap-6 text-sm text-blue-100">
+            <p className="text-lg text-white mb-6">{post.description}</p>
+            <div className="flex flex-wrap items-center gap-6 text-sm text-white">
               <span className="flex items-center gap-2">
                 <Calendar size={16} />
                 {formattedDate}

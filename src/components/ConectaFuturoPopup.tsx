@@ -43,7 +43,7 @@ const ConectaFuturoPopup = () => {
       }`}
       style={{ maxWidth: '360px' }}
     >
-      <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border-2 border-green-500">
+      <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border-2 border-primary">
         <button
           onClick={handleClose}
           className="absolute top-3 right-3 w-8 h-8 bg-white/90 hover:bg-white rounded-full flex items-center justify-center transition-all hover:scale-110 shadow-md z-10"
@@ -61,7 +61,7 @@ const ConectaFuturoPopup = () => {
               <h3 className="text-white font-bold text-lg leading-tight">
                 Escuela Conecta Futuro
               </h3>
-              <p className="text-green-100 text-xs font-medium">
+              <p className="text-white text-xs font-medium">
                 Capacitación Gratuita
               </p>
             </div>
@@ -76,7 +76,7 @@ const ConectaFuturoPopup = () => {
 
           <button
             onClick={handleClick}
-            className="w-full bg-primary hover:from-green-700 hover:to-blue-700 text-white py-3 px-4 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center group shadow-md hover:shadow-lg"
+            className="w-full bg-primary hover:from-green-700 hover:to-blue-700 text-gray-800 py-3 px-4 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center group shadow-md hover:shadow-lg"
           >
             Explorar Cursos
             <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />

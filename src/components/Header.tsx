@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Search, ChevronDown, Youtube, Linkedin } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import LanguageSwitcher from './LanguageSwitcher';
+import favicon from '../assets/logo/FAVICON.png';
 
 // TikTok icon component (since it's not in lucide-react)
 const TikTokIcon = ({ size = 16, className = "" }) => (
@@ -39,7 +40,12 @@ const Header = () => {
       <div className="bg-gray-900 text-white py-2 hidden lg:block">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
-            <div className="text-sm text-gray-300">
+            <div className="flex items-center space-x-2 text-sm text-gray-300">
+              <img
+                src={favicon}
+                alt="Red Ciudadana"
+                className="h-8 w-8 mr-4 filter invert"
+              />
               {t('header.social.follow')}
             </div>
             <div className="flex items-center space-x-4">
@@ -86,7 +92,7 @@ const Header = () => {
                 <img
                   src="/logo_red_ciudadana.png"
                   alt="Red Ciudadana"
-                  className="h-10 sm:h-12 lg:h-16 w-auto hover:opacity-90 transition-opacity duration-300 cursor-pointer"
+                  className="h-8 sm:h-12 lg:h-12 w-auto hover:opacity-90 transition-opacity duration-300 cursor-pointer"
                 />
               </Link>
             </div>
