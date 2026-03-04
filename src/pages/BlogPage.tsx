@@ -171,12 +171,25 @@ const BlogPage = () => {
                 >
                   <ChevronLeft size={18} />
                 </button>
-                <button
-                  className="h-10 w-10 rounded-lg border border-primary bg-primary text-white transition-all duration-200 flex items-center justify-center text-center leading-none"
-                  onClick={() => setFeaturedPage(featuredSafePage)}
-                >
-                  {featuredSafePage}
-                </button>
+                {Array.from({ length: featuredTotalPages }, (_, index) => {
+                  const pageNumber = index + 1;
+                  const isActive = pageNumber === featuredSafePage;
+                  return (
+                    <button
+                      key={`featured-page-${pageNumber}`}
+                      className={`h-10 w-10 rounded-lg border transition-all duration-200 flex items-center justify-center text-center leading-none ${
+                        isActive
+                          ? 'border-primary bg-primary text-white'
+                          : 'border-gray-300 text-gray-600 hover:bg-gray-100'
+                      }`}
+                      onClick={() => setFeaturedPage(pageNumber)}
+                      aria-label={`Página ${pageNumber}`}
+                      aria-current={isActive ? 'page' : undefined}
+                    >
+                      {pageNumber}
+                    </button>
+                  );
+                })}
                 <button
                   className={`h-10 w-10 rounded-lg border transition-all duration-200 flex items-center justify-center text-center leading-none ${
                     featuredSafePage === featuredTotalPages
@@ -285,12 +298,25 @@ const BlogPage = () => {
             >
               <ChevronLeft size={18} />
             </button>
-            <button
-              className="h-10 w-10 rounded-lg border border-primary bg-primary text-white transition-all duration-200 flex items-center justify-center text-center leading-none"
-              onClick={() => setRegularPage(regularSafePage)}
-            >
-              {regularSafePage}
-            </button>
+            {Array.from({ length: regularTotalPages }, (_, index) => {
+              const pageNumber = index + 1;
+              const isActive = pageNumber === regularSafePage;
+              return (
+                <button
+                  key={`regular-page-${pageNumber}`}
+                  className={`h-10 w-10 rounded-lg border transition-all duration-200 flex items-center justify-center text-center leading-none ${
+                    isActive
+                      ? 'border-primary bg-primary text-white'
+                      : 'border-gray-300 text-gray-600 hover:bg-gray-100'
+                  }`}
+                  onClick={() => setRegularPage(pageNumber)}
+                  aria-label={`Página ${pageNumber}`}
+                  aria-current={isActive ? 'page' : undefined}
+                >
+                  {pageNumber}
+                </button>
+              );
+            })}
             <button
               className={`h-10 w-10 rounded-lg border transition-all duration-200 flex items-center justify-center text-center leading-none ${
                 regularSafePage === regularTotalPages

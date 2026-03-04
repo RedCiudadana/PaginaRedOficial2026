@@ -132,7 +132,7 @@ const HeroSlider: React.FC<HeroSliderProps> = ({
             {/* Badge */}
             {currentSlideData.badge && (
               <div
-                className={`inline-flex items-center backdrop-blur-sm border px-4 py-2 lg:px-6 lg:py-3 rounded-full text-xs lg:text-sm font-semibold ${getBadgeColor(currentSlideData.badge.color)} transform hover:scale-105 transition-all duration-300 cursor-default`}
+                className={`inline-flex items-center backdrop-blur-sm border px-4 py-2 lg:px-6 lg:py-3 rounded-full text-xs lg:text-sm font-semibold ${getBadgeColor(currentSlideData.badge.color)} transform hover:scale-105 transition-all duration-300 cursor-default text-white`}
                 style={{ animationDelay: '0.2s' }}
               >
                 <span className="w-2 h-2 bg-primary rounded-full mr-2 animate-pulse" />

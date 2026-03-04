@@ -14,35 +14,35 @@ const BusinessPage = () => {
       icon: Award,
       title: 'Experiencia de +14 años',
       description: 'Líderes en transparencia y anticorrupción en Guatemala',
-      color: 'text-blue-600',
+      color: 'text-white',
       bgColor: 'bg-primary'
     },
     {
       icon: Target,
       title: 'Enfoque técnico e independiente',
       description: 'Soluciones basadas en evidencia y mejores prácticas internacionales',
-      color: 'text-green-600',
+      color: 'text-white',
       bgColor: 'bg-primary'
     },
     {
       icon: Building2,
       title: 'Adaptado a todo tamaño',
       description: 'Desde startups hasta corporaciones multinacionales',
-      color: 'text-purple-600',
+      color: 'text-white',
       bgColor: 'bg-primary'
     },
     {
       icon: Globe,
       title: 'Estándares internacionales',
       description: 'Cumplimiento con ESG, OCDE, OGP y marcos globales',
-      color: 'text-orange-600',
+      color: 'text-white',
       bgColor: 'bg-primary'
     },
     {
       icon: Users,
       title: 'Red de expertos',
       description: 'Alianzas con especialistas legales, digitales y sociales',
-      color: 'text-indigo-600',
+      color: 'text-white',
       bgColor: 'bg-primary'
     }
   ];
@@ -52,9 +52,9 @@ const BusinessPage = () => {
       id: 'ethics',
       title: 'Ética y Compliance',
       icon: Shield,
-      color: 'from-blue-500 to-blue-600',
+      color: 'from-primary to-primary',
       bgColor: 'bg-primary',
-      textColor: 'text-blue-600',
+      textColor: 'text-primary',
       description: 'Fortalecemos la cultura ética y el cumplimiento normativo en tu organización.',
       features: [
         'Códigos de ética personalizados',
@@ -67,9 +67,9 @@ const BusinessPage = () => {
       id: 'complaints',
       title: 'Mecanismos de Quejas y Consultas (MQC)',
       icon: MessageSquare,
-      color: 'from-green-500 to-green-600',
+      color: 'from-primary to-primary',
       bgColor: 'bg-primary',
-      textColor: 'text-green-600',
+      textColor: 'text-primary',
       description: 'Implementamos canales seguros y efectivos para la gestión de denuncias.',
       features: [
         'Canales de denuncia confidenciales',
@@ -82,9 +82,9 @@ const BusinessPage = () => {
       id: 'digital',
       title: 'Gobernanza Digital y Datos',
       icon: TrendingUp,
-      color: 'from-purple-500 to-purple-600',
+      color: 'from-primary to-primary',
       bgColor: 'bg-primary',
-      textColor: 'text-purple-600',
+      textColor: 'text-primary',
       description: 'Modernizamos tus procesos de gobernanza con tecnología avanzada.',
       features: [
         'Diagnóstico digital empresarial',
@@ -97,9 +97,9 @@ const BusinessPage = () => {
       id: 'reputation',
       title: 'Reputación y Medios',
       icon: Eye,
-      color: 'from-orange-500 to-orange-600',
+      color: 'from-primary to-primary',
       bgColor: 'bg-primary',
-      textColor: 'text-orange-600',
+      textColor: 'text-primary',
       description: 'Protegemos y fortalecemos la reputación corporativa de tu empresa.',
       features: [
         'Media training ejecutivo',
@@ -112,9 +112,9 @@ const BusinessPage = () => {
       id: 'investment',
       title: 'Inversión Social Estratégica',
       icon: Heart,
-      color: 'from-red-500 to-red-600',
+      color: 'from-primary to-primary',
       bgColor: 'bg-primary',
-      textColor: 'text-red-600',
+      textColor: 'text-primary',
       description: 'Diseñamos programas de impacto social alineados con tu estrategia de negocio.',
       features: [
         'Co-creación con comunidades',
@@ -252,6 +252,8 @@ const BusinessPage = () => {
     }
   ];
 
+  const PRIMARY_COLOR = '#7FB0EA';
+
   const handleDiagnosticSubmit = () => {
     if (!userEmail) {
       setShowEmailForm(true);
@@ -266,9 +268,9 @@ const BusinessPage = () => {
     if (percentage <= 40) {
       result = {
         level: 'Básico',
-        color: 'text-red-600',
+        color: 'text-white',
         bgColor: 'bg-primary',
-        chartColor: '#dc2626',
+        chartColor: PRIMARY_COLOR,
         percentage: Math.round(percentage),
         description: 'No hay mecanismos formales de ética empresarial.',
         recommendations: [
@@ -283,9 +285,9 @@ const BusinessPage = () => {
     } else if (percentage <= 70) {
       result = {
         level: 'Intermedio',
-        color: 'text-yellow-600',
+        color: 'text-white',
         bgColor: 'bg-primary',
-        chartColor: '#d97706',
+        chartColor: PRIMARY_COLOR,
         percentage: Math.round(percentage),
         description: 'Bases sólidas pero con riesgo reputacional.',
         recommendations: [
@@ -300,9 +302,9 @@ const BusinessPage = () => {
     } else {
       result = {
         level: 'Avanzado',
-        color: 'text-green-600',
+        color: 'text-white',
         bgColor: 'bg-primary',
-        chartColor: '#16a34a',
+        chartColor: PRIMARY_COLOR,
         percentage: Math.round(percentage),
         description: 'Madurez ética sólida y bien estructurada.',
         recommendations: [
@@ -431,19 +433,19 @@ const BusinessPage = () => {
   return (
     <div className="">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-primary via-primary to-primary text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center bg-primary text-blue-300 px-6 py-3 rounded-full mb-6">
+            <div className="inline-flex items-center bg-primary text-white px-6 py-3 rounded-full mb-6">
               <Building2 className="mr-2" size={20} />
               <span className="font-semibold">Servicios Empresariales</span>
             </div>
             
-            <h1 className="text-4xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-gray-900">
               Gobernanza ética para empresas con propósito
             </h1>
             
-            <p className="text-xl lg:text-2xl text-white mb-8 font-light leading-relaxed">
+            <p className="text-xl lg:text-2xl text-gray-900 mb-8 font-light leading-relaxed">
               Acompañamos a empresas a construir confianza, prevenir riesgos y fortalecer su reputación
             </p>
 
@@ -546,21 +548,21 @@ const BusinessPage = () => {
             <div className="grid md:grid-cols-3 gap-4 max-w-2xl mx-auto mb-8">
               <div className="bg-gray-50 rounded-lg p-4">
                 <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mx-auto mb-2">
-                  <Clock className="text-blue-600" size={20} />
+                  <Clock className="text-white" size={20} />
                 </div>
                 <div className="text-sm font-bold text-gray-900">5 minutos</div>
                 <div className="text-xs text-gray-600">Tiempo estimado</div>
               </div>
               <div className="bg-gray-50 rounded-lg p-4">
                 <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mx-auto mb-2">
-                  <FileText className="text-green-600" size={20} />
+                  <FileText className="text-white" size={20} />
                 </div>
                 <div className="text-sm font-bold text-gray-900">Informe PDF</div>
                 <div className="text-xs text-gray-600">Resultados detallados</div>
               </div>
               <div className="bg-gray-50 rounded-lg p-4">
                 <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mx-auto mb-2">
-                  <Target className="text-purple-600" size={20} />
+                  <Target className="text-white" size={20} />
                 </div>
                 <div className="text-sm font-bold text-gray-900">Plan de Acción</div>
                 <div className="text-xs text-gray-600">Recomendaciones específicas</div>
@@ -591,19 +593,19 @@ const BusinessPage = () => {
                         <h4 className="font-semibold text-gray-900 mb-2">Tu informe incluirá:</h4>
                         <div className="grid grid-cols-2 gap-2 text-sm">
                           <div className="flex items-center">
-                            <CheckCircle className="text-green-600 mr-2" size={16} />
+                            <CheckCircle className="text-primary mr-2" size={16} />
                             <span>Nivel de madurez ética</span>
                           </div>
                           <div className="flex items-center">
-                            <CheckCircle className="text-green-600 mr-2" size={16} />
+                            <CheckCircle className="text-primary mr-2" size={16} />
                             <span>Análisis por áreas</span>
                           </div>
                           <div className="flex items-center">
-                            <CheckCircle className="text-green-600 mr-2" size={16} />
+                            <CheckCircle className="text-primary mr-2" size={16} />
                             <span>Plan de acción</span>
                           </div>
                           <div className="flex items-center">
-                            <CheckCircle className="text-green-600 mr-2" size={16} />
+                            <CheckCircle className="text-primary mr-2" size={16} />
                             <span>Benchmarking sectorial</span>
                           </div>
                         </div>
@@ -614,7 +616,7 @@ const BusinessPage = () => {
                         value={userEmail}
                         onChange={(e) => setUserEmail(e.target.value)}
                         placeholder="director@tuempresa.com"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                         required
                       />
                       
@@ -647,7 +649,7 @@ const BusinessPage = () => {
                         <span className="font-semibold text-gray-900">
                           Progreso del Diagnóstico
                         </span>
-                        <span className="font-bold text-blue-600">
+                        <span className="font-bold text-primary">
                           {Object.keys(diagnosticAnswers).length} de {diagnosticQuestions.length}
                         </span>
                       </div>
@@ -688,7 +690,7 @@ const BusinessPage = () => {
                     {/* Current Question */}
                     <div className={`transition-opacity duration-200 ${isAnimating ? 'opacity-50' : 'opacity-100'}`}>
                       <div className="text-center mb-6">
-                        <div className="inline-flex items-center bg-primary text-blue-800 px-4 py-2 rounded-full mb-4">
+                        <div className="inline-flex items-center bg-primary text-white px-4 py-2 rounded-full mb-4">
                           <span className="font-bold">
                             Pregunta {currentQuestion + 1} de {diagnosticQuestions.length}
                           </span>
@@ -705,14 +707,14 @@ const BusinessPage = () => {
                             onClick={() => handleAnswerSelect(currentQuestion, optionIndex)}
                             className={`w-full text-left p-4 rounded-lg border-2 transition-all duration-200 ${
                               diagnosticAnswers[currentQuestion] == optionIndex
-                                ? 'border-blue-500 bg-primary'
-                                : 'border-gray-200 hover:border-blue-300 hover:bg-gray-50'
+                                ? 'border-primary bg-primary'
+                                : 'border-gray-200 hover:border-primary hover:bg-gray-50'
                             }`}
                           >
                             <div className="flex items-start">
                               <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0 ${
                                 diagnosticAnswers[currentQuestion] == optionIndex
-                                  ? 'border-blue-500 bg-primary'
+                                  ? 'border-primary bg-primary'
                                   : 'border-gray-300'
                               }`}>
                                 {diagnosticAnswers[currentQuestion] == optionIndex && (
@@ -746,7 +748,7 @@ const BusinessPage = () => {
 
                         <div className="text-center">
                           {isQuestionAnswered(currentQuestion) && (
-                            <div className="inline-flex items-center text-green-700 bg-primary px-3 py-1 rounded-full text-sm font-semibold">
+                            <div className="inline-flex items-center text-white bg-primary px-3 py-1 rounded-full text-sm font-semibold">
                               <CheckCircle size={16} className="mr-1" />
                               Respondida
                             </div>
@@ -781,7 +783,7 @@ const BusinessPage = () => {
                 {/* Header de Resultados */}
                 <div className="text-center">
                   <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-3">
-                    <Award className="text-green-600" size={24} />
+                    <Award className="text-white" size={24} />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">
                     Resultados de tu Diagnóstico
@@ -810,8 +812,8 @@ const BusinessPage = () => {
                       <div className="flex items-center justify-between p-3 bg-white rounded-lg text-sm">
                         <span className="font-medium text-gray-700">Prioridad de Acción:</span>
                         <span className={`font-bold ${
-                          diagnosticResult.priority === 'Alta' ? 'text-red-600' :
-                          diagnosticResult.priority === 'Media' ? 'text-yellow-600' : 'text-green-600'
+                          diagnosticResult.priority === 'Alta' ? 'text-primary' :
+                          diagnosticResult.priority === 'Media' ? 'text-primary' : 'text-primary'
                         }`}>
                           {diagnosticResult.priority}
                         </span>
@@ -843,7 +845,7 @@ const BusinessPage = () => {
                     {diagnosticResult.recommendations.map((rec, index) => (
                       <div key={index} className="flex items-start bg-white rounded-lg p-3">
                         <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center mr-2 mt-0.5 flex-shrink-0">
-                          <span className="text-blue-600 font-bold text-xs">{index + 1}</span>
+                          <span className="text-white font-bold text-xs">{index + 1}</span>
                         </div>
                         <span className="text-gray-700 text-sm">{rec}</span>
                       </div>
@@ -859,7 +861,7 @@ const BusinessPage = () => {
                     para fortalecer la ética y gobernanza de tu empresa.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                    <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-primary transition-colors duration-200">
+                    <button className="bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors duration-200">
                       Solicitar Consultoría Personalizada
                     </button>
                     <button className="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
@@ -878,7 +880,7 @@ const BusinessPage = () => {
                       setShowEmailForm(false);
                       setCurrentQuestion(0);
                     }}
-                    className="text-blue-600 hover:text-blue-700 text-sm transition-colors duration-200"
+                    className="text-primary hover:text-primary text-sm transition-colors duration-200"
                   >
                     ← Realizar nuevo diagnóstico
                   </button>
@@ -906,7 +908,7 @@ const BusinessPage = () => {
               <div key={index} className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mr-4">
-                    <Building2 className="text-blue-600" size={20} />
+                    <Building2 className="text-white" size={20} />
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-900">{case_.company}</h3>
@@ -915,14 +917,14 @@ const BusinessPage = () => {
                 </div>
 
                 <div className="mb-6">
-                  <div className="text-2xl font-bold text-green-600 mb-2">{case_.result}</div>
+                  <div className="text-2xl font-bold text-primary mb-2">{case_.result}</div>
                   <p className="text-gray-700 italic">"{case_.testimonial}"</p>
                 </div>
 
                 <div className="space-y-2">
                   {case_.metrics.map((metric, metricIndex) => (
                     <div key={index} className="border-b border-gray-100 pb-6">
-                      <Star className="text-yellow-500 mr-2" size={16} />
+                      <Star className="text-primary mr-2" size={16} />
                       <span className="text-gray-700 text-sm">{metric}</span>
                     </div>
                   ))}
@@ -934,35 +936,35 @@ const BusinessPage = () => {
       </section>
 
       {/* Academy Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-r from-blue-600 to-green-600 text-white">
+      <section className="py-16 lg:py-24 bg-gradient-to-r from-primary to-primary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-3xl mx-auto">
-            <div className="flex items-center justify-center mb-6">
+            <div className="flex items-center justify-center mb-6 text-gray-900">
               <Lightbulb className="mr-3" size={32} />
               <h2 className="text-3xl lg:text-4xl font-bold">Academia de Gobernanza Empresarial</h2>
             </div>
             
-            <p className="text-xl text-white mb-8">
+            <p className="text-xl text-gray-900 mb-8">
               Plataforma de formación especializada para empresas aliadas con cursos, certificaciones 
               y recursos exclusivos en ética, compliance y gobernanza corporativa.
             </p>
 
             <div className="grid md:grid-cols-3 gap-8 mb-8">
               <div className="bg-white/10 rounded-xl p-6">
-                <div className="text-3xl font-bold mb-2">25+</div>
-                <div className="text-white">Cursos Especializados</div>
+                <div className="text-3xl font-bold mb-2 text-gray-900">25+</div>
+                <div className="text-gray-900">Cursos Especializados</div>
               </div>
               <div className="bg-white/10 rounded-xl p-6">
-                <div className="text-3xl font-bold mb-2">500+</div>
-                <div className="text-white">Ejecutivos Certificados</div>
+                <div className="text-3xl font-bold mb-2 text-gray-900">500+</div>
+                <div className="text-gray-900">Ejecutivos Certificados</div>
               </div>
               <div className="bg-white/10 rounded-xl p-6">
-                <div className="text-3xl font-bold mb-2">95%</div>
-                <div className="text-white">Satisfacción</div>
+                <div className="text-3xl font-bold mb-2 text-gray-900">95%</div>
+                <div className="text-gray-900">Satisfacción</div>
               </div>
             </div>
 
-            <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary transition-colors duration-200">
+            <button className="bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors duration-200">
               Acceder a la Academia
             </button>
           </div>
@@ -991,7 +993,7 @@ const BusinessPage = () => {
                   <input
                     type="text"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                     placeholder="Tu nombre completo"
                   />
                 </div>
@@ -1002,7 +1004,7 @@ const BusinessPage = () => {
                   <input
                     type="text"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                     placeholder="Nombre de tu empresa"
                   />
                 </div>
@@ -1016,7 +1018,7 @@ const BusinessPage = () => {
                   <input
                     type="text"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                     placeholder="Tu cargo en la empresa"
                   />
                 </div>
@@ -1026,7 +1028,7 @@ const BusinessPage = () => {
                   </label>
                   <input
                     type="tel"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                     placeholder="+502 0000-0000"
                   />
                 </div>
@@ -1039,7 +1041,7 @@ const BusinessPage = () => {
                 <input
                   type="email"
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                   placeholder="tu@empresa.com"
                 />
               </div>
@@ -1064,7 +1066,7 @@ const BusinessPage = () => {
                 </label>
                 <textarea
                   rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                   placeholder="Cuéntanos más sobre tus necesidades específicas..."
                 ></textarea>
               </div>

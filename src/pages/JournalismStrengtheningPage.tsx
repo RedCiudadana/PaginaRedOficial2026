@@ -157,14 +157,14 @@ const JournalismStrengtheningPage = () => {
           <div className="text-center mb-16">
             <div className="inline-flex items-center bg-primary text-white px-6 py-3 rounded-full mb-6">
               <Users className="mr-2" size={20} />
-              <span className="font-semibold text-primary">Objetivo Estratégico 2</span>
+              <span className="font-semibold text-white">Objetivo Estratégico 2</span>
             </div>
 
-            <h1 className="text-5xl lg:text-6xl font-bold mb-6 text-primary">
+            <h1 className="text-5xl lg:text-6xl font-bold mb-6 text-gray-800">
               Fortalecimiento de Espacios Cívicos
             </h1>
 
-            <p className="text-xl lg:text-2xl text-primary max-w-4xl mx-auto font-light leading-relaxed">
+            <p className="text-xl lg:text-2xl text-gray-800 max-w-4xl mx-auto font-light leading-relaxed">
               Capacitamos líderes comunitarios y activistas en habilidades de liderazgo, incidencia política
               y movilización social. Promovemos el uso de datos abiertos para monitorear el estado de los
               espacios cívicos y la libertad de expresión y asociación.

@@ -1,197 +1,190 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import HeroSlider from '../components/HeroSlider';
-import { Send } from 'lucide-react';
+﻿import React, { useState } from 'react';
+import { Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
 import Slider from '../assets/banner/03_SLIDER.png';
 
-const ContactPage = () => {
-  const heroSlides = [
-    {
-      id: 'contact-main',
-      title: 'Contacto',
-      subtitle: 'Estamos aquí para apoyarte',
-      description: 'Contáctanos para colaboraciones institucionales, consultas especializadas, solicitudes de medios o cualquier información que necesites sobre nuestro trabajo.',
-      image: Slider,
-      cta: {
-        primary: { text: 'Enviar Mensaje', action: '#contacto-form' }
-      }
+const ContactPage: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    affair: '',
+    message: '',
+  });
+
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const formUrl =
+      'https://docs.google.com/forms/d/e/1FAIpQLSe2DNIWZVQugZ_G-rQCzO9EKpWr66ZXe8rbBBHtKYduKIeXyQ/formResponse';
+
+    const formBody = new URLSearchParams();
+    formBody.append('entry.1064235632', formData.name);
+    formBody.append('entry.1330832081', formData.email);
+    formBody.append('entry.1233483376', formData.affair);
+    formBody.append('entry.608682247', formData.message);
+
+    try {
+      await fetch(formUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: formBody.toString(),
+      });
+      setSubmitted(true);
+    } catch (error) {
+      console.error('Error al enviar:', error);
     }
-  ];
+  };
+
+  if (submitted) {
+    return (
+      <div className="max-w-2xl mx-auto text-center py-20">
+        <h2 className="text-2xl font-semibold text-primary">
+          Tu mensaje ha sido enviado
+        </h2>
+      </div>
+    );
+  }
 
   return (
-    <div className="">
-      <HeroSlider slides={heroSlides} />
+    <div>
+      {/* Hero */}
+      <div
+        className="text-white bg-cover bg-center"
+        style={{ backgroundImage: `url(${Slider})` }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="max-w-3xl mx-auto text-center py-16">
+            <h1 className="text-4xl font-bold mb-4">Contáctanos</h1>
+          </div>
+        </div>
+      </div>
 
-      {/* Main Contact Section */}
-      <section className="py-12 sm:py-16 lg:py-24 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Contact Form */}
-          <div className="bg-white rounded-2xl lg:rounded-3xl p-6 lg:p-10 shadow-xl border border-gray-100">
-              <div className="flex items-center mb-6 lg:mb-8">
-                <div className="w-12 h-12 lg:w-16 lg:h-16 bg-primary rounded-2xl flex items-center justify-center mr-4">
-                  <Send className="text-white" size={24} />
-                </div>
-                <div>
-                  <h2 className="text-xl lg:text-3xl font-bold text-gray-900">Envíanos un Mensaje</h2>
-                  <p className="text-gray-600 text-sm lg:text-base">Te responderemos en menos de 48 horas</p>
-                </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {/* Columna izquierda */}
+          <div>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-800">
+              Para más información de eventos, dudas o de nuestro trabajo
+            </h2>
+            <p className="mb-6 text-gray-700">
+              Llena el siguiente formulario y nuestro equipo te estará contactando.
+            </p>
+            <div className="flex gap-4 items-center flex-wrap">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.facebook.com/Redciudadanagt"
+                className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center"
+                aria-label="Facebook"
+              >
+                <Facebook size={20} />
+              </a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://twitter.com/redxguate"
+                className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center"
+                aria-label="Twitter"
+              >
+                <Twitter size={20} />
+              </a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.instagram.com/redxguate/"
+                className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center"
+                aria-label="Instagram"
+              >
+                <Instagram size={20} />
+              </a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.youtube.com/c/RedciudadanaOrgGt"
+                className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center"
+                aria-label="YouTube"
+              >
+                <Youtube size={20} />
+              </a>
+            </div>
+          </div>
+
+          {/* Columna derecha - Formulario */}
+          <div>
+            <form className="space-y-6" onSubmit={handleSubmit}>
+              <div>
+                <input
+                  placeholder="Nombre completo"
+                  type="text"
+                  name="name"
+                  id="name"
+                  required
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="mt-1 shadow-sm focus:ring-primary focus:border-primary block w-full sm:text-sm p-4 border border-black"
+                />
               </div>
-              
-              <form className="space-y-4 lg:space-y-6" id="contacto-form">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Nombre *
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      className="w-full px-4 py-3 lg:py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-sm lg:text-base"
-                      placeholder="Tu nombre"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Apellido *
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      className="w-full px-4 py-3 lg:py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-sm lg:text-base"
-                      placeholder="Tu apellido"
-                    />
-                  </div>
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Correo Electrónico *
-                  </label>
-                  <input
-                    type="email"
-                    required
-                    className="w-full px-4 py-3 lg:py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-sm lg:text-base"
-                    placeholder="tu@email.com"
-                  />
-                </div>
-                
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Organización
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full px-4 py-3 lg:py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-sm lg:text-base"
-                      placeholder="Nombre de tu organización"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Teléfono
-                    </label>
-                    <input
-                      type="tel"
-                      className="w-full px-4 py-3 lg:py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-sm lg:text-base"
-                      placeholder="+502 0000-0000"
-                    />
-                  </div>
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Motivo de Contacto *
-                  </label>
-                  <select 
-                    required
-                    className="w-full px-4 py-3 lg:py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-sm lg:text-base"
-                  >
-                    <option value="">Selecciona una opción</option>
-                    <option value="colaboracion">Colaboración Institucional</option>
-                    <option value="consultoria">Consultoría Especializada</option>
-                    <option value="medios">Solicitud de Medios</option>
-                    <option value="capacitacion">Capacitación y Formación</option>
-                    <option value="alianzas">Alianzas Estratégicas</option>
-                    <option value="donacion">Donaciones y Apoyo</option>
-                    <option value="otro">Otro</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Mensaje *
-                  </label>
-                  <textarea
-                    rows={5}
-                    required
-                    className="w-full px-4 py-3 lg:py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none text-sm lg:text-base"
-                    placeholder="Cuéntanos más detalles sobre tu consulta o propuesta..."
-                  ></textarea>
-                </div>
-                
-                <div className="flex items-start">
-                  <input
-                    type="checkbox"
-                    id="privacy"
-                    required
-                    className="mt-1 mr-3 w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-                  />
-                  <label htmlFor="privacy" className="text-sm text-gray-600">
-                    Acepto la <Link to="/contacto" className="text-blue-600 hover:underline">política de privacidad</Link> y 
-                    el tratamiento de mis datos personales según la normativa guatemalteca.
-                  </label>
-                </div>
-                
+
+              <div>
+                <input
+                  placeholder="Correo electrónico"
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="mt-1 shadow-sm focus:ring-primary focus:border-primary block w-full sm:text-sm p-4 border border-black"
+                />
+              </div>
+
+              <div>
+                <input
+                  placeholder="Asunto / Motivo de Contacto"
+                  type="text"
+                  name="affair"
+                  id="affair"
+                  value={formData.affair}
+                  onChange={handleChange}
+                  className="mt-1 shadow-sm focus:ring-primary focus:border-primary block w-full sm:text-sm p-4 border border-black"
+                />
+              </div>
+
+              <div>
+                <textarea
+                  placeholder="Escribe tu mensaje aquí..."
+                  id="message"
+                  name="message"
+                  rows={4}
+                  required
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="mt-1 shadow-sm focus:ring-primary focus:border-primary block w-full sm:text-sm p-4 border border-black"
+                />
+              </div>
+
+              <div>
                 <button
                   type="submit"
-                  className="w-full bg-primary hover:bg-white text-white hover:text-primary py-4 lg:py-5 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm lg:text-base"
+                  className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
                 >
-                  Enviar Mensaje
+                  Envíanos un mensaje
                 </button>
-              </form>
-            </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-12 lg:py-20 bg-gradient-to-br from-blue-50 to-green-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-2xl lg:text-4xl font-bold text-gray-900 mb-4 lg:mb-6">
-              Preguntas Frecuentes
-            </h2>
-            <p className="text-gray-600 text-sm lg:text-lg">
-              Encuentra respuestas rápidas a las consultas más comunes
-            </p>
-          </div>
-
-          <div className="space-y-4 lg:space-y-6">
-            <div className="bg-white rounded-xl lg:rounded-2xl p-4 lg:p-6 shadow-md">
-              <h3 className="font-bold text-gray-900 mb-2 text-sm lg:text-base">¿Cómo puedo colaborar con Red Ciudadana?</h3>
-              <p className="text-gray-600 text-sm lg:text-base">
-                Ofrecemos múltiples formas de colaboración: alianzas institucionales, voluntariado, 
-                donaciones y participación en nuestros programas de formación.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-xl lg:rounded-2xl p-4 lg:p-6 shadow-md">
-              <h3 className="font-bold text-gray-900 mb-2 text-sm lg:text-base">¿Ofrecen servicios de consultoría?</h3>
-              <p className="text-gray-600 text-sm lg:text-base">
-                Sí, brindamos consultoría especializada en gobierno digital, transparencia, 
-                anticorrupción y fortalecimiento del periodismo.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-xl lg:rounded-2xl p-4 lg:p-6 shadow-md">
-              <h3 className="font-bold text-gray-900 mb-2 text-sm lg:text-base">¿Cómo puedo acceder a sus capacitaciones?</h3>
-              <p className="text-gray-600 text-sm lg:text-base">
-                A través de nuestro programa Conecta Futuro ofrecemos cursos especializados. 
-                Visita la sección correspondiente para conocer la oferta actual.
-              </p>
-            </div>
+              </div>
+            </form>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 };

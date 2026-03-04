@@ -1,57 +1,32 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, User, Eye, ArrowRight } from 'lucide-react';
+import { Calendar, User, ArrowRight } from 'lucide-react';
 import favicon from '../assets/logo/FAVICON.png';
+import { getAllBlogs, BlogPost } from '../lib/cmsBlogs';
 
 const BlogPreview = () => {
-  const featuredPosts = [
-    {
-      id: 1,
-      title: 'El Futuro de la Transparencia Digital en Guatemala',
-      excerpt: 'Análisis sobre las tendencias emergentes en gobierno digital y su impacto en la transparencia pública guatemalteca.',
-      author: 'Ana García Morales',
-      date: '15 Enero 2024',
-      readTime: '8 min',
-      views: 1240,
-      category: 'Innovación',
-      image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&fit=crop',
-      featured: true
-    },
-    {
-      id: 2,
-      title: 'Periodismo de Datos: Herramientas Esenciales 2024',
-      excerpt: 'Guía completa de las mejores herramientas para periodistas que trabajan con análisis de datos.',
-      author: 'Jorge Hernández',
-      date: '12 Enero 2024',
-      readTime: '12 min',
-      views: 2340,
-      category: 'Periodismo',
-      image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop'
-    },
-    {
-      id: 3,
-      title: 'IA en la Detección de Corrupción: Casos de Éxito',
-      excerpt: 'Cómo los algoritmos de machine learning están revolucionando la identificación de patrones sospechosos.',
-      author: 'María Ruiz',
-      date: '10 Enero 2024',
-      readTime: '10 min',
-      views: 1890,
-      category: 'Anticorrupción',
-      image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop'
-    }
-  ];
+  const allBlogs = getAllBlogs();
+  const highlighted = allBlogs.filter((post) => post.highlight);
+  const featuredPosts = (highlighted.length ? highlighted : allBlogs).slice(0, 4);
 
-  const getCategoryColor = (category) => {
-    switch (category) {
-      case 'Innovación':
-        return 'bg-primary text-white';
-      case 'Periodismo':
-        return 'bg-primary text-white';
-      case 'Anticorrupción':
-        return 'bg-primary text-white';
-      default:
-        return 'bg-gray-100 text-gray-800';
-    }
+  if (featuredPosts.length === 0) {
+    return null;
+  }
+
+  const formatDate = (value: string) => {
+    const parsed = Date.parse(value);
+    if (Number.isNaN(parsed)) return value;
+    return new Date(parsed).toLocaleDateString('es-GT', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+    });
+  };
+
+  const getExcerpt = (post: BlogPost, length: number) => {
+    if (!post.description) return '';
+    if (post.description.length <= length) return post.description;
+    return `${post.description.slice(0, length).trim()}...`;
   };
 
   return (
@@ -86,12 +61,9 @@ const BlogPreview = () => {
                   className="w-full h-40 sm:h-48 lg:h-80 object-cover"
                 />
                 <div className="absolute top-3 left-3 lg:top-4 lg:left-4">
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${getCategoryColor(featuredPosts[0].category)}`}>
-                    {featuredPosts[0].category}
+                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-primary text-white">
+                    Destacado
                   </span>
-                </div>
-                <div className="absolute top-3 right-3 lg:top-4 lg:right-4 bg-primary text-white px-3 py-1 rounded-full text-xs font-medium">
-                  Destacado
                 </div>
               </div>
               
@@ -101,24 +73,28 @@ const BlogPreview = () => {
                 </h3>
                 
                 <p className="text-xs sm:text-sm lg:text-base text-gray-600 mb-3 lg:mb-6 leading-relaxed">
-                  {featuredPosts[0].excerpt}
+                  {getExcerpt(featuredPosts[0], 180)}
                 </p>
                 
                 <div className="flex items-center justify-between pt-2 lg:pt-4 border-t border-gray-100">
                   <div className="flex items-center">
                     <User size={14} className="text-gray-400 mr-2" />
-                    <span className="text-xs lg:text-sm text-gray-600">{featuredPosts[0].author}</span>
+                    <span className="text-xs lg:text-sm text-gray-600">{featuredPosts[0].autor}</span>
                   </div>
                   <div className="flex items-center space-x-2 text-xs lg:text-sm text-gray-500">
                     <div className="flex items-center">
                       <Calendar size={12} className="mr-1" />
-                      {featuredPosts[0].date}
-                    </div>
-                    <div className="flex items-center">
-                      <Eye size={12} className="mr-1" />
-                      {featuredPosts[0].views.toLocaleString()}
+                      {formatDate(featuredPosts[0].date)}
                     </div>
                   </div>
+                </div>
+                <div className="mt-4">
+                  <Link
+                    to={`/blog/${featuredPosts[0].slug}`}
+                    className="inline-flex items-center text-primary font-semibold text-sm lg:text-base hover:underline"
+                  >
+                    Leer más <ArrowRight size={16} className="ml-2" />
+                  </Link>
                 </div>
               </div>
             </article>
@@ -127,8 +103,8 @@ const BlogPreview = () => {
           {/* Recent Posts */}
           <div className="space-y-3 sm:space-y-4 lg:space-y-6 mt-4 lg:mt-0">
             {featuredPosts.slice(1).map((post) => (
-              <article key={post.id} className="bg-white rounded-lg lg:rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
-                <div className="flex">
+              <article key={post.slug} className="bg-white rounded-lg lg:rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <Link to={`/blog/${post.slug}`} className="flex h-full">
                   <img
                     src={post.image}
                     alt={post.title}
@@ -137,12 +113,11 @@ const BlogPreview = () => {
                   
                   <div className="p-2 sm:p-3 lg:p-4 flex-1">
                     <div className="flex items-center justify-between mb-2">
-                      <span className={`px-2 py-1 rounded text-xs font-medium ${getCategoryColor(post.category)}`}>
-                        {post.category}
+                      <span className="px-2 py-1 rounded text-xs font-medium bg-primary text-white">
+                        Destacado
                       </span>
-                      <div className="flex items-center text-gray-500 text-xs">
-                        <Eye size={10} className="mr-1" />
-                        {post.views.toLocaleString()}
+                      <div className="text-gray-500 text-xs">
+                        {formatDate(post.date)}
                       </div>
                     </div>
                     
@@ -151,18 +126,27 @@ const BlogPreview = () => {
                     </h3>
                     
                     <p className="text-gray-600 text-xs mb-1 lg:mb-3 leading-relaxed hidden sm:block">
-                      {post.excerpt.substring(0, 60)}...
+                      {getExcerpt(post, 70)}
                     </p>
                     
                     <div className="flex items-center justify-between text-xs text-gray-500">
-                      <span className="truncate mr-2">{post.author.split(' ')[0]}</span>
-                      <span className="text-xs">{post.date.split(' ')[0]} {post.date.split(' ')[1]}</span>
+                      <span className="truncate mr-2">{post.autor}</span>
                     </div>
                   </div>
-                </div>
+                </Link>
               </article>
             ))}
           </div>
+        </div>
+
+        <div className="flex justify-center">
+          <Link
+            to="/blog"
+            className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary transition-colors"
+          >
+            Ver todos los artículos
+            <ArrowRight size={18} />
+          </Link>
         </div>
       </div>
     </section>

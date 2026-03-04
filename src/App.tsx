@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { LanguageProvider } from './contexts/LanguageContext';
 import { translations } from './translations';
 import Header from './components/Header';
@@ -23,11 +23,22 @@ import PressRoomPage from './pages/PressRoomPage';
 import GDPRBar from './components/GDPRBar';
 import ConectaFuturoPopup from './components/ConectaFuturoPopup';
 
+function ScrollToTop() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }, [location.pathname]);
+
+  return null;
+}
+
 function App() {
   return (
     <LanguageProvider translations={translations}>
       <Router>
         <div className="min-h-screen bg-white">
+          <ScrollToTop />
           <Header />
           <main>
             <Routes>
