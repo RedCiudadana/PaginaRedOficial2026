@@ -16,6 +16,7 @@ interface FrontmatterResult {
 }
 
 const blogMarkdown = import.meta.glob('../cms/blogs/*.md', { as: 'raw', eager: true });
+const assetMap = import.meta.glob('../assets/**/*.{png,jpg,jpeg,gif,svg,webp}', { as: 'url', eager: true });
 
 const blogPosts: BlogPost[] = Object.entries(blogMarkdown).map(([path, raw]) => {
   const { data, content } = parseFrontmatter(raw as string);
@@ -27,7 +28,7 @@ const blogPosts: BlogPost[] = Object.entries(blogMarkdown).map(([path, raw]) => 
     slug,
     title: data.title ?? slug,
     description: data.description ?? '',
-    image: data.image ?? '',
+    image: resolveAssetUrl(data.image ?? ''),
     autor: data.autor ?? '',
     correo: data.correo ?? '',
     date: data.date ?? '',
@@ -48,6 +49,20 @@ export function getAllBlogs(): BlogPost[] {
 
 export function getBlogBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((post) => post.slug === slug);
+}
+
+function resolveAssetUrl(value: string): string {
+  if (!value) return '';
+  if (/^https?:\/\//i.test(value)) return value;
+
+  if (value.startsWith('/src/assets/')) {
+    const key = `../assets/${value.slice('/src/assets/'.length)}`;
+    if (key in assetMap) {
+      return assetMap[key] as string;
+    }
+  }
+
+  return value;
 }
 
 function sanitizeContent(content: string): string {

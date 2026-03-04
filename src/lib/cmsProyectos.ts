@@ -15,6 +15,7 @@ interface FrontmatterResult {
 }
 
 const projectMarkdown = import.meta.glob('../cms/proyectos/*.md', { as: 'raw', eager: true });
+const assetMap = import.meta.glob('../assets/**/*.{png,jpg,jpeg,gif,svg,webp}', { as: 'url', eager: true });
 
 const projects: Project[] = Object.entries(projectMarkdown).map(([path, raw]) => {
   const { data, content } = parseFrontmatter(raw as string);
@@ -29,7 +30,7 @@ const projects: Project[] = Object.entries(projectMarkdown).map(([path, raw]) =>
     programa: data.programa ?? '',
     descripcion: data.descripcion ?? '',
     ano: data.ano ?? '',
-    foto: data.foto ?? '',
+    foto: resolveAssetUrl(data.foto ?? ''),
     content: sanitizeContent(content),
   };
 });
@@ -55,6 +56,20 @@ export function getAllProjects(): Project[] {
 
 export function getProjectBySlug(slug: string): Project | undefined {
   return projects.find((project) => project.slug === slug);
+}
+
+function resolveAssetUrl(value: string): string {
+  if (!value) return '';
+  if (/^https?:\/\//i.test(value)) return value;
+
+  if (value.startsWith('/src/assets/')) {
+    const key = `../assets/${value.slice('/src/assets/'.length)}`;
+    if (key in assetMap) {
+      return assetMap[key] as string;
+    }
+  }
+
+  return value;
 }
 
 function sanitizeContent(content: string): string {
