@@ -1,21 +1,35 @@
 import React from 'react';
+import CounterpartLogo from '../assets/logo/COUNTERPART.png';
+import EuLogo from '../assets/logo/EU.png';
+import GizLogo from '../assets/logo/GIZ.png';
+import HivosLogo from '../assets/logo/HIVOS.png';
+import IndicoLogo from '../assets/logo/INDICO.png';
+import IriLogo from '../assets/logo/IRI.png';
+import KasLogo from '../assets/logo/KAS.png';
+import NedLogo from '../assets/logo/NED.png';
+import NimdLogo from '../assets/logo/NIMD.png';
+import OeaLogo from '../assets/logo/OEA.png';
+import OsfLogo from '../assets/logo/OSF.png';
+import PnudLogo from '../assets/logo/PNUD.png';
+import UkEmbLogo from '../assets/logo/UK EMBS.png';
+import UsaidLogo from '../assets/logo/USAID.png';
 
 const StrategicAllies = () => {
   const allies = [
-    { name: 'UK Embassy', logo: '/logos/uk-embassy.png' },
-    { name: 'Indico', logo: '/logos/indico.png' },
-    { name: 'Unión Europea', logo: '/logos/union-europea.png' },
-    { name: 'NED', logo: '/logos/ned.png' },
-    { name: 'PNUD', logo: '/logos/pnud.png' },
-    { name: 'IRI', logo: '/logos/iri.png' },
-    { name: 'USAID', logo: '/logos/usaid.png' },
-    { name: 'Counterpart', logo: '/logos/counterpart.png' },
-    { name: 'GIZ', logo: '/logos/giz.png' },
-    { name: 'HIVOS', logo: '/logos/hivos.png' },
-    { name: 'OEA', logo: '/logos/oea.png' },
-    { name: 'NIMD', logo: '/logos/nimd.png' },
-    { name: 'Open Society Foundation', logo: '/logos/open-society.png' },
-    { name: 'KAS', logo: '/logos/kas.png' }
+    { name: 'UK Embassy', logo: UkEmbLogo },
+    { name: 'Indico', logo: IndicoLogo },
+    { name: 'Unión Europea', logo: EuLogo },
+    { name: 'NED', logo: NedLogo },
+    { name: 'PNUD', logo: PnudLogo },
+    { name: 'IRI', logo: IriLogo },
+    { name: 'USAID', logo: UsaidLogo },
+    { name: 'Counterpart', logo: CounterpartLogo },
+    { name: 'GIZ', logo: GizLogo },
+    { name: 'HIVOS', logo: HivosLogo },
+    { name: 'OEA', logo: OeaLogo },
+    { name: 'NIMD', logo: NimdLogo },
+    { name: 'Open Society Foundation', logo: OsfLogo },
+    { name: 'KAS', logo: KasLogo }
   ];
 
   return (
@@ -35,10 +49,10 @@ const StrategicAllies = () => {
           {allies.map((ally, index) => (
             <div
               key={index}
-              className="flex items-center justify-center p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors duration-300 h-32"
+              className="flex items-center justify-center p-6 bg-white rounded-xl hover:bg-gray-100 transition-colors duration-300 h-40"
             >
               <div className="text-center">
-                <div className="w-full h-16 flex items-center justify-center mb-2">
+                <div className="w-full h-36 flex items-center justify-center mb-2">
                   <img
                     src={ally.logo}
                     alt={`${ally.name} logo`}
