@@ -18,6 +18,18 @@ import BusinessPage from './pages/BusinessPage';
 import BlogPage from './pages/BlogPage';
 import BlogDetailPage from './pages/BlogDetailPage';
 import PodcastPage from './pages/PodcastPage';
+import OpportunitiesPage from './pages/OpportunitiesPage';
+import OpportunityDetailPage from './pages/OpportunityDetailPage';
+import OpportunitiesResourcesPage from './pages/OpportunitiesResourcesPage';
+import PublicProcurementPage from './pages/PublicProcurementPage';
+import ProcurementExplorerPage from './pages/ProcurementExplorerPage';
+import ProcurementDetailPage from './pages/ProcurementDetailPage';
+import ProcurementResourcesPage from './pages/ProcurementResourcesPage';
+import TramitesHomePage from './pages/TramitesHomePage';
+import TramitesExplorerPage from './pages/TramitesExplorerPage';
+import TramiteDetailPage from './pages/TramiteDetailPage';
+import TramitesRecursosPage from './pages/TramitesRecursosPage';
+import TramitesComparadorPage from './pages/TramitesComparadorPage';
 import Anniversary15Page from './pages/Anniversary15Page';
 import PressRoomPage from './pages/PressRoomPage';
 import GDPRBar from './components/GDPRBar';
@@ -54,6 +66,21 @@ function App() {
               <Route path="/blog" element={<BlogPage />} />
               <Route path="/blog/:slug" element={<BlogDetailPage />} />
               <Route path="/podcast" element={<PodcastPage />} />
+              <Route path="/oportunidades" element={<OpportunitiesPage />} />
+              <Route path="/oportunidades/:id" element={<OpportunityDetailPage />} />
+              <Route path="/oportunidades/recursos" element={<OpportunitiesResourcesPage />} />
+              <Route path="/radar-compras" element={<PublicProcurementPage />} />
+              <Route path="/radar-compras/explorar" element={<ProcurementExplorerPage />} />
+              <Route path="/radar-compras/mipymes" element={<ProcurementExplorerPage />} />
+              <Route path="/radar-compras/proceso/:id" element={<ProcurementDetailPage />} />
+              <Route path="/radar-compras/recursos" element={<ProcurementResourcesPage />} />
+              <Route path="/radar-compras/sector/:sector" element={<ProcurementExplorerPage />} />
+              <Route path="/radar-compras/institucion/:institution" element={<ProcurementExplorerPage />} />
+              {/* <Route path="/tramites" element={<TramitesHomePage />} />
+              <Route path="/tramites/explorar" element={<TramitesExplorerPage />} />
+              <Route path="/tramites/:id" element={<TramiteDetailPage />} />
+              <Route path="/tramites/recursos" element={<TramitesRecursosPage />} />
+              <Route path="/tramites/comparar" element={<TramitesComparadorPage />} /> */}
               <Route path="/15-anos" element={<Anniversary15Page />} />
               <Route path="/sala-de-prensa" element={<PressRoomPage />} />
               <Route path="/contacto" element={<ContactPage />} />
