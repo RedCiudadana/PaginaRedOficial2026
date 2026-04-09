@@ -76,11 +76,11 @@ function App() {
               <Route path="/radar-compras/recursos" element={<ProcurementResourcesPage />} />
               <Route path="/radar-compras/sector/:sector" element={<ProcurementExplorerPage />} />
               <Route path="/radar-compras/institucion/:institution" element={<ProcurementExplorerPage />} />
-              {/* <Route path="/tramites" element={<TramitesHomePage />} />
+              <Route path="/tramites" element={<TramitesHomePage />} />
               <Route path="/tramites/explorar" element={<TramitesExplorerPage />} />
               <Route path="/tramites/:id" element={<TramiteDetailPage />} />
               <Route path="/tramites/recursos" element={<TramitesRecursosPage />} />
-              <Route path="/tramites/comparar" element={<TramitesComparadorPage />} /> */}
+              <Route path="/tramites/comparar" element={<TramitesComparadorPage />} />
               <Route path="/15-anos" element={<Anniversary15Page />} />
               <Route path="/sala-de-prensa" element={<PressRoomPage />} />
               <Route path="/contacto" element={<ContactPage />} />

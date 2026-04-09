@@ -1,52 +1,101 @@
-import { Link } from 'react-router-dom';
-import { Search, AlertCircle, FileText } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
+import { Search, Filter, X, Building2, Clock, DollarSign, MapPin, Sparkles, ArrowRight, Briefcase, Target, Calendar, ChevronDown } from 'lucide-react';
+import { fetchTramites, Tramite } from '../lib/tramitesData';
 
 export default function TramitesExplorerPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-teal-50 via-white to-gray-50">
-      <div className="relative bg-gradient-to-br from-teal-600 via-teal-700 to-blue-800 text-white py-20 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-5 py-2.5 rounded-full mb-6 border border-white/30 shadow-lg">
-              <Search size={22} className="text-teal-200" />
-              <span className="font-bold text-white">Explorar Trámites</span>
-            </div>
-            <h1 className="text-4xl md:text-5xl font-black mb-4 leading-tight">Explorar Trámites Públicos</h1>
-            <p className="text-xl text-teal-100 max-w-2xl mx-auto mb-8">
-              La exploración de trámites no puede realizarse porque no hay datos CSV disponibles en el proyecto.
-            </p>
-          </div>
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [tramites, setTramites] = useState<Tramite[]>([]);
+  const [filteredTramites, setFilteredTramites] = useState<Tramite[]>([]);
+  const [loading, setLoading] = useState(true);
 
-          <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-10 shadow-xl">
-            <div className="flex items-start gap-4">
-              <AlertCircle className="h-12 w-12 text-white" />
-              <div>
-                <h2 className="text-2xl font-bold text-white mb-3">Datos de trámites faltantes</h2>
-                <p className="text-teal-100 mb-4">
-                  Esta página requiere un archivo de datos de trámites en formato CSV. Si quieres que el explorador funcione sin backend,
-                  agrega un archivo como <code>public/data/tramites.csv</code> y los componentes podrán leerlo directamente.
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <Link
-                    to="/tramites"
-                    className="inline-flex items-center gap-2 rounded-xl bg-white text-teal-700 px-5 py-3 font-semibold hover:bg-teal-50 transition"
-                  >
-                    Volver a Trámites
-                  </Link>
-                  <Link
-                    to="/tramites/recursos"
-                    className="inline-flex items-center gap-2 rounded-xl border border-white/30 bg-white/10 text-white px-5 py-3 hover:bg-white/20 transition"
-                  >
-                    Ver recursos
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+  const [searchQuery, setSearchQuery] = useState(searchParams.get('q') || '');
+  const [selectedCategoria, setSelectedCategoria] = useState(searchParams.get('categoria') || '');
+  const [selectedInstitucion, setSelectedInstitucion] = useState(searchParams.get('institucion') || '');
+  const [selectedModalidad, setSelectedModalidad] = useState('');
+  const [selectedNivelDigital, setSelectedNivelDigital] = useState('');
+  const [soloGratuitos, setSoloGratuitos] = useState(false);
+  const [soloEmprendedores, setSoloEmprendedores] = useState(false);
+
+  useEffect(() => {
+    loadTramites();
+  }, []);
+
+  useEffect(() => {
+    applyFilters();
+  }, [tramites, searchQuery, selectedCategoria, selectedInstitucion, selectedModalidad, selectedNivelDigital, soloGratuitos, soloEmprendedores]);
+
+  const loadTramites = async () => {
+    setLoading(true);
+    const data = await fetchTramites();
+    const sortedData = data.sort((a, b) => b.vistas - a.vistas);
+    setTramites(sortedData);
+    setLoading(false);
+  };
+
+  const applyFilters = () => {
+    let filtered = [...tramites];
+
+    if (searchQuery) {
+      const query = searchQuery.toLowerCase();
+      filtered = filtered.filter(t =>
+        t.nombre.toLowerCase().includes(query) ||
+        t.descripcion.toLowerCase().includes(query) ||
+        t.institucion.toLowerCase().includes(query) ||
+        t.tags.some(tag => tag.toLowerCase().includes(query))
+      );
+    }
+
+    if (selectedCategoria) {
+      filtered = filtered.filter(t => t.categoria === selectedCategoria);
+    }
+
+    if (selectedInstitucion) {
+      filtered = filtered.filter(t => t.institucion === selectedInstitucion);
+    }
+
+    if (selectedModalidad) {
+      filtered = filtered.filter(t => t.modalidad === selectedModalidad);
+    }
+
+    if (selectedNivelDigital) {
+      filtered = filtered.filter(t => t.nivel_digital === selectedNivelDigital);
+    }
+
+    if (soloGratuitos) {
+      filtered = filtered.filter(t => t.costo === 0);
+    }
+
+    if (soloEmprendedores) {
+      filtered = filtered.filter(t => t.para_emprendedores);
+    }
+
+    setFilteredTramites(filtered);
+  };
+
+  const clearFilters = () => {
+    setSearchQuery('');
+    setSelectedCategoria('');
+    setSelectedInstitucion('');
+    setSelectedModalidad('');
+    setSelectedNivelDigital('');
+    setSoloGratuitos(false);
+    setSoloEmprendedores(false);
+    setSearchParams({});
+  };
+
+  const activeFiltersCount = [
+    searchQuery,
+    selectedCategoria,
+    selectedInstitucion,
+    selectedModalidad,
+    selectedNivelDigital,
+    soloGratuitos,
+    soloEmprendedores
+  ].filter(Boolean).length;
+
+  const categorias = [...new Set(tramites.map(t => t.categoria))];
+  const instituciones = [...new Set(tramites.map(t => t.institucion))];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-teal-50 via-white to-gray-50">

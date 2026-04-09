@@ -1,36 +1,38 @@
+import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { AlertCircle, ExternalLink } from 'lucide-react';
+import { Building2, Clock, DollarSign, MapPin, ExternalLink, CheckCircle2, AlertCircle, ArrowRight, Sparkles, FileText, Briefcase } from 'lucide-react';
+import { fetchTramiteById, fetchTramites, Tramite } from '../lib/tramitesData';
 
 export default function TramiteDetailPage() {
   const { id } = useParams<{ id: string }>();
+  const [tramite, setTramite] = useState<Tramite | null>(null);
+  const [relatedTramites, setRelatedTramites] = useState<Tramite[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center py-20">
-      <div className="max-w-3xl bg-white rounded-3xl shadow-2xl border border-gray-200 p-10 text-center">
-        <AlertCircle className="mx-auto mb-6 h-16 w-16 text-teal-600" />
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">Detalle de trámite no disponible</h1>
-        <p className="text-gray-600 mb-6">
-          El detalle de trámites solo puede mostrarse si existe un archivo CSV con los datos de los trámites.
-          Actualmente no hay un CSV de trámites en <code>public/data</code>.
-        </p>
-        <p className="text-sm text-gray-500 mb-8">ID de trámite solicitado: <strong>{id || 'N/A'}</strong></p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            to="/tramites"
-            className="inline-flex items-center justify-center rounded-xl bg-teal-600 px-6 py-3 text-white font-semibold hover:bg-teal-700 transition"
-          >
-            Volver a Trámites
-          </Link>
-          <Link
-            to="/tramites/recursos"
-            className="inline-flex items-center justify-center rounded-xl border border-teal-600 text-teal-600 px-6 py-3 font-semibold hover:bg-teal-50 transition"
-          >
-            Ver recursos
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
+  useEffect(() => {
+    if (id) {
+      loadTramite(id);
+    }
+  }, [id]);
+
+  const loadTramite = async (tramiteId: string) => {
+    setLoading(true);
+
+    const tramiteData = await fetchTramiteById(tramiteId);
+
+    if (tramiteData) {
+      setTramite(tramiteData);
+
+      const allTramites = await fetchTramites();
+      const related = allTramites
+        .filter(t => t.categoria === tramiteData.categoria && t.id !== tramiteId)
+        .slice(0, 3);
+
+      setRelatedTramites(related);
+    }
+
+    setLoading(false);
+  };
 
   if (loading) {
     return (

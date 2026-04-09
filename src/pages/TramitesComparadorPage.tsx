@@ -1,33 +1,37 @@
+import { useState, useEffect } from 'react';
+import { Search, X, Building2, Clock, DollarSign, MapPin, ArrowRight, Plus, Trash2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { AlertCircle } from 'lucide-react';
+import { fetchTramites, Tramite } from '../lib/tramitesData';
 
 export default function TramitesComparadorPage() {
-  return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center py-20">
-      <div className="max-w-3xl bg-white rounded-3xl shadow-2xl border border-gray-200 p-10 text-center">
-        <AlertCircle className="mx-auto mb-6 h-16 w-16 text-teal-600" />
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">Comparador de trámites no disponible</h1>
-        <p className="text-gray-600 mb-6">
-          La comparación de trámites requiere datos en CSV o un backend. Sin datos de trámites locales
-          no se puede llenar esta página.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            to="/tramites"
-            className="inline-flex items-center justify-center rounded-xl bg-teal-600 px-6 py-3 text-white font-semibold hover:bg-teal-700 transition"
-          >
-            Volver a Trámites
-          </Link>
-          <Link
-            to="/tramites/recursos"
-            className="inline-flex items-center justify-center rounded-xl border border-teal-600 text-teal-600 px-6 py-3 font-semibold hover:bg-teal-50 transition"
-          >
-            Ver recursos
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
+  const [tramites, setTramites] = useState<Tramite[]>([]);
+  const [selectedTramites, setSelectedTramites] = useState<Tramite[]>([]);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchResults, setSearchResults] = useState<Tramite[]>([]);
+  const [showSearch, setShowSearch] = useState(false);
+
+  useEffect(() => {
+    loadTramites();
+  }, []);
+
+  useEffect(() => {
+    if (searchQuery) {
+      const query = searchQuery.toLowerCase();
+      const results = tramites.filter(t =>
+        t.nombre.toLowerCase().includes(query) ||
+        t.institucion.toLowerCase().includes(query)
+      ).slice(0, 5);
+      setSearchResults(results);
+    } else {
+      setSearchResults([]);
+    }
+  }, [searchQuery, tramites]);
+
+  const loadTramites = async () => {
+    const data = await fetchTramites();
+    const sortedData = data.sort((a, b) => b.vistas - a.vistas);
+    setTramites(sortedData);
+  };
 
   const addTramite = (tramite: Tramite) => {
     if (selectedTramites.length < 3 && !selectedTramites.find(t => t.id === tramite.id)) {
