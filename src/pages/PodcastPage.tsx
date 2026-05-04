@@ -315,7 +315,7 @@ const PodcastPage = () => {
               No te pierdas ningún episodio. Disponible en todas las plataformas de podcast.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-white text-gray-900 x-6 p-3 rounded-lg font-semibold hover:bg-primary transition-colors">
+              {/* <button className="bg-white text-gray-900 x-6 p-3 rounded-lg font-semibold hover:bg-primary transition-colors">
                 Apple Podcasts
               </button>
               <button className="bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-primary transition-colors">
@@ -326,7 +326,7 @@ const PodcastPage = () => {
               </button>
               <button className="bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-primary transition-colors">
                 RSS Feed
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

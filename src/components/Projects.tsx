@@ -75,7 +75,7 @@ const Projects = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Conoce nuestros proyectos más impactantes y los resultados medibles que hemos logrado 
-            en estos 14 años de trabajo
+            en estos años de trabajo
           </p>
         </div>
 

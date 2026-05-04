@@ -121,7 +121,7 @@ const Footer = () => {
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
           <p className="text-gray-400 text-xs sm:text-sm text-center">
-            © {currentYear} Red Ciudadana. Todos los derechos reservados.
+            {currentYear} - Asociación Civil Red Ciudadana.
           </p>
         </div>
       </div>

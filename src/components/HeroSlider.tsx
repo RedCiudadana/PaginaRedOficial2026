@@ -4,11 +4,11 @@ import { ArrowRight, Target, Play, Pause, Volume2, VolumeX } from 'lucide-react'
 interface HeroSlide {
   id: string;
   title: string;
-  subtitle: string;
+  subtitle?: string;
   description: string;
   image: string;
   video?: string;
-  cta: {
+  cta?: {
     primary: { text: string; action: string };
     secondary?: { text: string; action: string };
   };
@@ -146,9 +146,11 @@ const HeroSlider: React.FC<HeroSliderProps> = ({
                 {currentSlideData.title}
               </h1>
 
-              <p className="text-lg sm:text-xl lg:text-2xl xl:text-3xl text-white font-normal animate-slide-in-left" style={{ animationDelay: '0.5s' }}>
-                {currentSlideData.subtitle}
-              </p>
+              {currentSlideData.subtitle && (
+                <p className="text-lg sm:text-xl lg:text-2xl xl:text-3xl text-white font-normal animate-slide-in-left" style={{ animationDelay: '0.5s' }}>
+                  {currentSlideData.subtitle}
+                </p>
+              )}
 
               <p className="text-base sm:text-lg lg:text-xl text-white font-normal leading-relaxed max-w-3xl animate-slide-in-left" style={{ animationDelay: '0.6s' }}>
                 {currentSlideData.description}
@@ -177,25 +179,27 @@ const HeroSlider: React.FC<HeroSliderProps> = ({
             )}
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 pt-4 animate-fade-in" style={{ animationDelay: '1s' }}>
-              <a
-                href={currentSlideData.cta.primary.action.startsWith('/') ? currentSlideData.cta.primary.action : '#'}
-                className="group bg-primary hover:bg-primary text-white px-6 py-3 lg:px-8 lg:py-4 rounded-xl font-medium flex items-center justify-center transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-xl hover:shadow-2xl text-sm lg:text-base"
-              >
-                {currentSlideData.cta.primary.text}
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" size={16} />
-              </a>
-
-              {currentSlideData.cta.secondary && (
+            {currentSlideData.cta && (
+              <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 pt-4 animate-fade-in" style={{ animationDelay: '1s' }}>
                 <a
-                  href={currentSlideData.cta.secondary.action.startsWith('/') ? currentSlideData.cta.secondary.action : '#'}
-                  className="group border-2 border-white/30 hover:border-white text-white px-6 py-3 lg:px-8 lg:py-4 rounded-xl font-medium flex items-center justify-center transition-all duration-300 hover:bg-white/10 backdrop-blur-md transform hover:scale-105 hover:-translate-y-1 text-sm lg:text-base"
+                  href={currentSlideData.cta.primary.action.startsWith('/') ? currentSlideData.cta.primary.action : '#'}
+                  className="group bg-primary hover:bg-primary text-white px-6 py-3 lg:px-8 lg:py-4 rounded-xl font-medium flex items-center justify-center transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-xl hover:shadow-2xl text-sm lg:text-base"
                 >
-                  <Target className="mr-2" size={16} />
-                  {currentSlideData.cta.secondary.text}
+                  {currentSlideData.cta.primary.text}
+                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" size={16} />
                 </a>
-              )}
-            </div>
+
+                {currentSlideData.cta.secondary && (
+                  <a
+                    href={currentSlideData.cta.secondary.action.startsWith('/') ? currentSlideData.cta.secondary.action : '#'}
+                    className="group border-2 border-white/30 hover:border-white text-white px-6 py-3 lg:px-8 lg:py-4 rounded-xl font-medium flex items-center justify-center transition-all duration-300 hover:bg-white/10 backdrop-blur-md transform hover:scale-105 hover:-translate-y-1 text-sm lg:text-base"
+                  >
+                    <Target className="mr-2" size={16} />
+                    {currentSlideData.cta.secondary.text}
+                  </a>
+                )}
+              </div>
+            )}
           </div>
         </div>
       </div>

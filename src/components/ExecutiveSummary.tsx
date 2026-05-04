@@ -43,11 +43,11 @@ const ExecutiveSummary = () => {
           </div>
           
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 lg:mb-6">
-            Líderes en Transparencia e Innovación Pública
+            Transparencia e Innovación Pública
           </h2>
           
           <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
-            Somos una organización guatemalteca que desde 2010 trabaja para construir una sociedad más transparente, 
+            Somos una organización guatemalteca que desde 2011 trabaja para construir una sociedad más transparente, 
             participativa e innovadora a través de la tecnología y la colaboración ciudadana.
           </p>
 

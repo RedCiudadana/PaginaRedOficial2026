@@ -12,10 +12,6 @@ const KnowledgePage = () => {
       subtitle: 'Recursos especializados para la transformación',
       description: 'Accede a nuestras investigaciones, análisis, guías prácticas y recursos especializados para fortalecer la transparencia y la participación ciudadana en Guatemala.',
       image: knowldegeHeroImage,
-      cta: {
-        primary: { text: 'Explorar Repositorio', action: '#repositorio' },
-        secondary: { text: 'Suscribirse al Blog', action: '#suscripcion' }
-      }
     }
   ];
 

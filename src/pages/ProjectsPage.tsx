@@ -8,13 +8,8 @@ const ProjectsPage = () => {
     {
       id: 'projects-main',
       title: 'Proyectos y Resultados',
-      subtitle: 'Impacto medible en 14 años de trabajo',
       description: 'Conoce nuestros proyectos más impactantes y los resultados concretos que hemos logrado transformando Guatemala a través de la innovación y la transparencia.',
       image: projectsHeroImage,
-      cta: {
-        primary: { text: 'Explorar Todos los Proyectos', action: '#proyectos' },
-        secondary: { text: 'Ver Casos de Éxito', action: '#casos' }
-      }
     }
   ];
 

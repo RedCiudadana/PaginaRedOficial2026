@@ -90,10 +90,10 @@ const AboutUs = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Quiénes Somos
+            ¿Quiénes Somos?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            15 años de logros, innovación y transformación social
+            Innovación y transformación social
           </p>
           <div className="mt-8 mx-auto h-1 w-24 rounded-full bg-gradient-to-r from-[#86c9b9] via-[#87becf] to-[#88b3e4] mb-4 lg:mb-6" />
         </div>

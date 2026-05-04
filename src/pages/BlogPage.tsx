@@ -94,132 +94,9 @@ const BlogPage = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Featured Posts */}
-        {featuredPosts.length > 0 && (
-          <div className="mb-16">
-            <div className="flex items-center gap-2 mb-8">
-              <TrendingUp className="text-blue-600" size={28} />
-              <h2 className="text-3xl font-bold text-gray-900">Artículos Destacados</h2>
-            </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {featuredPaginated.map((post) => (
-                <Link
-                  key={post.slug}
-                  to={`/blog/${post.slug}`}
-                  className="group block"
-                >
-                  <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                  <div className="relative h-64 overflow-hidden">
-                    <img
-                      src={post.image}
-                      alt={post.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
-                        Destacado
-                      </span>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <div className="flex items-center gap-4 text-sm text-gray-600 mb-3">
-                      <span className="flex items-center gap-1">
-                        <Calendar size={16} />
-                        {formatDate(post.date)}
-                      </span>
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                      {post.title}
-                    </h3>
-                    <p className="text-gray-600 mb-4 line-clamp-3">{post.description}</p>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2 text-sm text-gray-600">
-                        <User size={16} />
-                        <span>{post.autor}</span>
-                      </div>
-                      <span className="text-white font-semibold rounded p-2 hover:text-primary transition-colors">
-                        Leer más →
-                      </span>
-                    </div>
-                  </div>
-                </article>
-                </Link>
-              ))}
-            </div>
-            <div className="flex items-center justify-center gap-2 mt-10">
-                <button
-                  className={`h-10 w-10 rounded-lg border transition-all duration-200 flex items-center justify-center text-center leading-none ${
-                    featuredSafePage === 1
-                      ? 'border-gray-200 text-gray-300 cursor-not-allowed'
-                      : 'border-gray-300 text-gray-600 hover:bg-gray-100'
-                  }`}
-                  onClick={() => setFeaturedPage(1)}
-                  disabled={featuredSafePage === 1}
-                  aria-label="Primera"
-                >
-                  <ChevronsLeft size={18} />
-                </button>
-                <button
-                  className={`h-10 w-10 rounded-lg border transition-all duration-200 flex items-center justify-center text-center leading-none ${
-                    featuredSafePage === 1
-                      ? 'border-gray-200 text-gray-300 cursor-not-allowed'
-                      : 'border-gray-300 text-gray-600 hover:bg-gray-100'
-                  }`}
-                  onClick={() => setFeaturedPage((page) => Math.max(1, page - 1))}
-                  disabled={featuredSafePage === 1}
-                  aria-label="Anterior"
-                >
-                  <ChevronLeft size={18} />
-                </button>
-                {Array.from({ length: featuredTotalPages }, (_, index) => {
-                  const pageNumber = index + 1;
-                  const isActive = pageNumber === featuredSafePage;
-                  return (
-                    <button
-                      key={`featured-page-${pageNumber}`}
-                      className={`h-10 w-10 rounded-lg border transition-all duration-200 flex items-center justify-center text-center leading-none ${
-                        isActive
-                          ? 'border-primary bg-primary text-white'
-                          : 'border-gray-300 text-gray-600 hover:bg-gray-100'
-                      }`}
-                      onClick={() => setFeaturedPage(pageNumber)}
-                      aria-label={`Página ${pageNumber}`}
-                      aria-current={isActive ? 'page' : undefined}
-                    >
-                      {pageNumber}
-                    </button>
-                  );
-                })}
-                <button
-                  className={`h-10 w-10 rounded-lg border transition-all duration-200 flex items-center justify-center text-center leading-none ${
-                    featuredSafePage === featuredTotalPages
-                      ? 'border-gray-200 text-gray-300 cursor-not-allowed'
-                      : 'border-gray-300 text-gray-600 hover:bg-gray-100'
-                  }`}
-                  onClick={() => setFeaturedPage((page) => Math.min(featuredTotalPages, page + 1))}
-                  disabled={featuredSafePage === featuredTotalPages}
-                  aria-label="Siguiente"
-                >
-                  <ChevronRight size={18} />
-                </button>
-                <button
-                  className={`h-10 w-10 rounded-lg border transition-all duration-200 flex items-center justify-center text-center leading-none ${
-                    featuredSafePage === featuredTotalPages
-                      ? 'border-gray-200 text-gray-300 cursor-not-allowed'
-                      : 'border-gray-300 text-gray-600 hover:bg-gray-100'
-                  }`}
-                  onClick={() => setFeaturedPage(featuredTotalPages)}
-                  disabled={featuredSafePage === featuredTotalPages}
-                  aria-label="Última"
-                >
-                  <ChevronsRight size={18} />
-                </button>
-              </div>
-          </div>
-        )}
 
         {/* Regular Posts */}
-        <div>
+        <div className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">
             Todos los Artículos
           </h2>
@@ -341,6 +218,130 @@ const BlogPage = () => {
             >
               <ChevronsRight size={18} />
             </button>
+          </div>
+        )}
+
+        {/* Featured Posts */}
+        {featuredPosts.length > 0 && (
+          <div className="mt-16">
+            <div className="flex items-center gap-2 mb-8">
+              <TrendingUp className="text-blue-600" size={28} />
+              <h2 className="text-3xl font-bold text-gray-900">Artículos Destacados</h2>
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {featuredPaginated.map((post) => (
+                <Link
+                  key={post.slug}
+                  to={`/blog/${post.slug}`}
+                  className="group block"
+                >
+                  <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                  <div className="relative h-64 overflow-hidden">
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute top-4 left-4">
+                      <span className="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        Destacado
+                      </span>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <div className="flex items-center gap-4 text-sm text-gray-600 mb-3">
+                      <span className="flex items-center gap-1">
+                        <Calendar size={16} />
+                        {formatDate(post.date)}
+                      </span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                      {post.title}
+                    </h3>
+                    <p className="text-gray-600 mb-4 line-clamp-3">{post.description}</p>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2 text-sm text-gray-600">
+                        <User size={16} />
+                        <span>{post.autor}</span>
+                      </div>
+                      <span className="text-white font-semibold rounded p-2 hover:text-primary transition-colors">
+                        Leer más →
+                      </span>
+                    </div>
+                  </div>
+                </article>
+                </Link>
+              ))}
+            </div>
+            <div className="flex items-center justify-center gap-2 mt-10">
+                <button
+                  className={`h-10 w-10 rounded-lg border transition-all duration-200 flex items-center justify-center text-center leading-none ${
+                    featuredSafePage === 1
+                      ? 'border-gray-200 text-gray-300 cursor-not-allowed'
+                      : 'border-gray-300 text-gray-600 hover:bg-gray-100'
+                  }`}
+                  onClick={() => setFeaturedPage(1)}
+                  disabled={featuredSafePage === 1}
+                  aria-label="Primera"
+                >
+                  <ChevronsLeft size={18} />
+                </button>
+                <button
+                  className={`h-10 w-10 rounded-lg border transition-all duration-200 flex items-center justify-center text-center leading-none ${
+                    featuredSafePage === 1
+                      ? 'border-gray-200 text-gray-300 cursor-not-allowed'
+                      : 'border-gray-300 text-gray-600 hover:bg-gray-100'
+                  }`}
+                  onClick={() => setFeaturedPage((page) => Math.max(1, page - 1))}
+                  disabled={featuredSafePage === 1}
+                  aria-label="Anterior"
+                >
+                  <ChevronLeft size={18} />
+                </button>
+                {Array.from({ length: featuredTotalPages }, (_, index) => {
+                  const pageNumber = index + 1;
+                  const isActive = pageNumber === featuredSafePage;
+                  return (
+                    <button
+                      key={`featured-page-${pageNumber}`}
+                      className={`h-10 w-10 rounded-lg border transition-all duration-200 flex items-center justify-center text-center leading-none ${
+                        isActive
+                          ? 'border-primary bg-primary text-white'
+                          : 'border-gray-300 text-gray-600 hover:bg-gray-100'
+                      }`}
+                      onClick={() => setFeaturedPage(pageNumber)}
+                      aria-label={`Página ${pageNumber}`}
+                      aria-current={isActive ? 'page' : undefined}
+                    >
+                      {pageNumber}
+                    </button>
+                  );
+                })}
+                <button
+                  className={`h-10 w-10 rounded-lg border transition-all duration-200 flex items-center justify-center text-center leading-none ${
+                    featuredSafePage === featuredTotalPages
+                      ? 'border-gray-200 text-gray-300 cursor-not-allowed'
+                      : 'border-gray-300 text-gray-600 hover:bg-gray-100'
+                  }`}
+                  onClick={() => setFeaturedPage((page) => Math.min(featuredTotalPages, page + 1))}
+                  disabled={featuredSafePage === featuredTotalPages}
+                  aria-label="Siguiente"
+                >
+                  <ChevronRight size={18} />
+                </button>
+                <button
+                  className={`h-10 w-10 rounded-lg border transition-all duration-200 flex items-center justify-center text-center leading-none ${
+                    featuredSafePage === featuredTotalPages
+                      ? 'border-gray-200 text-gray-300 cursor-not-allowed'
+                      : 'border-gray-300 text-gray-600 hover:bg-gray-100'
+                  }`}
+                  onClick={() => setFeaturedPage(featuredTotalPages)}
+                  disabled={featuredSafePage === featuredTotalPages}
+                  aria-label="Última"
+                >
+                  <ChevronsRight size={18} />
+                </button>
+              </div>
           </div>
         )}
       </div>
