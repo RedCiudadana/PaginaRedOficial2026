@@ -32,6 +32,7 @@ import TramitesRecursosPage from './pages/TramitesRecursosPage';
 import TramitesComparadorPage from './pages/TramitesComparadorPage';
 import Anniversary15Page from './pages/Anniversary15Page';
 import PressRoomPage from './pages/PressRoomPage';
+import NotFoundPage from './pages/NotFoundPage';
 import GDPRBar from './components/GDPRBar';
 import ConectaFuturoPopup from './components/ConectaFuturoPopup';
 
@@ -85,6 +86,7 @@ function App() {
               <Route path="/sala-de-prensa" element={<PressRoomPage />} />
               <Route path="/contacto" element={<ContactPage />} />
               <Route path="/business" element={<BusinessPage />} />
+              <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </main>
           <Footer />
