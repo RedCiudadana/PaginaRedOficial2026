@@ -1,16 +1,9 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Search, ChevronDown, Youtube, Linkedin } from 'lucide-react';
+import { Menu, X, Search, ChevronDown, Facebook, Instagram, Youtube, Linkedin } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import LanguageSwitcher from './LanguageSwitcher';
-import favicon from '../assets/logo/FAVICON.png';
-
-// TikTok icon component (since it's not in lucide-react)
-const TikTokIcon = ({ size = 16, className = "" }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className}>
-    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-.04-.1z"/>
-  </svg>
-);
+import LogoChiquito from '../assets/logo/FAVICON.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,47 +29,53 @@ const Header = () => {
 
   return (
     <>
-      {/* Top Social Menu */}
-      <div className="bg-gray-900 text-white py-2 hidden lg:block">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center">
-            <div className="flex items-center space-x-2 text-sm text-gray-300">
-              <img
-                src={favicon}
-                alt="Red Ciudadana"
-                className="h-8 w-8 mr-4 filter invert"
-              />
-              {t('header.social.follow')}
-            </div>
-            <div className="flex items-center space-x-4">
-              <a
-                href="http://tiktok.com/@redxguate"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 group"
-              >
-                <TikTokIcon size={16} className="group-hover:scale-110 transition-transform duration-200" />
-                <span className="text-sm">TikTok</span>
-              </a>
-              <a
-                href="https://www.youtube.com/c/RedciudadanaOrgGt"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 text-gray-300 hover:text-red-400 transition-colors duration-200 group"
-              >
-                <Youtube size={16} className="group-hover:scale-110 transition-transform duration-200" />
-                <span className="text-sm">YouTube</span>
-              </a>
-              <a
-                href="https://www.linkedin.com/company/2532725"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors duration-200 group"
-              >
-                <Linkedin size={16} className="group-hover:scale-110 transition-transform duration-200" />
-                <span className="text-sm">LinkedIn</span>
-              </a>
-            </div>
+      {/* Top Header */}
+      <div className="bg-black2 text-white py-2">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+          <div className="md:flex items-center gap-2 sm:gap-4">
+            <img
+              src={LogoChiquito}
+              alt="Red Ciudadana"
+              width="25px"
+              style={{ filter: 'invert(1) hue-rotate(180deg) contrast(1.2) brightness(1.1)' }}
+            />
+            <p className="text-sm">
+              Sitio oficial de la Asociacion Civil Red Ciudadana
+            </p>
+          </div>
+          <div className="hidden sm:flex items-center space-x-4">
+            <a
+              href="https://www.facebook.com/Redciudadanagt/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-primary-200 transition-colors"
+            >
+              <Facebook size={20} />
+            </a>
+            <a
+              href="https://www.instagram.com/redxguate/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-primary-200 transition-colors"
+            >
+              <Instagram size={20} />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/2532725"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-primary-200 transition-colors"
+            >
+              <Linkedin size={20} />
+            </a>
+            <a
+              href="https://www.youtube.com/c/RedciudadanaOrgGt"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-primary-200 transition-colors"
+            >
+              <Youtube size={20} />
+            </a>
           </div>
         </div>
       </div>

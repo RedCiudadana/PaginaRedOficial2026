@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Play, Pause, Calendar, Clock, Users, Headphones, Search, Radio } from 'lucide-react';
+import { Play, Pause, Calendar, Clock, Users, Headphones, Search, Radio, X } from 'lucide-react';
 import { getAllPodcasts, PodcastEpisode } from '../lib/cmsPodcasts';
 import bannerHero from '../assets/banner/BANNER_02.png';
 import banner3 from '../assets/banner/BANNER_03.png';
@@ -11,6 +11,7 @@ const PodcastPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedTopic, setSelectedTopic] = useState('Todos');
   const [playingEpisode, setPlayingEpisode] = useState<string | null>(null);
+  const [modalEpisode, setModalEpisode] = useState<PodcastEpisode | null>(null);
 
   const topics = useMemo(() => {
     const allTopics = new Set<string>();
@@ -23,6 +24,22 @@ const PodcastPage = () => {
   useEffect(() => {
     fetchEpisodes();
   }, []);
+
+  useEffect(() => {
+    if (!modalEpisode) {
+      return undefined;
+    }
+
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setModalEpisode(null);
+        setPlayingEpisode(null);
+      }
+    };
+
+    window.addEventListener('keydown', handleEscape);
+    return () => window.removeEventListener('keydown', handleEscape);
+  }, [modalEpisode]);
 
   const fetchEpisodes = async () => {
     try {
@@ -55,22 +72,51 @@ const PodcastPage = () => {
     return date.toLocaleDateString('es-GT', { year: 'numeric', month: 'long', day: 'numeric' });
   };
 
-  const handlePlayPause = (episodeId: string, episodeLink: string) => {
-    if (playingEpisode === episodeId) {
-      setPlayingEpisode(null);
-    } else {
-      setPlayingEpisode(episodeId);
-      if (episodeLink) {
-        window.open(episodeLink, '_blank', 'noopener,noreferrer');
+  const getYoutubeEmbedUrl = (episodeLink: string) => {
+    if (!episodeLink) {
+      return null;
+    }
+
+    try {
+      const url = new URL(episodeLink);
+      const videoId =
+        url.hostname.includes('youtu.be')
+          ? url.pathname.slice(1)
+          : url.searchParams.get('v');
+
+      if (!videoId) {
+        return null;
       }
+
+      return `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+    } catch {
+      return null;
     }
   };
 
-  const handleOpenEpisode = (episodeLink: string) => {
-    if (episodeLink) {
-      window.open(episodeLink, '_blank', 'noopener,noreferrer');
+  const closeModal = () => {
+    setModalEpisode(null);
+    setPlayingEpisode(null);
+  };
+
+  const openEpisodeModal = (episode: PodcastEpisode) => {
+    if (!getYoutubeEmbedUrl(episode.link)) {
+      return;
+    }
+
+    setModalEpisode(episode);
+    setPlayingEpisode(episode.slug);
+  };
+
+  const handlePlayPause = (episode: PodcastEpisode) => {
+    if (playingEpisode === episode.slug) {
+      closeModal();
+    } else {
+      openEpisodeModal(episode);
     }
   };
+
+  const modalEmbedUrl = modalEpisode ? getYoutubeEmbedUrl(modalEpisode.link) : null;
 
   if (loading) {
     return (
@@ -82,6 +128,37 @@ const PodcastPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      {modalEpisode && modalEmbedUrl && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/75 px-4 py-8"
+          onClick={closeModal}
+        >
+          <div
+            className="relative w-full max-w-5xl overflow-hidden rounded-2xl bg-black shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={closeModal}
+              className="absolute right-3 top-3 z-10 rounded-full bg-black/70 p-2 text-white transition-colors hover:bg-black"
+              aria-label="Cerrar video"
+            >
+              <X size={20} />
+            </button>
+            <div className="aspect-video w-full">
+              <iframe
+                src={modalEmbedUrl}
+                title={modalEpisode.title}
+                className="h-full w-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Hero Section */}
       <div
         className="relative text-white py-20 bg-cover bg-center"
@@ -153,7 +230,7 @@ const PodcastPage = () => {
                 <article
                   key={episode.id}
                   className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group cursor-pointer"
-                  onClick={() => handleOpenEpisode(episode.link)}
+                  onClick={() => openEpisodeModal(episode)}
                 >
                   <div className="flex flex-col md:flex-row">
                     <div className="relative md:w-48 h-48 flex-shrink-0">
@@ -165,7 +242,7 @@ const PodcastPage = () => {
                       <button
                         onClick={(e) => {
                           e.stopPropagation();
-                          handlePlayPause(episode.slug, episode.link);
+                          handlePlayPause(episode);
                         }}
                         className="absolute inset-0 flex items-center justify-center bg-primary hover:bg-primary transition-all"
                       >
@@ -236,7 +313,7 @@ const PodcastPage = () => {
                 <article
                   key={episode.id}
                   className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 group cursor-pointer"
-                  onClick={() => handleOpenEpisode(episode.link)}
+                  onClick={() => openEpisodeModal(episode)}
                 >
                   <div className="flex flex-col md:flex-row">
                     <div className="relative md:w-40 h-40 flex-shrink-0">
@@ -248,7 +325,7 @@ const PodcastPage = () => {
                       <button
                         onClick={(e) => {
                           e.stopPropagation();
-                          handlePlayPause(episode.slug, episode.link);
+                          handlePlayPause(episode);
                         }}
                         className="absolute inset-0 flex items-center justify-center bg-primary hover:bg-primary transition-all"
                       >
