@@ -1,6 +1,6 @@
 ---
 title: El valor de los datos abiertos para fortalecer la integridad pública
-image: /uploads/maxresdefault.jpg
+image: /uploads/photo-2026-07-30-09-51-29-3-1-.jpg
 description: Participamos en el Encuentro Mensual de Integridad de la Comisión
   Nacional contra la Corrupción, donde presentó la conferencia titulada “¿Por
   qué son importantes los datos abiertos?”.
